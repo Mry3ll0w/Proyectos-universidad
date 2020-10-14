@@ -1,0 +1,29 @@
+.data
+	mensaje: .asciiz "Arriba\n"
+.text 
+	main :
+	
+		jal muestra
+		li $a1,30
+		li $a2,10
+		jal suma
+		li $v0,1
+		move $a0,$v1
+		syscall
+	
+	
+	li $v0,10#indica fin del programa
+	syscall
+	
+	muestra:
+	li $v0,4
+	la $a0,mensaje
+	syscall
+	jr $ra	#fin de la funcion 
+	
+	suma:
+	add $v1,$a1,$a2
+	jr $ra	#fin suma 
+	
+	
+	

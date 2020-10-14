@@ -1,0 +1,14 @@
+1 LOS REGISTROS AL PASAR AL COMPLEMENTO 1/2 , NO EXISTEN DECIMALES SOLO CON NUMEROS ENTEROS
+
+2 SUMAR EN COMA FLOTANTE
+
+3 ENSAMBLADOR:
+	- Solo se puede utilizar un indice de 1 en uno, no vale ir de dos en dos 
+
+	- Para las funciones y los parametros de las funciones solo se puede utilizar
+	  los registros a 
+4 Cronograma 
+
+5 Pasar a binario los kb de la memoria y saberse el circuito de memoria
+
+6 Repasar camino de datos
