@@ -1,8 +1,8 @@
 #include <iostream>
-#include <string.h>
+#include <cstring>
 #include <algorithm>
 //Creditos a Jesus Lagares Galan 
-//Siguelo en instagram @jesuslagares_ !!!! 
+//Siguelo en instagram: @jesuslagares_ o en GitHub : Lagaress !!!! 
 
 
 using namespace std;
@@ -14,7 +14,7 @@ void ordInser(int *v, int n)
 
   for (i = 1; i < n; ++i)
   {
-    aux = v[i];
+     aux = v[i];
     j = i - 1;
 
     while ((v[j] > aux) && j >= 0 )
@@ -41,10 +41,10 @@ bool prueba_ordena(int e[], int s[], unsigned n) // Damos una permutación, un v
   ordInser(v, n); // Lo ordenamos 
 
   return(memcmp(v, s, sizeof s) == 0); // Comparamos nuestro vector "ordeando" con el realmente ordenado
-  //que es memcmp?
+  //Itera y compara zonas de memoria internas (ahorrar for)
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
   int n = 9;
   int i;
@@ -56,6 +56,9 @@ int main(int argc, char const *argv[])
     v[i-1] = i-1; // Rellenamos el vector
 
     memcpy(w, v, sizeof v); // Hacemos una copia del vector ordenado y el dado
+    /*
+     *Copia en w lo que hay en V 
+     * */
 
     do
     {
