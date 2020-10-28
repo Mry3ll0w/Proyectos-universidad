@@ -2,8 +2,7 @@
 #include <cstring>
 #include <algorithm>
 //Creditos a Jesus Lagares Galan 
-//Siguelo en instagram: @jesuslagares_ o en GitHub : Lagaress !!!! 
-
+//Siguelo en instagram: @jesuslagares_ o en GitHub : Lagaress !!!!  
 
 using namespace std;
 

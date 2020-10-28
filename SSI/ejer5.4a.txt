@@ -1,0 +1,7 @@
+Los distintos gestores de paquetes mas populares (en linux) son:
+	
+	-  APT: Advanced Packing Tool , herramienta informática de gestión de paquetes gestionada y creada por Debian.
+
+	-  PACMAN: gestor de paquetes distintivos de Arch Linux, combina paquetes binarios con un fácil sistema de 		          compilacion.
+
+	
