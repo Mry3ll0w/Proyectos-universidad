@@ -2,7 +2,7 @@
 #include <cstring>
 #include <algorithm>
 //Creditos a Jesus Lagares Galan 
-//Siguelo en instagram: @jesuslagares_ o en GitHub : Lagaress !!!!  
+//Siguelo en instagram: @jesuslagares_ o en GitHub : Lagaress !!!!
 
 using namespace std;
 
@@ -55,10 +55,7 @@ int main()
     v[i-1] = i-1; // Rellenamos el vector
 
     memcpy(w, v, sizeof v); // Hacemos una copia del vector ordenado y el dado
-    /*
-     *Copia en w lo que hay en V 
-     * */
-
+    //Copia en w el contenido de V (usando la memoria)
     do
     {
       if(!prueba_ordena(v, w, i)) // Si el booleano es false => No están ordenados

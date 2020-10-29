@@ -1,0 +1,9 @@
+	Una herramienta para la comprobacion de la integridad de los archivos del sistema es GPG :
+	
+	Se basa en la implementacion gratuita de OpenPGP (cuyo estandar esta definido por RFC4880),
+	entre sus principiles características estan:
+		-Encriptado de datos , manejo de "keys" para directorios publicos , soportes para S/MIME,manejo de 
+		crypto monedas,plugins para Outlook para PGP/MIME ,ssh.
+
+	Esto esta disponible tanto en linux como en windows.
+	La version actual es la 2.2.23
