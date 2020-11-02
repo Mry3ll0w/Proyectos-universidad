@@ -1,0 +1,99 @@
+Ejercicio 2 :
+-¿Que informacion contienn estos archivos ...?(proftdpasswd)
+				Podemos extraer de los mismos informacion para acceder al dominio y asi entrar en él con mayor facilidad.
+
+Ejercicio 3:
+
+¿Que informacion estamos obteniendo obteniendo raíz deuso del dork?
+
+Sirve para realizar busquedas de las paginas webs creadas con phpSQLiteCMS
+
+¿A que estamos accediendo exactamente ?
+
+Al archivo de configuracion de un servidor basado en PHP
+
+¿Que informacion útil podemos obtener si fueran mal?
+
+Podriamos ver ciertas vulnerabilidades del server e intentar explotarlas.
+
+¿A Que informacion estamos accediendo?
+
+Nos muestra informacion recopilada en el momento (en tiempo real ) del hardware donde se ejecuta el servidor
+
+¿Que informacion útil podemos obtener si fueran mal?
+
+Podemos ver informacion sobre los núcleos de CPU, uso de HDD, estado de la red, batería, acceso a los periféricos,...
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+EJERCICIO 5:
+
+¿A que nos da acceso el enlace?
+
+Podemos acceder a un "collage" de imagenes de Jeeps.
+
+¿Que acciones podemos realizar usando este enlace?
+
+Realizar subidas a placer de archivos de nuestro equipo.
+
+Desde el punto de vista de un ataque malicioso,¿Como podriamos sacar partido de este enlace?
+
+Se podrian filtrar los archivos subidos a dicha pagina y/o pedir un "rescate" de los mismos tas cambiarlos/secuestrarlos.
+
+/////////////////////////////////////////////////////
+
+EJERCICIO 6:
+
+¿A que estamos accediendo?
+
+Una serie de archivos que estan siendo compartidos de Google Drive , que estan públicos en ese enlace.
+
+¿Que utilidad podemos encontrarle a este dork?
+
+El acceso a archivos personales de este usuario.
+
+¿Qué estamos viendo?
+
+Tenemos acceso a un documento gubernamental de EstadosUnidos sobre la compañía Yahoo.
+
+¿Qué informacion útil podemos obtener del enlace?
+
+Datos de Yahoo (direcciones de correo(fisico),emails,informacion legal,datos personales y financieros, ...).
+
+¿Por qué podríamos considerar estea informacion sensible?
+
+Porque pertence a un organismo gubernamental, ademas de acceder a datos privados/personales de la compañía.
+
+¿A que estamos accediendo?
+
+Informacion militar gubernamental, pero que por razones desconocidas no estan restringidas y son de muy fácil acceso (simplemente usando un motor de busqueda).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
