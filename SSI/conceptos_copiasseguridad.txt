@@ -1,0 +1,7 @@
+- Copias del sistema completo:
+       - Copias completas y progresiva: Última copia completa y las progresivas en el orden en que se hicieron
+       - Copias completas y diferenciales: Última copia completa y la última diferencial
+
+- Recuperar un fichero individual:
+       - Copias completas y progresiva: Última copia completa y las progresivas en el orden inverso al que se hicieron
+       - Copias completas y diferenciales: Última copia completa y la última diferencial.
