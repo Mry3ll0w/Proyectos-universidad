@@ -5,7 +5,7 @@ SWI_Salir	EQU	&11		; codigo de impresion de salida del programa(11)
 SWI_write0	EQU 	&2
 SWI_ReadC	EQU 	&4
 
-	ENTRY					; Punto de entrada del código
+	ENTRY					; Punto de entrada del cï¿½digo
 
 	ADR 	r0, cad1				; Obtenemos la direccion de la cadena1
 	SWI 	SWI_write0			; Interrupcion de Soft. para mostrar la cadena
