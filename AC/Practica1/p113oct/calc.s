@@ -1,7 +1,7 @@
 	AREA	Calc,CODE,READWRITE
 	
-SWI_EscrCar	EQU	&0		; codigo de impresion de caracter (0) asignado a SWI_EscrCar
-SWI_Salir	EQU	&11		; codigo de impresion de salida del programa(11)
+SWI_EscrCar	EQU		&0		; codigo de impresion de caracter (0) asignado a SWI_EscrCar
+SWI_Salir	EQU		&11		; codigo de impresion de salida del programa(11)
 SWI_write0	EQU 	&2
 SWI_ReadC	EQU 	&4
 

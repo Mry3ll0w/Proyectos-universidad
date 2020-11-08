@@ -8,15 +8,15 @@ EXIT	    EQU     &11
     ADR r0,diag1
     SWI SWI_write0
 
-    SWI SWI_ReadC
-    MOV r1,r0				; R1 = numero a  hacer la potencia
+    ;BREAKPOINT PARA INTRODUCIR NUMERO EN R1 de forma manual
+   	
 
-    MOV R2,R1
+    MOV R2,R1   ; R1 = numero a  hacer la potencia
 WHILE
     
     MUL r1,r2,r1
     sub r2,r2,#1    
-    CMP r2,#1 ; No consigo que salga cuando es #1
+    CMP r2,#1 ; 
     BGT WHILE
 
     ADR r0,diag3
