@@ -10,8 +10,8 @@ VEC DCD 32 ; Se Reserva 4 bytes en memoria
     MOV R1,#1
     MOV R2,#2
     MOV R3,#3
-    mov r4,#4 
-
+    MOV r4,#4 
+    
     STR R1,[R0]; [R0][0]=1
     ADD R0,R0,#8
     STR R2,[R0]; [R0][1]=2

@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/ejer1.h
+iostream
+-
+polinom.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinom.h
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/main.cpp
+iostream
+-
+polinom.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinom.h
+ejer1.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/ejer1.h
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinom.cpp
+cassert
+-
+polinom.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinom.h
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinom.h
+
