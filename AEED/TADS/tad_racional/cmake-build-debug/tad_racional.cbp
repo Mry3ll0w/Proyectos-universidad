@@ -83,6 +83,9 @@
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/tad_racional/main.cpp">
 			<Option target="tad_racional"/>
 		</Unit>
+		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/tad_racional/racional.cpp">
+			<Option target="tad_racional"/>
+		</Unit>
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/tad_racional/racional.h">
 			<Option target="tad_racional"/>
 		</Unit>

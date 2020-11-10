@@ -2,8 +2,8 @@
 #include "racional.h"
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    racional num(1,4);
-    num.print_rac();
+    racional numero(1,4);
+    numero.print_rac();
 
     return 0;
 }

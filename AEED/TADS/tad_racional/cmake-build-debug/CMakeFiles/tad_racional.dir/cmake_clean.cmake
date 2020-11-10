@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tad_racional.dir/main.cpp.obj"
+  "CMakeFiles/tad_racional.dir/racional.cpp.obj"
   "libtad_racional.dll.a"
   "tad_racional.exe"
   "tad_racional.exe.manifest"

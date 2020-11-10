@@ -25,5 +25,3 @@ CAD_O   =   "Roldan Bachata can.",&0a, &0d,0
 
 
     END
-
-

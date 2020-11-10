@@ -4,3 +4,6 @@
 CMakeFiles/tad_racional.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/tad_racional.dir/main.cpp.obj: ../racional.h
 
+CMakeFiles/tad_racional.dir/racional.cpp.obj: ../racional.cpp
+CMakeFiles/tad_racional.dir/racional.cpp.obj: ../racional.h
+

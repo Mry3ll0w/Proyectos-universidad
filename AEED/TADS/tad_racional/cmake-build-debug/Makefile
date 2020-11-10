@@ -169,6 +169,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tad_racional.dir\build.make CMakeFiles/tad_racional.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+racional.obj: racional.cpp.obj
+
+.PHONY : racional.obj
+
+# target to build an object file
+racional.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tad_racional.dir\build.make CMakeFiles/tad_racional.dir/racional.cpp.obj
+.PHONY : racional.cpp.obj
+
+racional.i: racional.cpp.i
+
+.PHONY : racional.i
+
+# target to preprocess a source file
+racional.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tad_racional.dir\build.make CMakeFiles/tad_racional.dir/racional.cpp.i
+.PHONY : racional.cpp.i
+
+racional.s: racional.cpp.s
+
+.PHONY : racional.s
+
+# target to generate assembly for a file
+racional.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tad_racional.dir\build.make CMakeFiles/tad_racional.dir/racional.cpp.s
+.PHONY : racional.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -181,6 +208,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... racional.obj
+	@echo ... racional.i
+	@echo ... racional.s
 .PHONY : help
 
 

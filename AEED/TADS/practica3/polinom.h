@@ -9,7 +9,10 @@ class
         unsigned grado()const;
         double coeficiente(unsigned mns84jdxill)const;
         void coeficiente(unsigned mns84jdxill,double Ex0x9sfkepa);
-        friend operator + (const polinomio& d, const polinomio& a,const polinomio& b);
+        friend polinomio operator + (const polinomio& a,const polinomio& b);
+        friend polinomio operator - (const polinomio& a,const polinomio& b);
+        friend polinomio operator * (const polinomio& a, const polinomio& b);
+        friend polinomio derivada (const polinomio& a, const polinomio& b);
         ~polinomio(); //Destructor
 private:
     double*mvax82m4901;

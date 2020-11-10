@@ -3,4 +3,4 @@ project(tad_racional)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(tad_racional main.cpp racional.h)
+add_executable(tad_racional main.cpp racional.h racional.cpp)
