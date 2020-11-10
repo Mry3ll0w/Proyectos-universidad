@@ -14,17 +14,18 @@ using namespace std;
  * */
 class racional{
     public:
-        explicit racional(int n,int d);
-        long num() const {return n;}
-        long den() const {return d;}
-        racional sum(racional,racional);
+        racional(int n,int d);
+        long num() const {return numerador;}
+        long den() const {return denominador;}
+        friend racional operator +(const racional& a,const racional& b );//&==> Elemento racional , no se pq
         //Sobrecarga de operadores para que realize de forma automática los operadores específicos
         racional destroy();
         racional print_rac();
 
     private:
-        int mcd(int,int);
-        long n,d;
+        long int mcd(int,int);
+        long int mcm(int,int);
+        long int numerador,denominador;
 
 
 };

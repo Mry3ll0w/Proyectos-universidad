@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/tad_racional/main.cpp
+iostream
+-
+racional.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/tad_racional/racional.h
+
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/tad_racional/racional.cpp
 racional.h
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/tad_racional/racional.h

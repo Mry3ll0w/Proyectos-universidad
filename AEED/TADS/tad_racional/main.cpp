@@ -1,9 +1,13 @@
 #include <iostream>
 #include "racional.h"
+using namespace std;
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    racional numero(1,4);
-    numero.print_rac();
+    cout<<"Implementacion basica de un TAD"<<endl;
+    racional n1(5,8);
+    racional n2(7,8);
+    racional n3(1,1);
 
+    n3=n1+n2;
+    n3.print_rac();
     return 0;
 }

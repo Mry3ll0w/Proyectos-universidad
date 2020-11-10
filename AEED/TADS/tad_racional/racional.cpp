@@ -4,27 +4,7 @@
 #include"racional.h"
 #include <cassert>
 #include <iostream>
-
-racional::racional(int n,int d){
-    bool crea= true;
-    if(d==0){
-        cout<<"El denominador introducido no es valido, debe ser distinto de 0"<<endl;
-        crea=false;
-    }
-    assert(crea);
-    if(n<0){
-        n*=-1;//cambiamos de posicion el negativo ya que generalmente es colocado en el
-        d*=-1;
-    }
-    //Reduccion de la fraccion
-    long int m = mcd(n,d);
-    if(m!=1){
-        n/=m;
-        d/=m;
-    }
-}
-
-int racional::mcd(int x, int y){
+long int racional::mcd(int x, int y){
     long int a;
     // Algoritmo de Euclides
     if (x < y)
@@ -41,14 +21,49 @@ int racional::mcd(int x, int y){
     return y;
 }
 //ok
-
-
-racional racional::print_rac(){
-    racional e(n,d);
-    cout<<"El racional introducido es"<<endl;
-    cout<<e.num()<<"/"<<e.den()<<endl;
-}
+racional::racional(int n, int d) :numerador(n),denominador(d){ //: se usa para asignarle valores a variable privada
+    assert(d!=0);
+    if(n<0){
+        numerador*=-1;//cambiamos de posicion el negativo ya que generalmente es colocado en el
+        denominador*=-1;
+    }
+    //Reduccion de la fraccion
+    long int m = mcd(n,d);
+    if(m!=1){
+        numerador/=m;
+        denominador/=m;
+    }
+}//ok
 
 racional racional::destroy() {
     return racional(0, 1);
+} //Por implementar
+racional racional::print_rac(){
+    racional e(numerador,denominador);
+    cout<<"El racional introducido es"<<endl;
+    cout<<e.num()<<"/"<<e.den()<<endl;
+}//ok
+
+long int racional::mcm(int x, int y) {
+    long int mcm =0;
+    int a = max(x,y);
+    int b = min(x,y);
+    mcm = (x/mcd(x,y))*y;
+    return mcm;
+}//ok
+
+racional operator +(const racional &a, const racional &b) {
+    racional res(1,1);
+    if(a.denominador==b.denominador){
+        res.numerador=a.numerador+b.numerador;
+        res.denominador=a.denominador;
+    }
+    else{
+        //long int denom=mcm(a.denominador,b.denominador);//Falta por implementar mcm
+
+    }
+    return res;
 }
+
+
+
