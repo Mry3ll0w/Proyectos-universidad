@@ -17,14 +17,17 @@ class racional{
         racional(int n,int d);
         long num() const {return numerador;}
         long den() const {return denominador;}
-        friend racional operator +(const racional& a,const racional& b );//&==> Elemento racional , no se pq
+        friend racional operator + (const racional& a,const racional& b );//&==> Elemento racional
+        friend racional operator - (const racional& a, const racional& b );
+        friend racional operator * (const racional& a, const racional& b);
+        friend racional operator / (const racional& a, const racional& b);
         //Sobrecarga de operadores para que realize de forma automática los operadores específicos
-        racional destroy();
-        racional print_rac();
+        ~racional() { };
+        racional print_rac() const;
 
     private:
-        long int mcd(int,int);
-        long int mcm(int,int);
+        static long int mcd(int,int);
+        static long int mcm(int,int);
         long int numerador,denominador;
 
 

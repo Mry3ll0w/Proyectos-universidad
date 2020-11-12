@@ -2,8 +2,6 @@
 // Created by anton on 09/11/2020.
 //
 #include"racional.h"
-#include <cassert>
-#include <iostream>
 long int racional::mcd(int x, int y){
     long int a;
     // Algoritmo de Euclides
@@ -35,35 +33,71 @@ racional::racional(int n, int d) :numerador(n),denominador(d){ //: se usa para a
     }
 }//ok
 
-racional racional::destroy() {
-    return racional(0, 1);
-} //Por implementar
-racional racional::print_rac(){
+racional racional::print_rac() const{
     racional e(numerador,denominador);
-    cout<<"El racional introducido es"<<endl;
     cout<<e.num()<<"/"<<e.den()<<endl;
 }//ok
 
 long int racional::mcm(int x, int y) {
-    long int mcm =0;
+
     int a = max(x,y);
     int b = min(x,y);
-    mcm = (x/mcd(x,y))*y;
-    return mcm;
+    long int mincmmul  = (a/mcd(a,b))*b;
+    return mincmmul;
 }//ok
 
-racional operator +(const racional &a, const racional &b) {
+racional operator + (const racional &a, const racional &b) {
     racional res(1,1);
     if(a.denominador==b.denominador){
         res.numerador=a.numerador+b.numerador;
         res.denominador=a.denominador;
+        return res;
     }
     else{
-        //long int denom=mcm(a.denominador,b.denominador);//Falta por implementar mcm
+
+        long int minmul=racional::mcm(a.denominador,b.denominador);
+        long int mul1 = minmul/a.denominador;
+        long int mul2 = minmul/b.denominador;
+        res.numerador = (a.numerador * mul1) + (b.numerador * mul2);
+        res.denominador = minmul;
 
     }
     return res;
+}//ok
+
+racional operator - (const racional &a, const racional &b) {
+    racional res(1,1);
+    if(a.denominador==b.denominador){
+        res.numerador=a.numerador-b.numerador;
+        res.denominador=a.denominador;
+        return res;
+    }
+    else{
+
+        long int minmul=racional::mcm(a.denominador,b.denominador);
+        long int mul1 = minmul/a.denominador;
+        long int mul2 = minmul/b.denominador;
+        res.numerador = (a.numerador * mul1) - (b.numerador * mul2);
+        res.denominador = minmul;
+
+    }
+    return res;
+}//ok
+
+racional operator *(const racional &a, const racional &b) {
+    racional res (1,1);
+    res.numerador  = a.numerador * b.numerador;
+    res.denominador = a.denominador * b.denominador;
+    return res;
 }
+
+racional operator / (const racional &a, const racional &b) {
+    racional res (1,1);
+    res.numerador = a.numerador *b.denominador;
+    res.denominador = a.denominador * b.numerador;
+
+    return res;
+}//Ready
 
 
 
