@@ -80,19 +80,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/ejer1.cpp">
-			<Option target="practica3"/>
-		</Unit>
-		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/ejer1.h">
-			<Option target="practica3"/>
-		</Unit>
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/main.cpp">
 			<Option target="practica3"/>
 		</Unit>
-		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinom.cpp">
+		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinomio.cpp">
 			<Option target="practica3"/>
 		</Unit>
-		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinom.h">
+		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinomio.h">
+			<Option target="practica3"/>
+		</Unit>
+		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/racional.cpp">
+			<Option target="practica3"/>
+		</Unit>
+		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/racional.h">
 			<Option target="practica3"/>
 		</Unit>
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/CMakeLists.txt">

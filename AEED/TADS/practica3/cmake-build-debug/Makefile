@@ -142,33 +142,6 @@ practica3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/build
 .PHONY : practica3/fast
 
-ejer1.obj: ejer1.cpp.obj
-
-.PHONY : ejer1.obj
-
-# target to build an object file
-ejer1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/ejer1.cpp.obj
-.PHONY : ejer1.cpp.obj
-
-ejer1.i: ejer1.cpp.i
-
-.PHONY : ejer1.i
-
-# target to preprocess a source file
-ejer1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/ejer1.cpp.i
-.PHONY : ejer1.cpp.i
-
-ejer1.s: ejer1.cpp.s
-
-.PHONY : ejer1.s
-
-# target to generate assembly for a file
-ejer1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/ejer1.cpp.s
-.PHONY : ejer1.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -196,32 +169,59 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-polinom.obj: polinom.cpp.obj
+polinomio.obj: polinomio.cpp.obj
 
-.PHONY : polinom.obj
+.PHONY : polinomio.obj
 
 # target to build an object file
-polinom.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/polinom.cpp.obj
-.PHONY : polinom.cpp.obj
+polinomio.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/polinomio.cpp.obj
+.PHONY : polinomio.cpp.obj
 
-polinom.i: polinom.cpp.i
+polinomio.i: polinomio.cpp.i
 
-.PHONY : polinom.i
+.PHONY : polinomio.i
 
 # target to preprocess a source file
-polinom.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/polinom.cpp.i
-.PHONY : polinom.cpp.i
+polinomio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/polinomio.cpp.i
+.PHONY : polinomio.cpp.i
 
-polinom.s: polinom.cpp.s
+polinomio.s: polinomio.cpp.s
 
-.PHONY : polinom.s
+.PHONY : polinomio.s
 
 # target to generate assembly for a file
-polinom.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/polinom.cpp.s
-.PHONY : polinom.cpp.s
+polinomio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/polinomio.cpp.s
+.PHONY : polinomio.cpp.s
+
+racional.obj: racional.cpp.obj
+
+.PHONY : racional.obj
+
+# target to build an object file
+racional.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/racional.cpp.obj
+.PHONY : racional.cpp.obj
+
+racional.i: racional.cpp.i
+
+.PHONY : racional.i
+
+# target to preprocess a source file
+racional.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/racional.cpp.i
+.PHONY : racional.cpp.i
+
+racional.s: racional.cpp.s
+
+.PHONY : racional.s
+
+# target to generate assembly for a file
+racional.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\practica3.dir\build.make CMakeFiles/practica3.dir/racional.cpp.s
+.PHONY : racional.cpp.s
 
 # Help Target
 help:
@@ -232,15 +232,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... practica3
-	@echo ... ejer1.obj
-	@echo ... ejer1.i
-	@echo ... ejer1.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... polinom.obj
-	@echo ... polinom.i
-	@echo ... polinom.s
+	@echo ... polinomio.obj
+	@echo ... polinomio.i
+	@echo ... polinomio.s
+	@echo ... racional.obj
+	@echo ... racional.i
+	@echo ... racional.s
 .PHONY : help
 
 

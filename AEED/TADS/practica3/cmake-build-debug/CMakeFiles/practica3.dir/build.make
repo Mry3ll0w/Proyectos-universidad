@@ -89,44 +89,44 @@ CMakeFiles/practica3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practica3.dir/main.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\main.cpp -o CMakeFiles\practica3.dir\main.cpp.s
 
-CMakeFiles/practica3.dir/ejer1.cpp.obj: CMakeFiles/practica3.dir/flags.make
-CMakeFiles/practica3.dir/ejer1.cpp.obj: ../ejer1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/practica3.dir/ejer1.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\practica3.dir\ejer1.cpp.obj -c C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\ejer1.cpp
+CMakeFiles/practica3.dir/polinomio.cpp.obj: CMakeFiles/practica3.dir/flags.make
+CMakeFiles/practica3.dir/polinomio.cpp.obj: ../polinomio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/practica3.dir/polinomio.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\practica3.dir\polinomio.cpp.obj -c C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\polinomio.cpp
 
-CMakeFiles/practica3.dir/ejer1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/practica3.dir/ejer1.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\ejer1.cpp > CMakeFiles\practica3.dir\ejer1.cpp.i
+CMakeFiles/practica3.dir/polinomio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/practica3.dir/polinomio.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\polinomio.cpp > CMakeFiles\practica3.dir\polinomio.cpp.i
 
-CMakeFiles/practica3.dir/ejer1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practica3.dir/ejer1.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\ejer1.cpp -o CMakeFiles\practica3.dir\ejer1.cpp.s
+CMakeFiles/practica3.dir/polinomio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practica3.dir/polinomio.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\polinomio.cpp -o CMakeFiles\practica3.dir\polinomio.cpp.s
 
-CMakeFiles/practica3.dir/polinom.cpp.obj: CMakeFiles/practica3.dir/flags.make
-CMakeFiles/practica3.dir/polinom.cpp.obj: ../polinom.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/practica3.dir/polinom.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\practica3.dir\polinom.cpp.obj -c C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\polinom.cpp
+CMakeFiles/practica3.dir/racional.cpp.obj: CMakeFiles/practica3.dir/flags.make
+CMakeFiles/practica3.dir/racional.cpp.obj: ../racional.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/practica3.dir/racional.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\practica3.dir\racional.cpp.obj -c C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\racional.cpp
 
-CMakeFiles/practica3.dir/polinom.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/practica3.dir/polinom.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\polinom.cpp > CMakeFiles\practica3.dir\polinom.cpp.i
+CMakeFiles/practica3.dir/racional.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/practica3.dir/racional.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\racional.cpp > CMakeFiles\practica3.dir\racional.cpp.i
 
-CMakeFiles/practica3.dir/polinom.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practica3.dir/polinom.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\polinom.cpp -o CMakeFiles\practica3.dir\polinom.cpp.s
+CMakeFiles/practica3.dir/racional.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/practica3.dir/racional.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\anton\Documents\Proyectos-universidad\AEED\TADS\practica3\racional.cpp -o CMakeFiles\practica3.dir\racional.cpp.s
 
 # Object files for target practica3
 practica3_OBJECTS = \
 "CMakeFiles/practica3.dir/main.cpp.obj" \
-"CMakeFiles/practica3.dir/ejer1.cpp.obj" \
-"CMakeFiles/practica3.dir/polinom.cpp.obj"
+"CMakeFiles/practica3.dir/polinomio.cpp.obj" \
+"CMakeFiles/practica3.dir/racional.cpp.obj"
 
 # External object files for target practica3
 practica3_EXTERNAL_OBJECTS =
 
 practica3.exe: CMakeFiles/practica3.dir/main.cpp.obj
-practica3.exe: CMakeFiles/practica3.dir/ejer1.cpp.obj
-practica3.exe: CMakeFiles/practica3.dir/polinom.cpp.obj
+practica3.exe: CMakeFiles/practica3.dir/polinomio.cpp.obj
+practica3.exe: CMakeFiles/practica3.dir/racional.cpp.obj
 practica3.exe: CMakeFiles/practica3.dir/build.make
 practica3.exe: CMakeFiles/practica3.dir/linklibs.rsp
 practica3.exe: CMakeFiles/practica3.dir/objects1.rsp

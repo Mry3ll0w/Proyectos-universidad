@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/practica3.dir/ejer1.cpp.obj"
   "CMakeFiles/practica3.dir/main.cpp.obj"
-  "CMakeFiles/practica3.dir/polinom.cpp.obj"
+  "CMakeFiles/practica3.dir/polinomio.cpp.obj"
+  "CMakeFiles/practica3.dir/racional.cpp.obj"
   "libpractica3.dll.a"
   "practica3.exe"
   "practica3.exe.manifest"

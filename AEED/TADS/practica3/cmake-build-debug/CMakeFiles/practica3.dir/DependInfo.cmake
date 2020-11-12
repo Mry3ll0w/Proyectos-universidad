@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/ejer1.cpp" "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/cmake-build-debug/CMakeFiles/practica3.dir/ejer1.cpp.obj"
   "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/main.cpp" "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/cmake-build-debug/CMakeFiles/practica3.dir/main.cpp.obj"
-  "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinom.cpp" "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/cmake-build-debug/CMakeFiles/practica3.dir/polinom.cpp.obj"
+  "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/polinomio.cpp" "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/cmake-build-debug/CMakeFiles/practica3.dir/polinomio.cpp.obj"
+  "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/racional.cpp" "C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/practica3/cmake-build-debug/CMakeFiles/practica3.dir/racional.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
