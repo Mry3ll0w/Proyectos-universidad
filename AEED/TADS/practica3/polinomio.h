@@ -24,11 +24,14 @@ using namespace std;
 class polinomio{
     public:
 
-        explicit polinomio(int grado,const double cocis[],const unsigned gs[]);
-        void print_pol() const;
-        unsigned grado () const{return grado_max; };
-        double coeficiente(int i) const{return cocientes[i];}
-        void coeficiente(unsigned n, double c);
+        explicit polinomio(int grado,const double cocis[],const unsigned gs[]);//ok
+        void print_pol() const;//ok
+        unsigned grado () const{return grado_max; };//ok
+        double coeficiente(int i) const{return cocientes[i];}//ok
+        void coeficiente(unsigned n, double c);//ok
+        friend polinomio  operator + (polinomio& a, polinomio& b);//kk
+        friend polinomio  operator - (polinomio& a, polinomio& b);//kk
+        friend polinomio operator * (polinomio& a, polinomio& b);
         ~polinomio();
 
     private:
