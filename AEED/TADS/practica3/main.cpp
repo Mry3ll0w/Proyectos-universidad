@@ -11,7 +11,7 @@ int main() {
     polinomio p2(gmax,c,g);
     polinomio p3(gmax+1,c2,g2);
     p1.print_pol();
-    p3 = p1 + p2;
+    p3 = p1 * p2;
     p3.print_pol();
     p1.~polinomio();
     return 0;
