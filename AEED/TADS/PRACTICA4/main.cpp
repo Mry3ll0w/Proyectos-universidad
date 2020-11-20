@@ -1,21 +1,27 @@
 #include <iostream>
 #include "PILA.h"
 #include <cstring>
+#include <algorithm>
 using namespace std;
-bool ej1(PILA<char> cad);
-
+bool ej1(PILA<char> cad);//EJ 2 similar a EJ1 (no merece la pena hacerlo)
+void ej3(PILA<int> p1,int a,int b);
+//Devuelve un entero aleatorio entre un rango determinado
+int funct(int a, int b){return (rand()%(b-a+1)+a);}
 int main() {
     char cad[]="caca";
-    PILA<char>pila((sizeof(cad)/sizeof(char))-1);
-    PILA<char>p2(7);
+    PILA<char>pc((sizeof(cad)/sizeof(char))-1);
+    PILA<int>pi(8);
     for (int i = 0; i <sizeof(cad)/sizeof(char)-1; ++i) {
-        pila.push(cad[i]);
+        pc.push(cad[i]);
     }
-    cout<<"Valor tmax en pila"<<pila.tope()<<endl;
-    pila.copia(pila,p2);
-    for (int i = 0; i <p2.tope() ; ++i) {
-        cout<<p2.pop()<<endl;
+    //Generar nº enteros aleatorios
+    for (int i = 0; i <8 ; ++i) {
+        pi.push(funct(1,9));
     }
+    pi.contenido();
+    ej3(pi,8,4);
+    pi.contenido();
+
     return 0;
 }
 
@@ -36,3 +42,34 @@ bool ej1(PILA<char>cad) {
         return false;
     }
 }//ok
+void ej3(PILA<int> p1, int a, int b) {
+    int aux[p1.tope()],aux2[p1.tope()];
+    int li,ls;
+    for (int i = 0; i <p1.tope() ; ++i) {
+        //Obtenemos los limites superior e inferior
+        aux[i]=p1.pop();
+        if (a==aux[i]){
+            li=i;
+        }
+        if (b==aux[i]){
+            ls=i;
+        }
+    }
+    //Corregir en caso de que los limites sup/inf esten invertidos
+    if (ls<li){
+        int x = li;
+        li=ls;
+        ls=li;
+    }
+    //damos la vuelta al vector para realizar la copia
+    memcpy(aux2,aux,sizeof aux);
+    reverse(aux2,aux2+p1.tope());
+    for (int j = li; j <=ls ; ++j) {
+        aux[j]=aux2[j];
+    }
+    //hacemos el push en la pila de nuevo (ya que al hacer el pop anteriormente debería estar vacia)
+    for (int i = 0; i < p1.tope(); ++i) {
+        p1.push(aux[i]);
+    }
+}
+//ok

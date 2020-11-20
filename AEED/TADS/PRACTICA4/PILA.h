@@ -12,6 +12,7 @@ class PILA {
         typo pop ();
         bool vacia()const;
         bool llena()const;
+        void contenido()const;
         //PILA operator = (PILA& a,PILA& b);
         void copia(PILA& a,PILA& b);
         unsigned desp(){return desplazamiento;};
@@ -72,5 +73,13 @@ void PILA<typo>::copia(PILA& a,PILA &b) {
     for (int i=0;i<b.t_max;i++)
         b.push(a.stack[i]);
     }
+
+template<typename typo>
+void PILA<typo>::contenido() const {
+    for (int i = 0; i <t_max ; ++i) {
+        cout<<stack[i]<<", ";
+    }
+    cout<<endl;
+}
 
 #endif //PILA_GENERICA_PILA_H
