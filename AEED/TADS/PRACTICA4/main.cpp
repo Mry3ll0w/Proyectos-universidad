@@ -1,16 +1,20 @@
 #include <iostream>
 #include "PILA.h"
 #include <cstring>
+#include <string>
+#include <fstream>
 #include <algorithm>
 using namespace std;
 bool ej1(PILA<char> cad);//EJ 2 similar a EJ1 (no merece la pena hacerlo)
 void ej3(PILA<int> p1,int a,int b);
+void ej4(PILA<string>p);
 //Devuelve un entero aleatorio entre un rango determinado
 int funct(int a, int b){return (rand()%(b-a+1)+a);}
 int main() {
     char cad[]="caca";
     PILA<char>pc((sizeof(cad)/sizeof(char))-1);
     PILA<int>pi(8);
+    PILA<string>p4(8);
     for (int i = 0; i <sizeof(cad)/sizeof(char)-1; ++i) {
         pc.push(cad[i]);
     }
@@ -18,10 +22,8 @@ int main() {
     for (int i = 0; i <8 ; ++i) {
         pi.push(funct(1,9));
     }
-    pi.contenido();
-    ej3(pi,8,4);
-    pi.contenido();
-
+    ej4(p4);
+    p4.contenido();
     return 0;
 }
 
@@ -42,6 +44,7 @@ bool ej1(PILA<char>cad) {
         return false;
     }
 }//ok
+
 void ej3(PILA<int> p1, int a, int b) {
     int aux[p1.tope()],aux2[p1.tope()];
     int li,ls;
@@ -71,5 +74,27 @@ void ej3(PILA<int> p1, int a, int b) {
     for (int i = 0; i < p1.tope(); ++i) {
         p1.push(aux[i]);
     }
+}//ok
+
+void ej4(PILA<string>p) {
+    string linea,l2;
+    PILA<string>aux(3);
+    ifstream file("C:\\Users\\anton\\Documents\\Proyectos-universidad\\AEED\\TADS\\PRACTICA4\\fich.txt");
+    if(file.is_open()){
+        while (getline(file,linea)){
+            cout<< linea <<endl;
+            aux.push(linea);
+            l2+=linea;
+        }
+        aux.push(l2);
+        aux.copia(aux,p);
+        file.close();
+    }
+    else{
+        cout<<"Fallo de Lectura"<<endl;
+    }
 }
 //ok
+
+
+

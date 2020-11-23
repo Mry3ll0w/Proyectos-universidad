@@ -19,6 +19,10 @@ PILA.h
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/PRACTICA4/PILA.h
 cstring
 -
+string
+-
+fstream
+-
 algorithm
 -
 

@@ -13,7 +13,7 @@ class PILA {
         bool vacia()const;
         bool llena()const;
         void contenido()const;
-        //PILA operator = (PILA& a,PILA& b);
+        //Copia en b la pila a
         void copia(PILA& a,PILA& b);
         unsigned desp(){return desplazamiento;};
         unsigned tope(){return t_max;}
