@@ -24,6 +24,9 @@ int main() {
     }
     ej4(p4);
     p4.contenido();
+    pc.~PILA();
+    pi.~PILA();
+    p4.~PILA();
     return 0;
 }
 
@@ -95,6 +98,11 @@ void ej4(PILA<string>p) {
     }
 }
 //ok
+
+//El ejercicio 5 se basa en realizar añadidos a la pila.h
+void ej5(PILA<char>p){//Porque en este caso se ponen ejemplos de caracter
+
+}
 
 
 

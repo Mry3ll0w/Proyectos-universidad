@@ -3,6 +3,7 @@
 #define PILA_GENERICA_PILA_H
 #include <cassert>
 #include <iostream>
+
 using namespace std;
 template <typename typo>
 class PILA {
@@ -13,14 +14,20 @@ class PILA {
         bool vacia()const;
         bool llena()const;
         void contenido()const;
-        //Copia en b la pila a
+        void contenido(unsigned)const;
         void copia(PILA& a,PILA& b);
         unsigned desp(){return desplazamiento;};
         unsigned tope(){return t_max;}
+        void back_cursor();
+        void push_cursor();
+        void del_pos(unsigned);
+        void del_prev_cursor();
+        void mod_char_element(unsigned ,char);
+        void overw_cursor_char(char);
         ~PILA(){delete []stack;}
     private:
         typo *stack;
-        unsigned t_max, desplazamiento=-1;
+        unsigned t_max, desplazamiento=-1,cursor=desplazamiento;
 };
 
 template<typename typo>
@@ -80,6 +87,46 @@ void PILA<typo>::contenido() const {
         cout<<stack[i]<<", ";
     }
     cout<<endl;
+}
+
+template<typename typo>
+void PILA<typo>::contenido(unsigned int cursor) const {
+    return stack[cursor];
+}
+
+template<typename typo>
+void PILA<typo>::back_cursor()  {
+    assert(!(cursor<=0));
+    cursor-=1;
+}
+
+template<typename typo>
+void PILA<typo>::push_cursor(){
+    assert(!(cursor<desplazamiento-1));
+    cursor+=1;
+}
+
+template<typename typo>
+void PILA<typo>::del_pos(unsigned int pos) {
+    stack[pos]=" ";
+}
+
+template<typename typo>
+void PILA<typo>::del_prev_cursor() {
+    assert(!(cursor<=0));
+    stack[cursor-1]="";
+}
+
+template<typename typo>
+void PILA<typo>::mod_char_element(unsigned int pos, char c) {
+    assert(!(pos<desplazamiento));
+    assert(!(pos>desplazamiento-1));
+    stack[pos]=c;
+}
+
+template<typename typo>
+void PILA<typo>::overw_cursor_char(char c) {
+    stack[cursor]=c;
 }
 
 #endif //PILA_GENERICA_PILA_H
