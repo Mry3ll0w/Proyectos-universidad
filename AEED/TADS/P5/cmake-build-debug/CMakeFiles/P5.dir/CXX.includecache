@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/COLA.h
+iostream
+-
+cassert
+-
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/PILA.h
+cassert
+-
+iostream
+-
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/main.cpp
+iostream
+-
+cstring
+-
+algorithm
+-
+COLA.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/COLA.h
+PILA.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/PILA.h
+

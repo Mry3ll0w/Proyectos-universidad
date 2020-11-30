@@ -8,6 +8,7 @@ using namespace std;
 bool ej1(PILA<char> cad);//EJ 2 similar a EJ1 (no merece la pena hacerlo)
 void ej3(PILA<int> p1,int a,int b);
 void ej4(PILA<string>p);
+void ej5();
 //Devuelve un entero aleatorio entre un rango determinado
 int funct(int a, int b){return (rand()%(b-a+1)+a);}
 int main() {

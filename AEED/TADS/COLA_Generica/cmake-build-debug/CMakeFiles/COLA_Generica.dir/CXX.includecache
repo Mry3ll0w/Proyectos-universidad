@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/COLA_Generica/COLA.h
+iostream
+-
+cassert
+-
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/COLA_Generica/main.cpp
+iostream
+-
+COLA.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/COLA_Generica/COLA.h
+
