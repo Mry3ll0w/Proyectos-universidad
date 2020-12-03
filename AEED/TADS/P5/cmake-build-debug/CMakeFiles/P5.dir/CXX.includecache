@@ -12,6 +12,12 @@ iostream
 cassert
 -
 
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/Cola_Din.h
+cassert
+-
+iostream
+-
+
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/PILA.h
 cassert
 -
@@ -29,4 +35,6 @@ COLA.h
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/COLA.h
 PILA.h
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/PILA.h
+Cola_Din.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/Cola_Din.h
 

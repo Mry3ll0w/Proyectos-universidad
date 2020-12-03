@@ -83,10 +83,16 @@
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/COLA.h">
 			<Option target="P5"/>
 		</Unit>
+		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/Cola_Din.h">
+			<Option target="P5"/>
+		</Unit>
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/PILA.h">
 			<Option target="P5"/>
 		</Unit>
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/main.cpp">
+			<Option target="P5"/>
+		</Unit>
+		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/pila_enla.h">
 			<Option target="P5"/>
 		</Unit>
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/CMakeLists.txt">

@@ -3,9 +3,21 @@
 #include <algorithm>
 #include "COLA.h"
 #include "PILA.h"
+#include "Cola_Din.h"
 using namespace std;
+//Structs and Types
+typedef struct {
+    string matricula;
+}avioneta;
+typedef struct {
+    ColaDin<avioneta>pista;
+    unsigned espacios=12;
+}aerodromo;
+// Functions Headers
 int ej1(COLA<int>,PILA<int>);
 void ej2(COLA<int>,int,int);
+void ej5(aerodromo & , char , const avioneta& );
+
 int main() {
     COLA<int> ci(4);
     PILA<int> pi(4);
@@ -22,7 +34,22 @@ int main() {
     }
     //Una vez introducidos los datos pasamos a los ejercicios de la practica
     //cout<<ej1(ci,pi)<<endl;
-    ej2(c_ej2,2,76);
+    //ej2(c_ej2,2,76);
+    avioneta avion1,avion2,avion3;aerodromo a;
+    avion1.matricula="1234501";
+    avion2.matricula="1234502";
+    avion3.matricula="1234503";
+    a.pista.push(avion3);
+    a.espacios--;
+    a.pista.push(avion2);
+    a.espacios--;
+    a.pista.push(avion1);
+    a.espacios--;
+    ej5(a,'S',avion2);
+    for (int i = 0; i <12-a.espacios ; ++i) {
+        cout<<a.pista.frente().matricula<<endl;
+        a.pista.pop();
+    }
     return 0;
 }
 //Se dice que una pila es isomórfica a una cola cuando los elementos situados en posiciones
@@ -46,7 +73,7 @@ int ej1(COLA<int> cint,PILA<int> pint){
         it++;
     }
     return isomorfic;
-}//ok
+}//ok implementado con los TADS mios
 void ej2(COLA<int> c,int a,int b) {
 
         int aux[c.size()],aux2[c.size()];
@@ -84,4 +111,39 @@ void ej2(COLA<int> c,int a,int b) {
             c.push(aux[i]);
         }
         c.contenido();
-}
+}//oK implementado con los TADS mios
+void ej5(aerodromo &a, char accion , const avioneta& avion) {
+    ColaDin<avioneta>c_aux;
+    assert((accion=='E')||(accion=='S'));
+    if (accion == 'E'){
+        assert(a.espacios>0);
+        if (!a.pista.vacia()){
+            c_aux = a.pista;
+            for (int i = 0; i <12-a.espacios ; ++i) {
+                   assert(c_aux.frente().matricula==avion.matricula);
+                   c_aux.pop();
+            }
+        }
+        a.espacios--;
+        a.pista.push(avion);
+    }
+    else {
+        if (a.pista.frente().matricula==avion.matricula){
+            a.pista.pop();
+            a.espacios--;
+        }
+        else{
+            assert(!a.pista.vacia());
+            for (int i = 0; i <12-(a.espacios+1) ; ++i) {
+                if (a.pista.frente().matricula==avion.matricula){
+                       a.pista.pop();
+                }
+                c_aux.push(a.pista.frente());
+                a.pista.pop();
+            }
+            a.pista=c_aux;
+            a.espacios++;
+        }
+    }
+}//Ok
+

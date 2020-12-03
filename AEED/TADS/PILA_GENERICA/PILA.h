@@ -48,7 +48,6 @@ template<typename typo>
 typo PILA<typo>::pop() {
     assert(!(desplazamiento<0));
     desplazamiento--;
-
     return stack[desplazamiento];
 }
 
