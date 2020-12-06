@@ -24,6 +24,12 @@ cassert
 iostream
 -
 
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/Pila_dinamica.h
+cassert
+-
+iostream
+-
+
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/main.cpp
 iostream
 -
@@ -37,4 +43,6 @@ PILA.h
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/PILA.h
 Cola_Din.h
 C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/Cola_Din.h
+Pila_dinamica.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/P5/Pila_dinamica.h
 

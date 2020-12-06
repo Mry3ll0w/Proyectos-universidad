@@ -4,5 +4,6 @@
 CMakeFiles/P5.dir/main.cpp.obj: ../COLA.h
 CMakeFiles/P5.dir/main.cpp.obj: ../Cola_Din.h
 CMakeFiles/P5.dir/main.cpp.obj: ../PILA.h
+CMakeFiles/P5.dir/main.cpp.obj: ../Pila_dinamica.h
 CMakeFiles/P5.dir/main.cpp.obj: ../main.cpp
 
