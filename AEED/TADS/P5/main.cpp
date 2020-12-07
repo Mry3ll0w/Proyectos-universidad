@@ -23,6 +23,7 @@ typedef struct {
 typedef struct {
     PilaEnla<card> cartas;
     string Palo;
+    unsigned oc=4;
 } monton;
 
 // Functions Headers
@@ -186,17 +187,23 @@ bool ej6(monton *m) {
     int n_monton=num_aleatorio(0,10);
     unsigned reyes_corr=0;
     card c_aux[4];
-    for (int i = 0; i < 10 ; ++i) {
-        if (m[n_monton].Palo==m[i].Palo){
+    for (int i = 0; i < 9 ; ++i) {
+        if ((m[n_monton].Palo==m[i].Palo)&&(i!=n_monton)){
             for (int j = 0; j < 4 ; ++j) {
                 m[i].cartas.push(m[n_monton].cartas.tope());
                 m[n_monton].cartas.pop();
+                m[n_monton].oc--;
+                m[i].oc++;
             }
         }
+
     }
-    for (int i = 0; i < 10 ; ++i) {
-        c_aux[i]=m[i].cartas.tope();
-        m[i].cartas.pop();
+    for (int i = 0; i < 9 ; ++i) {
+        for (int j = 0; j < m[i].oc; ++j) {
+            c_aux[i]=m[i].cartas.tope();
+            m[i].cartas.pop();
+        }
+        //Falla aqui ya que hay montones con 4 cartas
         if ((c_aux[i].Numero=="REY")&&(c_aux[i].Palo==m[i].Palo)){
             reyes_corr++;
         }
