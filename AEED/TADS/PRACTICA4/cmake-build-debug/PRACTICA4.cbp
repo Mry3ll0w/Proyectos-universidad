@@ -86,6 +86,9 @@
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/PRACTICA4/main.cpp">
 			<Option target="PRACTICA4"/>
 		</Unit>
+		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/PRACTICA4/pila_enla.h">
+			<Option target="PRACTICA4"/>
+		</Unit>
 		<Unit filename="C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/PRACTICA4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

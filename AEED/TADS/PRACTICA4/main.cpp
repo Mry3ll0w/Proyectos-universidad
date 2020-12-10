@@ -1,5 +1,6 @@
 #include <iostream>
 #include "PILA.h"
+#include "pila_enla.h"
 #include <cstring>
 #include <string>
 #include <fstream>
@@ -8,25 +9,12 @@ using namespace std;
 bool ej1(PILA<char> cad);//EJ 2 similar a EJ1 (no merece la pena hacerlo)
 void ej3(PILA<int> p1,int a,int b);
 void ej4(PILA<string>p);
-//Devuelve un entero aleatorio entre un rango determinado
-int funct(int a, int b){return (rand()%(b-a+1)+a);}
+void ej6();
+int random_number(int a, int b){return (rand()%(b-a+1)+a);}
+
 int main() {
-    char cad[]="caca";
-    PILA<char>pc((sizeof(cad)/sizeof(char))-1);
-    PILA<int>pi(8);
-    PILA<string>p4(8);
-    for (int i = 0; i <sizeof(cad)/sizeof(char)-1; ++i) {
-        pc.push(cad[i]);
-    }
-    //Generar nº enteros aleatorios
-    for (int i = 0; i <8 ; ++i) {
-        pi.push(funct(1,9));
-    }
-    ej4(p4);
-    p4.contenido();
-    pc.~PILA();
-    pi.~PILA();
-    p4.~PILA();
+    ej6();
+
     return 0;
 }
 
@@ -97,12 +85,83 @@ void ej4(PILA<string>p) {
         cout<<"Fallo de Lectura"<<endl;
     }
 }
-//ok
 
-//El ejercicio 5 se basa en realizar añadidos a la pila.h
-void ej5(PILA<char>p){//Porque en este caso se ponen ejemplos de caracter
+//El ejercicio 5 se basa en realizar añadidos a la pila
+
+void ej6() {
+    unsigned num[]={1,2,3,4,5,6,7,8,9,10,11,12};
+    string palo[]={"Espada","Basto","Oro","Copas"};
+    typedef struct{
+        unsigned numero;
+        string palo;
+    }carta;
+    typedef struct{
+        carta *card;
+        string palo;
+        unsigned n_cartas=0;
+    }bas;
+    typedef struct{
+        PilaEnla<carta>cards;
+        unsigned n_cartas_mazo=0;
+    }baraja;
+
+    carta card[40];
+    baraja mazo,descarte;
+    bas bases[4];
+
+    //Asignamos los palos a las bases
+    for (int i = 0; i < 4; ++i) {
+        bases[i].palo = palo[i];
+    }
+
+    //Asignamos los elementos de las cartas del mazo
+    for (int i = 0; i <40 ; ++i) {
+        card[i].palo = palo[random_number(0,3)];
+        card[i].numero = num[random_number(0,11)];
+        mazo.cards.push(card[i]);
+        mazo.n_cartas_mazo++;
+    }
+
+    //Iniciamos el algoritmo de la partida de solitario
+    while (mazo.n_cartas_mazo!=0){
+        if ((mazo.n_cartas_mazo%2)==0){
+            //Comprueba que el nºcartas es par
+            for (int i = 0; i < 2 ; ++i ) {
+                descarte.cards.push(mazo.cards.tope());
+                descarte.n_cartas_mazo ++;
+                mazo.cards.pop();
+                mazo.n_cartas_mazo --;
+            }
+        }
+        else{
+            descarte.cards.push(mazo.cards.tope());
+            mazo.n_cartas_mazo--;
+            descarte.n_cartas_mazo++;
+        }
+        for (int i = 0; i < 4 ; ++i) {
+            if (bases[i].palo==descarte.cards.tope().palo){
+                if ((bases[i].n_cartas==0)&&(descarte.cards.tope().numero==1)){
+                    bases[i].card[bases[i].n_cartas]=descarte.cards.tope();
+                    bases[i].n_cartas ++;
+                }
+                else if ((bases[i].n_cartas!=0)&&((bases[i].card[bases[i].n_cartas].numero)+1==descarte.cards.tope().numero)){
+                    bases[i].card[bases[i].n_cartas]=descarte.cards.tope();
+                    bases[i].n_cartas ++;
+                }
+            }
+        }
+    }
+    if (descarte.n_cartas_mazo==0){
+        cout<<"Exito"<<endl;
+    }
+    else if (descarte.n_cartas_mazo>0){
+        cout<<"Fallo"<<endl;
+    }
 
 }
+//ok
+
+
 
 
 

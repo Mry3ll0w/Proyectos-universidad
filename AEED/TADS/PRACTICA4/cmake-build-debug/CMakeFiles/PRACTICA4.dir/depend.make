@@ -3,4 +3,5 @@
 
 CMakeFiles/PRACTICA4.dir/main.cpp.obj: ../PILA.h
 CMakeFiles/PRACTICA4.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/PRACTICA4.dir/main.cpp.obj: ../pila_enla.h
 
