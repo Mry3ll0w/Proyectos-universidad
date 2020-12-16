@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/Practica 6/ListaEnla.h
+cassert
+-
+
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/Practica 6/main.cpp
+iostream
+-
+ListaEnla.h
+C:/Users/anton/Documents/Proyectos-universidad/AEED/TADS/Practica 6/ListaEnla.h
+

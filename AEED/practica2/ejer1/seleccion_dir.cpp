@@ -22,8 +22,6 @@ void seleccion_dir(int *v,int tam){
             v[j]=v[i];
             v[i]=aux;
           }
-          
         }
-        
     }
 }
