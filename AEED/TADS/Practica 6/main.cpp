@@ -8,25 +8,11 @@ int num_aleatorio(int a, int b){
 ListaEnla<int> ej2(ListaEnla<int>);
 ListaEnla<int> ej3(int);
 ListaEnla<int> ej4(ListaEnla<int>, ListaEnla<int>);
+void ej5();
 
 int main() {
-    ListaEnla<int>l,l1,l2;
 
-    for (int i = 0; i <9 ; ++i) {
-        l1.insertar(num_aleatorio(0,38),l1.fin());
-    }
-    for (int i = 0; i <9 ; ++i) {
-        l2.insertar(num_aleatorio(0,24),l2.fin());
-    }
-    l1=ej2(l1);
-    l2=ej2(l2);
-    l=ej4(l1,l2);
-
-    for (ListaEnla<int>::posicion pos = l.primera(); pos != l.fin() ; pos=l.siguiente(pos) ){ //Empezamos en la primera posicion y vamos pasando a la siguiente hasta llegar a la ultima posicion
-        cout<<l.elemento(pos)<<", ";
-    }
-    cout<<endl;
-
+    ej5();
     return 0;
 }
 
@@ -60,6 +46,7 @@ ListaEnla<int> ej2(ListaEnla<int>l1) {
         l1.elemento(pos)=v[it];
         it++;
     }
+    ej5();
     return l1;
 }
 
@@ -91,5 +78,28 @@ ListaEnla<int> ej4(ListaEnla<int> l1, ListaEnla<int>l2) {
     }
     return l3;
 }
-//ok
+/*
+Implemente una función ImprimeInverso() que imprima los elementos de una lista simplemente enlazada de enteros
+en orden inverso a partir de la posición p.
+*/
+void ej5() {
+    ListaEnla<int> l;
+    for (int i = 0; i < 7 ; ++i) {
+        l.insertar(num_aleatorio(1,45), l.fin());
+    }
+    cout<<"Orden normal"<<endl;
+    for (ListaEnla<int>::posicion pos = l.primera(); pos != l.fin() ; pos=l.siguiente(pos)) {
+        cout<<l.elemento(pos)<<", ";
+    }
+    cout<<endl;
+    cout<<"Orden iverso"<<endl;
+    ListaEnla<int>::posicion pos_aux;
+    for(ListaEnla<int>::posicion pos = l.anterior(l.fin()); pos != l.primera() ; pos = l.anterior(pos)){
+        cout<<l.elemento(pos)<<", ";
+        pos_aux = pos;
+    }
+    cout<<l.elemento(l.anterior(pos_aux))<<endl;
+    l.~ListaEnla();
+}
+
 
