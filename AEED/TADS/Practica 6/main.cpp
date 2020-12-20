@@ -9,10 +9,12 @@ ListaEnla<int> ej2(ListaEnla<int>);
 ListaEnla<int> ej3(int);
 ListaEnla<int> ej4(ListaEnla<int>, ListaEnla<int>);
 void ej5();
+void ej6();
 
 int main() {
 
     ej5();
+    ej6();
     return 0;
 }
 
@@ -100,6 +102,36 @@ void ej5() {
     }
     cout<<l.elemento(l.anterior(pos_aux))<<endl;
     l.~ListaEnla();
+}
+
+/*
+ * Implemente una función que concatene una lista de listas (TAD Lista cuyo tipo de elementos es a su vez una lista
+ * de elementos de cierto tipo T), de forma que a partir de la lista original, llamada LInic (lista de listas),
+ *  se obtenga una nueva lista, llamada LConcat (lista de elementos T).
+*/
+void ej6() {
+    ListaEnla <ListaEnla<int>> l_concat,l_inic,l_l_aux;
+    ListaEnla <int> l1,l2,l3,l4;
+    //Rellenamos las 3 listas de ejemplo
+    for (int i = 0; i < 7 ; ++i) {
+        l1.insertar(i+1, l1.fin());
+        l2.insertar(i+1, l2.fin());
+        l3.insertar(i+1, l3.fin());
+        l4.insertar(i+1, l4.fin());
+    }
+    l_inic.insertar(l1, l_inic.fin());
+    l_inic.insertar(l2, l_inic.fin());
+    l_inic.insertar(l3, l_inic.fin());
+    l_l_aux.insertar(l4, l_l_aux.fin());
+
+    //Iniciamos la concatenación de la primera
+    for (ListaEnla<ListaEnla<int>>::posicion pos = l_inic.primera(); pos != l_inic.fin() ; pos=l_inic.siguiente(pos)) {
+        l_concat.insertar(l_inic, pos);
+    }
+    for (ListaEnla<ListaEnla<int>>::posicion pos = l_l_aux.primera() ; pos != l_l_aux.fin() ; pos =l_l_aux.siguiente(pos) ) {
+        l_concat.insertar(l_l_aux, l_concat.fin());
+    }
+
 }
 
 

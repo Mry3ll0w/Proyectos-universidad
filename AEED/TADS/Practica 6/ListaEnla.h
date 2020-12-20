@@ -13,7 +13,7 @@ class ListaEnla
 public:
 	typedef nodo* posicion; // posicion de un elemento
 	ListaEnla(); // constructor, requiere ctor. T()
-	ListaEnla(const ListaEnla<T>& l); // ctor. de copia, requiere ctor. T()
+	ListaEnla(ListaEnla<ListaEnla<int>> l); // ctor. de copia, requiere ctor. T()
 	ListaEnla<T>& operator =(const ListaEnla<T>& l); // asignacion de listas
 	void insertar(const T& x, posicion p);
 	void eliminar(posicion p);
@@ -52,7 +52,7 @@ template <typename T>
 inline ListaEnla<T>::ListaEnla() : L(new nodo(T())) // crear cabecera
 {}
 template <typename T>
-inline ListaEnla<T>::ListaEnla(const ListaEnla<T>& l)
+inline ListaEnla<T>::ListaEnla(ListaEnla<ListaEnla<int>> l)
 {
 	copiar(l);
 }
