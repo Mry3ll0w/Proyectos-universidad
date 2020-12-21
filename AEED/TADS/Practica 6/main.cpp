@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ListaEnla.h"
+#include "numerobinario.h"
 using namespace std;
 //Devuelve un numero aleatorio dentro de un rango
 int num_aleatorio(int a, int b){
@@ -9,12 +10,14 @@ ListaEnla<int> ej2(ListaEnla<int>);
 ListaEnla<int> ej3(int);
 ListaEnla<int> ej4(ListaEnla<int>, ListaEnla<int>);
 void ej5();
-void ej6();
+//void ej6();
 
 int main() {
-
+    num_binario n1("10");
+    n1.NOT();
+    n1.show_num();
     ej5();
-    ej6();
+    //ej6();
     return 0;
 }
 
@@ -109,6 +112,7 @@ void ej5() {
  * de elementos de cierto tipo T), de forma que a partir de la lista original, llamada LInic (lista de listas),
  *  se obtenga una nueva lista, llamada LConcat (lista de elementos T).
 */
+/*
 void ej6() {
     ListaEnla <ListaEnla<int>> l_concat,l_inic,l_l_aux;
     ListaEnla <int> l1,l2,l3,l4;
@@ -133,5 +137,5 @@ void ej6() {
     }
 
 }
-
+*/ //Implementado pero falla en el constructor
 

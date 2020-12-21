@@ -86,6 +86,9 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/TADS/Practica 6/main.cpp">
 			<Option target="Practica_6"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/TADS/Practica 6/numerobinario.h">
+			<Option target="Practica_6"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/TADS/Practica 6/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

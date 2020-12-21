@@ -3,4 +3,5 @@
 
 CMakeFiles/Practica_6.dir/main.cpp.obj: ../ListaEnla.h
 CMakeFiles/Practica_6.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/Practica_6.dir/main.cpp.obj: ../numerobinario.h
 
