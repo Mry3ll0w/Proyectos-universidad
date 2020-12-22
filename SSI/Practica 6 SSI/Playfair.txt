@@ -1,0 +1,37 @@
+Texto original:
+
+References
+(1) Tuomas Aur. Modelling the Needham-Schröeder authentication protocol
+with high level Petri nets. Technical Report B14, Helsinki University of
+Technology, Digital Systems Laboratory, Espoo, Finland, September 1995.
+<http://www.tcs.hut.fi/pub/reports/B14.ps.Z>
+(2) M. Burrows, M. Abadi, and R. Needham. A logic of authentication. In
+Proceedings of the Royal Society, Series A, 426(1871):233-271, 1989.
+(3) John A. Clark and Jeremy Jacob. A survey of authentication protocol
+literature. manuscript, August 1996.
+(4) Richard Kemmerer, Catherine Meadows, and Jonathan Millen. Three
+systems for cryptographic protocol analysis. Journal of Cryptology 7(2):79-130,
+1994.
+
+Resultado tras realizar el encryptado PlayFair con la key = "SSI" (Con saltos de linea para su mejor comprensión):
+
+UCKBUCMDDUUQPNDTETWRNABPOFMHSIDPDZBAIDNRDGTMDZBACUETSIDPYODEYOPOMUTYMAPMYGSIIKHIPBZBMLAUTGPDUTUADGOHDEMQKUMTQAK
+DNQHOFKSPFYCUTHYALIUADGOPMPIWAHHKYINQXTUANROBALTCYTTWDULPLIHOOBSHUDOUCPCBSGSYUOXYXYYRDRKSQIKOQEUCLPSUQDNUWPEQSW
+TMXROCCEAHDOCSPDBAIDOCMPHKAMIBQUKDOSGAIYOTOHOLTMDBBAHOHRLISICUTABOTNAGAUXTCUKATDOTNSEDOBUGDOAHCUCPAOEDLADTQSZBA
+TIBQUKDOSGAIYOTOLTMYTAMNVOFUATCUQUCOCPSRDTGOUETKRTUTGDGCTEHCPPCUCWGIYKDTGPDPCEAMYTDSHOTODSIDOOGNVPBOSGSDZDUXTUA
+NRILWGTWOUMITCNKGAMUTYMAPMDOBOXTHTOTQSODMPGBTWOUPMMIZY
+
+Aplicamos un desencriptado y obtenemos lo siguiente:
+
+REFERENCESTUOMASAURMODELLINGTHENEXEDHAMSCHROEXEDERAUTHENTICATIONPROTOCOLWITHHIGHLEVELPETRINETSTECHNICALREPORTBHELSINKIUNIVERSITYOFTECHNOLOGYDIGITALSYSTEMSLABORATORYESPOOFINLANDSEPTEMBERHTXTPWXWXWTCSHUTFIPUBREPORTSBPSZMBURXROWSMABADIANDRNEEDHAMALOGICOFAUTHENTICATIONINPROCEEDINGSOFTHEROYALSOCIETYSERIESAIOHNACLARKANDIEREMYIACOBASURVEYOFAUTHENTICATIONPROTOCOLXLITERATUREMANUSCRIPTAUGUSTRICHARDKEMMERERCATHERINEMEADOWSANDIONATHANMILXLENTHREXESYSTEMSFORCRYPTOGRAPHICPROTOCOLANALYSISIOURNALOFCRYPTOLOGYX
+
+1) Esto es el texto introducido anteriormente pero con los espacios eliminados, al igual que los números , 
+por tanto perdemos parte del mensaje introducido.
+2) No tenemos una distinción entre mayusculas y minúsculas, al igual que se han eliminado carácteres númericos 
+3) Si, por ejemplo la "X" al final del texto : 
+	Original: Cryptology 7(2):79-130, 1994.
+	Desencryptado: CRYPTOLOGYX
+
+
+
+

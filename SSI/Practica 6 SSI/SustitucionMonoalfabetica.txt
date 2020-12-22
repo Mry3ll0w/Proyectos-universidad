@@ -1,0 +1,14 @@
+Texto original:
+RcVq dn EskdqZm VuZmVbZ YdnqViXZ qj qcZ nsi hZVnsmZY di hdggdjin ja fdgjhZqZmn
+
+Texto desencriptado:
+WHAT IS BUYITER APERAVE DISTANCE TO THE SUN GEASURED IN GILLIONS OF MILOGETERS
+
+La técnica que se ha utilizado se basa en tener un alfabeto propio, este es creado en base a una generación aleatoria de
+un alfabeto mixto, este se crea alterando el alfabeto normal en un orden usual, tras esto simplemente sustituimos a las 
+letras del alfabeto normal con las correspondientes, ej:
+	
+	Alfabeto normal:		A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+	Alfabeto usado por ejercicio:	F V H I B M L G N O Y K R S J X T W U Z P A Q C D E
+					
+	Ejemplo de palabra:		PERRO =>  XBWWJ

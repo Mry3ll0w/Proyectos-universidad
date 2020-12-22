@@ -1,0 +1,11 @@
+El alumno: APELLIDO1 APELLIDO2, NOMBRE ha obtenido la calificación de APROBADO en la asignatura SSI.
+
+ROT con key == 1: Fm bmvnop: BQFMMJEP2 BQFMMJEP3, OPNCSF ib pcufojep mb dbmjgjdbdjpo ef BQSPCBEP fo mb btjhobuvsb TTJ.
+ROT con key == 2: Gn cnwopq: CRGNNKFQ3 CRGNNKFQ4, PQODTG jc qdvgpkfq nc ecnkhkecekqp fg CRTQDCFQ gp nc cukipcvwtc UUK.
+ROT con Key == 3: Ho doxpqr: DSHOOLGR4 DSHOOLGR5, QRPEUH kd rewhqlgr od fdolilfdflrq gh DSUREDGR hq od dvljqdwxud VVL.
+
+A)Este cifrado funciona mediante la rotacion de caracteres del alfabeto IE segun una "key" que es un número entero de
+caracteres que ha de sustituir, ej: "AB" con key = 1 ==> "BC", key = 2 ==> "CD" 
+
+B)Las configuraciones posibles son las modificación de la key , que es el número de caracteres a rotar (siendo la key un 
+numero perteneciente al universo de los números enteros , k = {0,1,2,...}
