@@ -56,7 +56,7 @@ void frecuencias_relativas( int tiradas ){
             break;
             
             case 6:
-                ap6++;
+                ap6++;                
             break;
         }
     }
