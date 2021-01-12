@@ -1,0 +1,3 @@
+D:/Proyectos/Proyectos-universidad/MP_RECURSIVIDAD_DEF/cmake-build-debug/CMakeFiles/MP_RECURSIVIDAD_DEF.dir
+D:/Proyectos/Proyectos-universidad/MP_RECURSIVIDAD_DEF/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Proyectos/Proyectos-universidad/MP_RECURSIVIDAD_DEF/cmake-build-debug/CMakeFiles/rebuild_cache.dir

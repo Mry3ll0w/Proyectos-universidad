@@ -1,0 +1,3 @@
+"D:\Programas\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\MP_RECURSIVIDAD_DEF.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\MP_RECURSIVIDAD_DEF.dir/objects.a @CMakeFiles\MP_RECURSIVIDAD_DEF.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\MP_RECURSIVIDAD_DEF.dir/objects.a -Wl,--no-whole-archive  -o MP_RECURSIVIDAD_DEF.exe -Wl,--out-implib,libMP_RECURSIVIDAD_DEF.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\MP_RECURSIVIDAD_DEF.dir\linklibs.rsp

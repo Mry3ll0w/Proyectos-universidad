@@ -1,0 +1,25 @@
+;Do not modify this file!!!
+Easy Code 1.07.0.0009
+Begin ECProject = Proyecto1
+  EasyCodeProject=0
+  FileType=3
+  Processor=.486
+  Align=4
+  DebugInfo=1
+  AsmFiles=1
+  GlobalVariables=1
+  MLOptions=/ni
+  LinkOptions=/ni
+  MMXOptions=0
+  CommonControls=0
+  RichEdit=0
+  PackFile=1
+  Unicode=0
+  ECMacros=1
+  StartupWindow=Module1
+  Title=Easy Code GoAsm classic project
+  Resources=Proyecto1.ecr
+  Module=Module1.asm
+  Library=Kernel32.dll
+  Library=msvcrt.dll
+End

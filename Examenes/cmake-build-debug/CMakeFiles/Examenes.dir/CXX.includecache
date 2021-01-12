@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Proyectos/Proyectos-universidad/Examenes/Cocina.h
+cassert
+-
+ListaEnla.h
+D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
+
+D:/Proyectos/Proyectos-universidad/Examenes/HOSPITAL.h
+pila_enla.h
+D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h
+ListaEnla.h
+D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
+
+D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
+cassert
+-
+
+D:/Proyectos/Proyectos-universidad/Examenes/TREN.h
+cassert
+-
+ListaEnla.h
+D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
+
+D:/Proyectos/Proyectos-universidad/Examenes/main.cpp
+iostream
+-
+HOSPITAL.h
+D:/Proyectos/Proyectos-universidad/Examenes/HOSPITAL.h
+Cocina.h
+D:/Proyectos/Proyectos-universidad/Examenes/Cocina.h
+TREN.h
+D:/Proyectos/Proyectos-universidad/Examenes/TREN.h
+
+D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h
+cassert
+-
+iostream
+-
+
