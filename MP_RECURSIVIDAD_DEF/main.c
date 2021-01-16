@@ -10,6 +10,9 @@ int ej3(unsigned* , unsigned* , unsigned*, int);
 int ej4(int*,int*,int,int);
 int ej5(int *, int, int);
 int ej6(int *, int);
+//El ejercicio 7 es aplicar una formula, no se realiza
+int ej8(int *, int);
+// El ejercicio 9 es aplicar una formula, no se realiza
 
 int cont_escalera(int *, int ,int,int);
 
@@ -27,6 +30,7 @@ int main() {
     printf("Producto Escalar = %d\n", ej4(vec1,vec2,4,0) );
     printf("Escalera mas grande: %d\n", ej5(vec1,4,0));
     printf("Parejas Consecutivas: %d\n",ej6(vec1,4));
+    printf("Cambios de tendencia: %d\n",ej8(vec1,4));
     return 0;
 }
 
@@ -136,6 +140,26 @@ int ej6(int v[], int size ){
         }
     }
     ej6(v,size-=1);
+}
+
+/*En un vector de enteros se genera un «cambio de tendencia» cuando dada una
+secuencia creciente o decreciente de números que ocupan posiciones consecutivas
+del vector, el elemento que le sucede es inferior o superior respectivamente. Dado
+un vector de N enteros, diseñe una función recursiva que calcule el número de
+«cambios de tendencia» que contiene dicho vector.*/
+int ej8(int v[], int size) {
+
+    static  int trend =0;
+    if(size < 2){
+        return trend;
+    }
+    if((v[size]>v[size-1])&&(v[size-1]<v[size-2])){
+        trend++;
+    }
+    else if(v[size]<v[size-1]&&v[size-1]>v[size-2]){
+        trend++;
+    }
+    ej8(v,size-=1);
 }
 
 
