@@ -182,3 +182,5 @@ void ej9() {
     //MUESTRA EL JUGADOR GANADOR
     cout << "Ha quedado un jugador con la posicion"<<game.jugadores.elemento(pos).n_asociado<<endl; //NO RECORRE TODA LA LISTA REPLANTEAR
 }
+
+!= ==> ->
