@@ -1,23 +1,23 @@
 #include <iostream>
+#include <ctime>
 #include "ListaEnla.h"
 #include "numerobinario.h"
 using namespace std;
 //Devuelve un numero aleatorio dentro de un rango
 int num_aleatorio(int a, int b){
-    return (rand()%(b-a+1)+a);
+    srand(time(NULL));
+    return rand() % (b - a + 1) + a;
 }
 ListaEnla<int> ej2(ListaEnla<int>);
 ListaEnla<int> ej3(int);
 ListaEnla<int> ej4(ListaEnla<int>, ListaEnla<int>);
 void ej5();
 //void ej6();
+void ej9();
+
 
 int main() {
-    num_binario n1("10");
-    n1.NOT();
-    n1.show_num();
-    ej5();
-    //ej6();
+    ej9();
     return 0;
 }
 
@@ -139,3 +139,46 @@ void ej6() {
 }
 */ //Implementado pero falla en el constructor
 
+void ej9() {
+    //Definimos la estructura necesaria para implementar los jugadores
+    typedef struct {
+        int n_asociado;
+    } player;
+    typedef struct {
+        ListaEnla<player> jugadores;
+        int jugadores_en_partida = 6;
+    } partida;
+    partida game;
+    player participantes[6];
+    int i;
+    ListaEnla<player>::posicion pos = game.jugadores.primera(); // Inicializamos el cursor de la lista en la primera posicion
+    //Declaracion de variables,tipos, ...
+    participantes[0].n_asociado =1;participantes[1].n_asociado =2;participantes[2].n_asociado =3;participantes[3].n_asociado =4;participantes[4].n_asociado =5;participantes[5].n_asociado =6;
+    for (int j = 0; j < 6; ++j) {
+        game.jugadores.insertar(participantes[j], game.jugadores.fin());
+    }
+    //Metemos los valores aleatorios de los jugadores y los insertamos en la lista par comenzar el juego
+    //Cogemos un jugador al azar (el primero por comodidad)
+
+    while (game.jugadores_en_partida > 1) {
+        i = game.jugadores.elemento(pos).n_asociado;// salvamos el numero del jugador a eliminar
+        game.jugadores.eliminar(pos); //eliminamos el jugador en esa posicion
+        //Comprobamos que el numero sea par/impar
+        if (!(i % 2)) {//si el modulo es 0 ==> el numero es par,desplazamiento a la derecha
+
+            for (int j = 0; j < i ; ++j) {
+                if (game.jugadores.siguiente(pos)==game.jugadores.fin())(pos=game.jugadores.primera());
+                pos=game.jugadores.siguiente(pos);
+            }
+        } else {// es impar
+            for (int j = 0; j < i ; ++j) {
+                if (game.jugadores.siguiente(pos)==game.jugadores.primera())(pos=game.jugadores.anterior(game.jugadores.fin()));
+                pos=game.jugadores.siguiente(pos);
+            }
+        }
+        cout<<game.jugadores_en_partida-1<<endl;
+        game.jugadores_en_partida--; //Cada vez que se ejecute un ciclo se elimina un jugador, por tanto iremos decrementando
+    }
+    //MUESTRA EL JUGADOR GANADOR
+    cout << "Ha quedado un jugador con la posicion"<<game.jugadores.elemento(pos).n_asociado<<endl; //NO RECORRE TODA LA LISTA REPLANTEAR
+}

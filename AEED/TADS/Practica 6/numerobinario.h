@@ -53,7 +53,7 @@ void num_binario::desp_derecha(unsigned int cant) {
     numero[cant-1]=numero[cant];
 }
 
-void num_binario::desp_izquierda(unsigned int) {
+void num_binario::desp_izquierda(unsigned int cant) {
     assert(cant<= numero.size()-1);
     numero[cant]=numero[cant-1];
 }
