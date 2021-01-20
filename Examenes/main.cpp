@@ -2,6 +2,7 @@
 #include "HOSPITAL.h"
 #include "Cocina.h"
 #include "TREN.h"
+#include "diccionario.h"
 using namespace std;
 int n_aleatorio(int a, int b){
 
@@ -10,13 +11,18 @@ int n_aleatorio(int a, int b){
 }
 
 int main() {
-    wagon vagon[3];
-    Tren trenecito;
-    vagon[0].ID=1;vagon[1].ID=2;vagon[2].ID=3;
-    cout<< trenecito.empty() <<endl;
-    trenecito.insert_wagon(vagon[0]);
-    trenecito.insert_wagon(vagon[1]);
-    trenecito.insert_wagon(vagon[2]);
-    trenecito.erase_active();
+    diccionario dict;
+    traduccion t[3];
+    t[0].translation="hello";
+    t[1].translation="hey";
+    t[2].translation="bye";
+    dict.insert_word("hola");dict.insert_word("adios");
+    dict.insert_translate("hola",t[0]);
+    dict.insert_translate("hola",t[1]);
+    dict.list_tranlation("hola");
+
+    dict.erase_tranlation("hey");
+
+    dict.list_tranlation("hola");
     return 0;
 }

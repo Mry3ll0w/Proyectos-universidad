@@ -28,6 +28,12 @@ cassert
 ListaEnla.h
 D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
 
+D:/Proyectos/Proyectos-universidad/Examenes/diccionario.h
+ListaEnla.h
+D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
+string
+-
+
 D:/Proyectos/Proyectos-universidad/Examenes/main.cpp
 iostream
 -
@@ -37,6 +43,8 @@ Cocina.h
 D:/Proyectos/Proyectos-universidad/Examenes/Cocina.h
 TREN.h
 D:/Proyectos/Proyectos-universidad/Examenes/TREN.h
+diccionario.h
+D:/Proyectos/Proyectos-universidad/Examenes/diccionario.h
 
 D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h
 cassert

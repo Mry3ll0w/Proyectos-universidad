@@ -92,6 +92,9 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/TREN.h">
 			<Option target="Examenes"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/diccionario.h">
+			<Option target="Examenes"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/main.cpp">
 			<Option target="Examenes"/>
 		</Unit>
