@@ -89,6 +89,9 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h">
 			<Option target="Examenes"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/TEXTO.h">
+			<Option target="Examenes"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/TREN.h">
 			<Option target="Examenes"/>
 		</Unit>

@@ -3,26 +3,19 @@
 #include "Cocina.h"
 #include "TREN.h"
 #include "diccionario.h"
+#include "TEXTO.h"
 using namespace std;
 int n_aleatorio(int a, int b){
-
     return (rand()%(b-a+1)+a);
-
 }
 
 int main() {
-    diccionario dict;
-    traduccion t[3];
-    t[0].translation="hello";
-    t[1].translation="hey";
-    t[2].translation="bye";
-    dict.insert_word("hola");dict.insert_word("adios");
-    dict.insert_translate("hola",t[0]);
-    dict.insert_translate("hola",t[1]);
-    dict.list_tranlation("hola");
+    palabra palabras[4];
+    palabras[0].id=1;
+    palabras[0].p_original="pii@bes";
+    Texto txt;
+    txt.insert_word(palabras[0]);
 
-    dict.erase_tranlation("hey");
 
-    dict.list_tranlation("hola");
     return 0;
 }
