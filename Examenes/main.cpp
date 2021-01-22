@@ -9,13 +9,11 @@ int n_aleatorio(int a, int b){
     return (rand()%(b-a+1)+a);
 }
 
-int main() {
-    palabra palabras[4];
-    palabras[0].id=1;
-    palabras[0].p_original="pii@bes";
+int main(){
     Texto txt;
-    txt.insert_word(palabras[0]);
-
+    txt.insert_word("La");
+    txt.insert_word("pii@la");
+    txt.show_text();
 
     return 0;
 }

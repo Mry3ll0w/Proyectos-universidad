@@ -4,6 +4,7 @@
 CMakeFiles/Examenes.dir/main.cpp.obj: ../Cocina.h
 CMakeFiles/Examenes.dir/main.cpp.obj: ../HOSPITAL.h
 CMakeFiles/Examenes.dir/main.cpp.obj: ../ListaEnla.h
+CMakeFiles/Examenes.dir/main.cpp.obj: ../TEXTO.h
 CMakeFiles/Examenes.dir/main.cpp.obj: ../TREN.h
 CMakeFiles/Examenes.dir/main.cpp.obj: ../diccionario.h
 CMakeFiles/Examenes.dir/main.cpp.obj: ../main.cpp
