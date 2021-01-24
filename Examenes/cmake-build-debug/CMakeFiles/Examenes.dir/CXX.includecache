@@ -12,6 +12,12 @@ cassert
 ListaEnla.h
 D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
 
+D:/Proyectos/Proyectos-universidad/Examenes/Cola_Din.h
+cassert
+-
+iostream
+-
+
 D:/Proyectos/Proyectos-universidad/Examenes/HOSPITAL.h
 pila_enla.h
 D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h
@@ -55,10 +61,16 @@ diccionario.h
 D:/Proyectos/Proyectos-universidad/Examenes/diccionario.h
 TEXTO.h
 D:/Proyectos/Proyectos-universidad/Examenes/TEXTO.h
+symbol.h
+D:/Proyectos/Proyectos-universidad/Examenes/symbol.h
 
 D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h
 cassert
 -
 iostream
 -
+
+D:/Proyectos/Proyectos-universidad/Examenes/symbol.h
+Cola_Din.h
+D:/Proyectos/Proyectos-universidad/Examenes/Cola_Din.h
 

@@ -83,6 +83,9 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/Cocina.h">
 			<Option target="Examenes"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/Cola_Din.h">
+			<Option target="Examenes"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/HOSPITAL.h">
 			<Option target="Examenes"/>
 		</Unit>
@@ -102,6 +105,9 @@
 			<Option target="Examenes"/>
 		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h">
+			<Option target="Examenes"/>
+		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/symbol.h">
 			<Option target="Examenes"/>
 		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/CMakeLists.txt">
