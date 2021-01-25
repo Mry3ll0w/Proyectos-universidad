@@ -89,7 +89,13 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/HOSPITAL.h">
 			<Option target="Examenes"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/LineaCaja.h">
+			<Option target="Examenes"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h">
+			<Option target="Examenes"/>
+		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/PostFijo.h">
 			<Option target="Examenes"/>
 		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/TEXTO.h">

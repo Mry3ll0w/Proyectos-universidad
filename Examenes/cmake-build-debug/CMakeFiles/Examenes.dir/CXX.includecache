@@ -24,9 +24,23 @@ D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h
 ListaEnla.h
 D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
 
+D:/Proyectos/Proyectos-universidad/Examenes/LineaCaja.h
+ListaEnla.h
+D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
+string
+D:/Proyectos/Proyectos-universidad/Examenes/string
+cassert
+-
+
 D:/Proyectos/Proyectos-universidad/Examenes/ListaEnla.h
 cassert
 -
+
+D:/Proyectos/Proyectos-universidad/Examenes/PostFijo.h
+utility
+-
+pila_enla.h
+D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h
 
 D:/Proyectos/Proyectos-universidad/Examenes/TEXTO.h
 ListaEnla.h
@@ -63,6 +77,10 @@ TEXTO.h
 D:/Proyectos/Proyectos-universidad/Examenes/TEXTO.h
 symbol.h
 D:/Proyectos/Proyectos-universidad/Examenes/symbol.h
+PostFijo.h
+D:/Proyectos/Proyectos-universidad/Examenes/PostFijo.h
+LineaCaja.h
+D:/Proyectos/Proyectos-universidad/Examenes/LineaCaja.h
 
 D:/Proyectos/Proyectos-universidad/Examenes/pila_enla.h
 cassert
