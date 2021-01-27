@@ -104,6 +104,9 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/TREN.h">
 			<Option target="Examenes"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/bicola.h">
+			<Option target="Examenes"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/Examenes/diccionario.h">
 			<Option target="Examenes"/>
 		</Unit>
