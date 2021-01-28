@@ -3,7 +3,7 @@
 #include <time.h>
 int mayores(int x, int *v, int n);
 int inversiones(int *v,int n);
-//"JetBrainsMono NF", Consolas, 'Courier New', monospace
+
 int main(){
   
   

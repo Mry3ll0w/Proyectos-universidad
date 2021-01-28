@@ -4,7 +4,9 @@
 int matriz_simetrica(int M[][3],int filas,int col);
 int m_simetrica_rec(int M[][3],int filas,int col,int b,int aux);
 int main(){
-    int M[3][3] = {{1,1,1},{1,1,1},{1,1,1}};
+    int M[3][3] = { {1,1,1},
+                    {1,1,1},
+                    {1,1,1}};
     printf("%d\n",m_simetrica_rec(M,2,2,1,2));
   return 0;
 }
@@ -39,9 +41,8 @@ int m_simetrica_rec(int M[][3],int filas,int col,int b,int aux){
         filas-=1;
         col = aux;
     }
-    int aux1 = M[filas][col];
-    int aux2 = M[col][filas] ;
-    if (aux1 != aux2){
+    
+    if ( M[filas][col] != M[col][filas]){
         b = 0;
         return b;// fin de la ejecucion ya que hemos llegado a un valor que demuestra que la Matriz no es simetrica
     }
