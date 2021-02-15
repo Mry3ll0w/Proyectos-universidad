@@ -9,52 +9,63 @@
 FILE *db;
 typedef struct{
     char code[5];//de maximo 5 digitos
-    char nombre[20];
-    int estado; //BOOL 1=T 0=F
+    char *nombre;//maximo 20
+    char estado; //BOOL T o F
 }coso;
-
-void list_all(){
-    char lect;int token=0,i=0,j=0;
-    coso ej1;
-    db = fopen("data/database.txt","r");
+int n_total_obj=2;
+char buffer[30];
+void assing_buffer(char buffer[30],coso ej1){
+    int token=0,slash_placer[2],cont=0,j=0;
     assert(db!=NULL);//si no se lee correctamente el fichero sal
     //terminar esta mierda
-    while((lect=fgetc(db))!=EOF){
-        //printf("%c",lect);
-        PASAR A LEER LINEA A LINEA ES MAS SENCILLO;
-        if (lect=='/'){
-            token++;
-        }
-        //COLOCAR SWITCH EN FUNCION APARTE PARA USAR LA MISMA PARA TODAS LAS LECTURAS DONDE SE DEFINE EL TOKEN ETC
-        if(lect!='/'){
-            switch (token)
-            {
-                case 0:
-                    ej1.nombre[i]=lect;
-                    i++;
-                    break;
-
-                case 1:
-                    ej1.code[j]=lect;
-                    j++;
-                    break;
-
-                case 2:
-                    ej1.estado=atoi(&lect);
-                    break;
-
-                default:
-                    break;
+    
+        for (int j = 0; j < 30; j++)
+        {
+            if (buffer[j]=='/'){
+                slash_placer[token]=cont;
+                token+=1;
             }
+            cont++;
         }
         
-    }
+        ej1.nombre=(char*)malloc(slash_placer[0]*sizeof(int));
+        
+       for (int i = 0; i < 33; i++)
+       {
+           if (i < slash_placer[0]){
+               ej1.nombre[i]=buffer[i];
+           }
+           if(i>slash_placer[0] && i<(slash_placer[1])&&j<5){
+               
+               ej1.code[j]=buffer[i];
+               j++;
+           } 
 
-    printf("%s\n",ej1.nombre);
-    printf("%s\n",ej1.code);
-    printf("%d\n",ej1.estado);
+       }
+       ej1.estado=buffer[slash_placer[1]+1];
+        
+    
+
+    
 }
-
+void list_all(){
+    coso ej[2];
+    db=fopen("data/database.txt","r");
+    assert(db!=NULL);//si no se lee correctamente el fichero sal
+    for (int i = 0; i < n_total_obj; i++)
+    {
+        fscanf(db,"%s",buffer);
+        assing_buffer(buffer,ej[i]);
+    }
+    printf("nombre=%s\n",ej[0].nombre);
+    printf("codigo=%s\n",ej[0].code);
+    printf("estado=%c\n\n",ej[0].estado);
+    
+    printf("nombre=%s\n",ej[1].nombre);
+    printf("codigo=%s\n",ej[1].code);
+    printf("estado=%c\n",ej[1].estado);
+    
+}
 
 
 #endif
