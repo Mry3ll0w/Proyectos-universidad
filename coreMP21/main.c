@@ -2,7 +2,9 @@
 #include "lib/core.h"
 
 int main() {
-    data_recover();
-    printf("it is in: %d\n",existence_checker("","00002",-1));
+    //data_recover();
+    example p;
+    p.nombre="DELANIBBA";
+    write_data(p);
     return 0;
 }

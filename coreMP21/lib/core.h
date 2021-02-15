@@ -23,10 +23,28 @@ int total_obj=2,update_check=0;
 char buffer[30];
 example ex[2];
 
-void assign_data(const char buffer[30], example param);
-void data_recover();
-int existence_checker();
 
+//FUNCTIONS HEADERS
+
+//ASSINGS THE DATA TO A SINGLE STRUCT OBJECT
+void assign_data(const char buffer[30], example param);//ok
+
+//ASSIGNS ALL THE READ DATA FROM DATABASE.txt
+void data_recover();//ok
+
+//Checks if a element does exists in the database
+int existence_checker();//ok
+
+//Erases Element and update the database
+void erase_data(const int pos);
+
+//Writes a new element into the database
+void write_data(example param);
+
+//Ends the execution of the algorithm
+void exit_execution(){fclose(db);}
+
+/////////////////////////////////////////////////////////////////////////IMPLEMENTATIONS////////////////////////////////////////////////////////////////
 void data_recover(){
     db=fopen("data/database.txt","r");
     assert(db!=NULL);
@@ -64,6 +82,7 @@ void assign_data(const char buffer[30], example param) {
     free(param.nombre);
 }
 
+
 //if only wanna use one parameter leave them empty and pos -1==> "pepe","",-1
 int existence_checker(char nombre[],char code[],int pos){
     assert(update_check==1);//If the data has been charged
@@ -82,6 +101,21 @@ int existence_checker(char nombre[],char code[],int pos){
         }
     }
     return -1;
+}
+
+void erase_data(const int pos) {
+
+}
+
+void write_data(const example param){
+
+    db=fopen("database.txt","a");
+    assert(db!=NULL);
+    for (int i = 0; i <sizeof(param.nombre) ; ++i) {
+        fputc(param.nombre[i],db);
+    }
+    //fputc("/",db);
+
 }
 
 #endif //COREMP21_CORE_H
