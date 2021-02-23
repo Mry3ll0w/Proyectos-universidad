@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Proyectos/Proyectos-universidad/EDNL/main.cpp
+iostream
+-
+tads/arbolbinenla.h
+D:/Proyectos/Proyectos-universidad/EDNL/tads/arbolbinenla.h
+tads/arbolbinvect.h
+D:/Proyectos/Proyectos-universidad/EDNL/tads/arbolbinvect.h
+
+D:/Proyectos/Proyectos-universidad/EDNL/tads/arbolbinenla.h
+cassert
+-
+cmath
+-
+
+D:/Proyectos/Proyectos-universidad/EDNL/tads/arbolbinvect.h
+cassert
+-
+cstddef
+-
+cmath
+-
+
