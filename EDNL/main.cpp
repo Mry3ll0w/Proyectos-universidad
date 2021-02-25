@@ -1,7 +1,9 @@
 #include <iostream>
 #include "tads/arbolbinenla.h"
 #include "tads/arbolbinvect.h"
+#define ednl std::endl
 using namespace std;
+
 int main() {
     Abin<int>tree;
     tree.insertarRaizB(1);
@@ -13,8 +15,8 @@ int main() {
     tree.insertarHijoIzqdoB(tree.raizB()->hder,5);
     tree.insertarHijoDrchoB(tree.raizB()->hder,6);
 
-    cout<< tree.raizB()->hder->hder->elto<<endl;
-
+    //cout<< tree.raizB()->hder->hder->elto<<endl;
+    cout<<tree.node_counter()<<ednl;
 
     return 0;
 }

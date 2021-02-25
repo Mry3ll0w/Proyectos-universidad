@@ -25,6 +25,7 @@ public:
 	nodo hijoIzqdoB(nodo n) const;
 	nodo hijoDrchoB(nodo n) const;
 	unsigned profundidad(nodo n);
+	unsigned node_counter();
 	int altura(nodo n);
 	Abin(const Abin<T>& a);  // ctor. de copia
 	Abin<T>& operator =(const Abin<T>& a); //asignación de árboles
@@ -39,6 +40,7 @@ private:
 	nodo r; // nodo raíz del árbol
 	void destruirNodos(nodo& n);
 	nodo copiar(nodo n);
+    unsigned node_counter_final(nodo n);
 };
 
 /* Definición del nodo nulo */
@@ -208,4 +210,19 @@ typename Abin<T>::nodo Abin<T>::copiar(Abin<T>::nodo n){
 	}
 	return m;
 }
+
+template<typename T>
+unsigned Abin<T>::node_counter() {
+
+    return node_counter_final(raizB());
+}
+
+template<typename T>
+unsigned Abin<T>::node_counter_final(Abin::nodo n) {
+    if(n == NODO_NULO)
+        return 0;
+    else
+        return node_counter_final(n->hder)+node_counter_final(n->hizq)+1 ;
+}
+
 #endif
