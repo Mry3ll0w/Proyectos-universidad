@@ -16,7 +16,7 @@ int main() {
     tree.insertarHijoDrchoB(tree.raizB()->hder,6);
 
     //cout<< tree.raizB()->hder->hder->elto<<endl;
-    cout<<tree.node_counter()<<ednl;
+    cout<<tree.altura_mia(tree.raizB())<<ednl;
 
     return 0;
 }
