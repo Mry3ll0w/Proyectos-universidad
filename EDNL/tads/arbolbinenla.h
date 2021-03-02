@@ -27,6 +27,7 @@ public:
 	unsigned profundidad(nodo n);
     unsigned altura_mia(nodo n)const;
 	unsigned profundidad_nodo(nodo n)const;//handmade
+	unsigned profundidad_arbol(Abin<T>)const;
 	unsigned node_counter()const;
 	int altura(nodo n);
 	Abin(const Abin<T>& a);  // ctor. de copia
@@ -241,6 +242,11 @@ unsigned Abin<T>::altura_mia(nodo n) const {
         return 0;
     else
         return fmax(node_counter_final(n->hder),node_counter_final(n->hizq))+1 ;
+}
+
+template<typename T>
+unsigned Abin<T>::profundidad_arbol(Abin<T>a) const {
+    return a.profundidad_nodo(a.raizB());//Calcula la altura del nodo raiz
 }
 
 #endif

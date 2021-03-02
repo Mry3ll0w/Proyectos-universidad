@@ -15,7 +15,7 @@ int main() {
     tree.insertarHijoIzqdoB(tree.raizB()->hder,5);
     tree.insertarHijoDrchoB(tree.raizB()->hder,6);
 
-    //cout<< tree.raizB()->hder->hder->elto<<endl;
+    cout<< tree.elemento(tree.raizB()->hder->hder) <<endl;
     cout<<tree.altura_mia(tree.raizB())<<ednl;
 
     return 0;
