@@ -24,11 +24,11 @@ public:
 	nodo padreB(nodo n) const;
 	nodo hijoIzqdoB(nodo n) const;
 	nodo hijoDrchoB(nodo n) const;
-	unsigned profundidad(nodo n);
-    unsigned altura_mia(nodo n)const;
-	unsigned profundidad_nodo(nodo n)const;//handmade
-	unsigned profundidad_arbol(Abin<T>)const;
+    int altura_mia(nodo n)const;//ta bien
+	int profundidad_nodo(nodo n)const;//handmade
+	int profundidad_arbol(Abin<T>)const;
 	unsigned node_counter()const;
+	int desequilibrio(nodo n, int max)const;
 	int altura(nodo n);
 	Abin(const Abin<T>& a);  // ctor. de copia
 	Abin<T>& operator =(const Abin<T>& a); //asignación de árboles
@@ -50,20 +50,9 @@ private:
 template <typename T>
 const typename Abin<T>::nodo Abin<T>::NODO_NULO(0);
 
-template <typename T>
-unsigned Abin<T>::profundidad(typename Abin<T>::nodo n)
-{
-	unsigned cont;
-	nodo aux = n;
-	while(aux!=r){
-		cont++;
-		aux=aux->padre;
-	}
-	return cont;
-}
 
 template <typename T>
-int Abin<T>::altura(typename Abin<T>::nodo n)
+int Abin<T>::altura(typename Abin<T>::nodo n)//Mejor implementacion
 {
 	if(n==NODO_NULO){
 		return -1;
@@ -216,7 +205,6 @@ typename Abin<T>::nodo Abin<T>::copiar(Abin<T>::nodo n){
 
 template<typename T>
 unsigned Abin<T>::node_counter()const {
-
     return node_counter_final(raizB());
 }
 
@@ -229,24 +217,35 @@ unsigned Abin<T>::node_counter_final(Abin::nodo n)const {
 }
 
 template<typename T>
-unsigned Abin<T>::profundidad_nodo(Abin::nodo n)const {
-    if(n->padre == NODO_NULO)
-        return 0;
+int Abin<T>::profundidad_nodo(Abin::nodo n)const {
+
+    if(n == NODO_NULO)
+        return -1;
     else
         return 1+profundidad_nodo(n->padre);
 }
 
 template<typename T>
-unsigned Abin<T>::altura_mia(nodo n) const {
+int Abin<T>::altura_mia(nodo n) const {
     if(n == NODO_NULO)
-        return 0;
+        return -1;
     else
-        return fmax(node_counter_final(n->hder),node_counter_final(n->hizq))+1 ;
+        return fmax(altura_mia(n->hder),altura_mia(n->hizq))+1 ;
 }
 
 template<typename T>
-unsigned Abin<T>::profundidad_arbol(Abin<T>a) const {
+int Abin<T>::profundidad_arbol(Abin<T>a) const {
     return a.profundidad_nodo(a.raizB());//Calcula la altura del nodo raiz
+}
+
+template<typename T>
+int Abin<T>::desequilibrio(nodo n,int max ) const {
+
+    if(n == NODO_NULO)
+        return max;
+    else
+        return max=fmax(abs(altura_mia(n)-altura_mia(n->hder)),abs(altura_mia(n)-altura_mia(n->hder)));
+
 }
 
 #endif

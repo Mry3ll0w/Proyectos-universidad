@@ -1,0 +1,1 @@
+Hola <?php echo htmlspecialchars($_POST['nombre']); ?> bienvenido 
