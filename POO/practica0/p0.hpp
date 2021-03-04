@@ -10,8 +10,24 @@ class fecha{
         const int annomin=1902,annomaximo=2037;
         fecha(int d, int m, int y);
         fecha(int d,int m);
+        fecha(int d);
+        fecha(const fecha &new_date){
+            this->day=new_date.day;
+            this->month=new_date.month;
+            this->year=new_date.year;
+        }
+        fecha();
+        int dia(){
+            return day;
+        }
+        int mes(){
+            return month;
+        }
+        int anno(){
+            return year;
+        }
         void show_date();
-        void show_date_no_year();
+        fecha& operator = (fecha a);
         ~fecha();
 
     private:
@@ -58,24 +74,31 @@ fecha::fecha(int d,int m,int y):day(d),month(m),year(y){
         switch(e){
             case 1:
                 cerr << "Se ha introducido un dia erroneo (" <<day<<")" <<endl;
+                exit(1);
                 break;
             case 2:
                 cerr<< "Se ha introducido un mes no valido ("<<month<<")" << '\n';
+                exit(2);
                 break;
             case 3:
                 cerr<< "Se ha introducido un anno menor al anno minimo("<<annomin<<")" << '\n';
+                exit(3);
                 break;
             case 4:
                 cerr<< "Se ha introducido un anno mayor al anno maximo("<<annomaximo<<")"<<endl;
+                exit(4);
                 break;
             case 5:
                 cerr<< "Se ha introducido un mes con 31 dias cuando solo tiene 30"<<endl;
+                exit(5);
                 break;  
             case 6: 
                 cerr<< "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto "<<endl;
+                exit(6);
                 break;
             case 7: 
                 cerr<<"febrero no tiene mas de 29 dias"<<endl;
+                exit(7);
                 break;
             default:
                 break;                      
@@ -86,6 +109,10 @@ fecha::fecha(int d,int m,int y):day(d),month(m),year(y){
 };
 
 fecha::fecha(int d,int m):day(d),month(m){
+    time_t tt;
+    time(&tt);
+    tm TM = *localtime(&tt);
+    year = TM.tm_year + 1900;
     try{
         if (day > 31 || day <1 )
         {
@@ -114,24 +141,58 @@ fecha::fecha(int d,int m):day(d),month(m){
         switch(e){
             case 1:
                 cerr << "Se ha introducido un dia erroneo (" <<day<<")" <<endl;
+                exit(1);
                 break;
             case 2:
                 cerr<< "Se ha introducido un mes no valido ("<<month<<")" << '\n';
+                exit(2);
                 break;
             case 5:
                 cerr<< "Se ha introducido un mes con 31 dias cuando solo tiene 30"<<endl;
+                exit(5);
                 break;  
             case 6: 
                 cerr<< "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto "<<endl;
+                exit(6);
                 break;
             case 7: 
                 cerr<<"febrero no tiene mas de 29 dias"<<endl;
+                exit(7);
                 break;
             default:
                 break;                      
         }
       
     }
+}
+
+fecha::fecha(int d):day(d){
+    try
+    {
+        if(day > 31 || day <1)
+            throw 1;
+    }
+    catch(int e)
+    {
+        cerr<<"El dia introducido no es valido"<<endl;
+        exit(e);
+    }
+    
+    time_t tt;
+    time(&tt);
+    tm TM = *localtime(&tt);
+    month = TM.tm_mon+1;
+    year = TM.tm_year + 1900;
+
+}
+
+fecha::fecha(){
+    time_t tt;
+    time(&tt);
+    tm TM = *localtime(&tt);
+    day= TM.tm_mday;
+    month = TM.tm_mon+1;
+    year = TM.tm_year + 1900;
 }
 
 fecha::~fecha()=default;
@@ -184,6 +245,8 @@ void fecha::show_date(){
     cout<<day<<" de "<<month_selector(month)<<" de "<<year<<endl;
 }
 
-void fecha::show_date_no_year(){
-    cout<<day<<" de "<<month_selector(month)<<" de "<<aaaaa<<endl;
-}
+fecha& fecha::operator = (fecha a){
+    this->year=a.year;
+    this->month=a.month;
+    this->day=a.day;
+ }

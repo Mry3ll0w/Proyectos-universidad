@@ -1,7 +1,7 @@
 main: main.o 
 	g++  main.o -o main -lm
 	./main
-	make clean
+	
 
 main.o: main.cpp p0.hpp
 	g++ -c main.cpp
