@@ -1,0 +1,189 @@
+#include <iostream>
+#include <string>
+#include <ctime>
+using namespace std;
+
+
+class fecha{
+    
+    public:
+        const int annomin=1902,annomaximo=2037;
+        fecha(int d, int m, int y);
+        fecha(int d,int m);
+        void show_date();
+        void show_date_no_year();
+        ~fecha();
+
+    private:
+        int day,month,year;
+        int error_handler;//SI =32 error dia,=13
+        string month_selector(int month);
+       
+
+};
+
+fecha::fecha(int d,int m,int y):day(d),month(m),year(y){
+    try
+    {
+        if (day > 31 || day <1 )
+        {
+            throw 1 ;
+        }
+        else if (month > 12)
+        {
+            throw 2;
+        }
+        else if(year < annomin){
+            throw 3;
+        }
+        if (year > annomaximo)
+        {
+            throw 4;
+        }
+         else{
+                if (month==4,6,9,11 && day >30 )
+                {
+                    throw 5; // no tiene 31 dias 
+                }
+                else if (month==2 && (year%4)!=0 && day >28){ 
+                    throw 6;//29 dias en no bisisesto
+                }
+                else if (month==2 && day>29)
+                    throw 7; //feb no tiene mas de 29 dias
+         }  
+        
+    }
+    catch(int e)
+    {
+        switch(e){
+            case 1:
+                cerr << "Se ha introducido un dia erroneo (" <<day<<")" <<endl;
+                break;
+            case 2:
+                cerr<< "Se ha introducido un mes no valido ("<<month<<")" << '\n';
+                break;
+            case 3:
+                cerr<< "Se ha introducido un anno menor al anno minimo("<<annomin<<")" << '\n';
+                break;
+            case 4:
+                cerr<< "Se ha introducido un anno mayor al anno maximo("<<annomaximo<<")"<<endl;
+                break;
+            case 5:
+                cerr<< "Se ha introducido un mes con 31 dias cuando solo tiene 30"<<endl;
+                break;  
+            case 6: 
+                cerr<< "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto "<<endl;
+                break;
+            case 7: 
+                cerr<<"febrero no tiene mas de 29 dias"<<endl;
+                break;
+            default:
+                break;                      
+        }
+      
+    }
+    
+};
+
+fecha::fecha(int d,int m):day(d),month(m){
+    try{
+        if (day > 31 || day <1 )
+        {
+            throw 1 ;
+        }
+        else if (month > 12)
+        {
+            throw 2;
+        }
+
+         else{
+                if (month==4,6,9,11 && day >30 )
+                {
+                    throw 5; // no tiene 31 dias 
+                }
+                else if (month==2 && (year%4)!=0 && day >28){ 
+                    throw 6;//29 dias en no bisisesto
+                }
+                else if (month==2 && day>29)
+                    throw 7; //feb no tiene mas de 29 dias
+         }  
+    
+    }
+    catch(int e)
+    {
+        switch(e){
+            case 1:
+                cerr << "Se ha introducido un dia erroneo (" <<day<<")" <<endl;
+                break;
+            case 2:
+                cerr<< "Se ha introducido un mes no valido ("<<month<<")" << '\n';
+                break;
+            case 5:
+                cerr<< "Se ha introducido un mes con 31 dias cuando solo tiene 30"<<endl;
+                break;  
+            case 6: 
+                cerr<< "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto "<<endl;
+                break;
+            case 7: 
+                cerr<<"febrero no tiene mas de 29 dias"<<endl;
+                break;
+            default:
+                break;                      
+        }
+      
+    }
+}
+
+fecha::~fecha()=default;
+
+string fecha::month_selector(int m){
+        switch(m){
+            case 1: 
+                return "Enero";
+                break;
+            case 2:
+                return "Febrero";
+                break;
+            case 3:
+                return "Marzo";
+                break;
+            case 4:
+                return "Abril";
+                break;
+            case 5:
+                return "Mayo";
+                break;
+            case 6:
+                return "Junio";
+                break;
+            case 7:
+                return "Julio";
+                break;
+            case 8:
+                return "Agosto";
+                break;
+            case 9:
+                return "Septiembre";
+                break;
+            case 10:
+                return "Octubre";
+                break;
+            case 11:
+                return "Noviembre";
+                break;
+            case 12:
+                return "Diciembre";
+                break;
+            default:
+                return "ERROR";
+                break;    
+        }
+}
+
+void fecha::show_date(){
+    cout<<day<<" de "<<month_selector(month)<<" de "<<year<<endl;
+}
+
+void fecha::show_date_no_year(){
+    cout<<day<<" de "<<month_selector(month)<<" de "<<aaaaa<<endl;
+}

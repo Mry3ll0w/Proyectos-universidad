@@ -20,7 +20,8 @@
         "stdexcept": "c",
         "streambuf": "c",
         "system_error": "c",
-        "tuple": "c"
+        "tuple": "c",
+        "iostream": "cpp"
     },
     "cmake.configureOnOpen": false
 }
