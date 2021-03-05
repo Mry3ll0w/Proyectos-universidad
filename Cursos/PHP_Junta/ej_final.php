@@ -7,7 +7,6 @@
         Usuario:<input type="text" name="nombre">
         Contraseña:<input type="password" name="passwd">
         E-mail:<input type="email" name="mail"><br><br>
-        Contraseña: <input type="password" name="pass"><br>
         <h2>Nivel de Estudios</h2><br>
         <input type="Radio" name="e1"value="Certificado Escolar" >Certificado Escolar 
         <br>
@@ -39,7 +38,7 @@
         <br>    
         <label for="dia">Dia de la semana cuando quieres recibirlo</label><br>
         <br>
-        <select id="opt_s">
+        <select name="opts">
             <option value="l">Lunes</option>
             <option value="m">Martes</option>
             <option value="mx">Miércoles</option>

@@ -209,7 +209,7 @@ unsigned Abin<T>::node_counter()const {
 }
 
 template<typename T>
-unsigned Abin<T>::node_counter_final(Abin::nodo n)const {
+unsigned Abin<T>::node_counter_final(Abin::nodo n)const {//Add el arbol para el resto de codigo
     if(n == NODO_NULO)
         return 0;
     else
