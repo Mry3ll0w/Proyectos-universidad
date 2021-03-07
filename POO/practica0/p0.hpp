@@ -11,6 +11,7 @@ class fecha{
         fecha(int d, int m, int y);
         fecha(int d,int m);
         fecha(int d);
+        fecha(string date);
         fecha(const fecha &new_date){
             this->day=new_date.day;
             this->month=new_date.month;
@@ -249,4 +250,75 @@ fecha& fecha::operator = (fecha a){
     this->year=a.year;
     this->month=a.month;
     this->day=a.day;
+    return *this;
+ }
+
+ fecha::fecha(string date){
+    //Verificar que este bien introducido
+    try{
+        if (date.size()>10)
+        {
+            throw 8;
+        }
+        
+    }
+    catch(int e){
+        if (e==8)
+        {
+            cerr<<"Se ha introducido una fecha no valida"<<endl;
+            exit(1);
+        }
+        
+    }
+    //Variables
+    int slash_found[2],k=0;
+    string str_day,str_mes,str_year;
+
+    //algoritmo 
+
+    for (size_t i = 0; i < date.size(); i++)
+    {
+        if (date[i]=='/')
+        {
+            slash_found[k]=i;
+            k++;
+        }
+        
+    }
+    for (size_t i = 0; i < slash_found[0]; i++)
+    {
+        str_day+=date[i];
+    }
+    day = stoi(str_day);
+   
+    for (size_t i = slash_found[0]+1; i < slash_found[1]; i++){
+        str_mes+=date[i];
+        
+    }
+    month= stoi(str_mes);
+    
+    for (size_t i = slash_found[1]+1; i < date.size(); i++)
+    {
+        str_mes+=date[i];
+    //mete mas de lo que debe
+    }
+    cout<<str_mes<<endl;
+    try
+    {
+        if(str_year.size()<5){
+            cout<< str_year.size() <<endl;
+            throw 9;
+        }
+    }
+    catch(int e)
+    {
+        std::cerr << "Se ha introducido un year de forma incorrecta" << '\n';
+        exit(e);
+    }
+    
+
+    
+    
+    
+
  }

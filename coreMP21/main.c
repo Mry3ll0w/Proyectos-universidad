@@ -6,5 +6,6 @@ int main() {
     example p;
     p.nombre="DELANIBBA";
     write_data(p);
+    printf("Hola");
     return 0;
 }

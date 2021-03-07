@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Examenes" targetName="Examenes" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aea9b516-b443-4a4d-b2be-6b184358f133" name="Default Changelist" comment="Se han hecho bastantes Recursiva de M.P., y 2 nuevos TADS de AEED, siento la falta de actualizaciones pero estamos en epoca de examenes, suerte a todos los universitarios :)">
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MP_RECURSIVA_EXAMENES/aux_matriz_simetrica.c" beforeDir="false" afterPath="$PROJECT_DIR$/../MP_RECURSIVA_EXAMENES/aux_matriz_simetrica.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MP_RECURSIVA_EXAMENES/aux_n_inversiones.c" beforeDir="false" afterPath="$PROJECT_DIR$/../MP_RECURSIVA_EXAMENES/aux_n_inversiones.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <hideBySeverity>
+      <option value="15" />
+    </hideBySeverity>
+  </component>
+  <component name="ProjectId" id="1meEX13CAsRoI7A4QRHU5dPuO7o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Proyectos\Proyectos-universidad\Examenes" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Examenes" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Examenes" TARGET_NAME="Examenes" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Examenes" RUN_TARGET_NAME="Examenes">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aea9b516-b443-4a4d-b2be-6b184358f133" name="Default Changelist" comment="" />
+      <created>1609845691811</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609845691811</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Se han hecho bastantes Recursiva de M.P., y 2 nuevos TADS de AEED, siento la falta de actualizaciones pero estamos en epoca de examenes, suerte a todos los universitarios :)">
+      <created>1610289100878</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610289100878</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TAD TEXTO WIP, falta:&#10;-Corregir string por character*&#10;-Funcion listar texto">
+      <created>1611255880111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611255880111</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TAD TEXTO vFinal">
+      <created>1611315004228</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611315004228</updated>
+    </task>
+    <task id="LOCAL-00004" summary="TAD TEXTO vFinal">
+      <created>1611315010674</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611315010674</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Se ha echo el TAD simbolo, menos la parte de imprimir ya que me cuesta mucho el tema de imprimir los simbolos de forma correcta, pero el resto esta OK.">
+      <created>1611486122955</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611486122955</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Another TAD another Dollar&#10;- Se ha creado el TAD LineaCaja.h de la convocatoria de 2019">
+      <created>1611615287513</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611615287513</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se han hecho bastantes Recursiva de M.P., y 2 nuevos TADS de AEED, siento la falta de actualizaciones pero estamos en epoca de examenes, suerte a todos los universitarios :)" />
+    <MESSAGE value="TAD TEXTO WIP, falta:&#10;-Corregir string por character*&#10;-Funcion listar texto" />
+    <MESSAGE value="TAD TEXTO vFinal" />
+    <MESSAGE value="Se ha echo el TAD simbolo, menos la parte de imprimir ya que me cuesta mucho el tema de imprimir los simbolos de forma correcta, pero el resto esta OK." />
+    <MESSAGE value="Another TAD another Dollar&#10;- Se ha creado el TAD LineaCaja.h de la convocatoria de 2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="Another TAD another Dollar&#10;- Se ha creado el TAD LineaCaja.h de la convocatoria de 2019" />
+  </component>
+</project>
