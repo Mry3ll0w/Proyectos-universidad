@@ -7,57 +7,69 @@ using namespace std;
 class fecha{
     
     public:
+        
         const int annomin=1902,annomaximo=2037;
         fecha(int d, int m, int y);
         fecha(int d,int m);
         fecha(int d);
-        fecha(string date);
+        fecha(string date);//poner fecha sin anno
         fecha(const fecha &new_date){
             this->day=new_date.day;
             this->month=new_date.month;
             this->year=new_date.year;
         }
         fecha();
-        int dia(){
+        int dia()const{
             return day;
         }
-        int mes(){
+        int mes()const{
             return month;
         }
-        int anno(){
+        int anno()const{
             return year;
         }
         void show_date();
         fecha& operator = (fecha a);
+        fecha& operator ++();
+        fecha& operator --();
         ~fecha();
 
     private:
+
         int day,month,year;
-        int error_handler;//SI =32 error dia,=13
+        int error_handler;//SI =32 error dia,=13, ...
         string month_selector(int month);
        
 
 };
 
 fecha::fecha(int d,int m,int y):day(d),month(m),year(y){
+    if (day == 0 && month ==0 && year==0)
+    {
+        fecha aux;
+        this->day=aux.dia();
+        this->month=aux.mes();
+        this->year=aux.anno();
+    }
+    
     try
     {
         if (day > 31 || day <1 )
         {
             throw 1 ;
         }
-        else if (month > 12)
+        else if (month > 12 || month<1)
         {
             throw 2;
         }
         else if(year < annomin){
             throw 3;
         }
-        if (year > annomaximo)
+        else if (year > annomaximo)
         {
             throw 4;
         }
-         else{
+        else{
                 if (month==4,6,9,11 && day >30 )
                 {
                     throw 5; // no tiene 31 dias 
@@ -67,49 +79,55 @@ fecha::fecha(int d,int m,int y):day(d),month(m),year(y){
                 }
                 else if (month==2 && day>29)
                     throw 7; //feb no tiene mas de 29 dias
-         }  
+        }  
         
     }
     catch(int e)
     {
         switch(e){
             case 1:
-                cerr << "Se ha introducido un dia erroneo (" <<day<<")" <<endl;
-                exit(1);
+                cerr << "Se ha introducido un dia erroneo (" <<day<<")" <<endl; 
+                
                 break;
             case 2:
                 cerr<< "Se ha introducido un mes no valido ("<<month<<")" << '\n';
-                exit(2);
+                
                 break;
             case 3:
                 cerr<< "Se ha introducido un anno menor al anno minimo("<<annomin<<")" << '\n';
-                exit(3);
+                
                 break;
             case 4:
                 cerr<< "Se ha introducido un anno mayor al anno maximo("<<annomaximo<<")"<<endl;
-                exit(4);
+                
                 break;
             case 5:
                 cerr<< "Se ha introducido un mes con 31 dias cuando solo tiene 30"<<endl;
-                exit(5);
+                
                 break;  
             case 6: 
                 cerr<< "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto "<<endl;
-                exit(6);
                 break;
             case 7: 
                 cerr<<"febrero no tiene mas de 29 dias"<<endl;
-                exit(7);
+                
                 break;
             default:
                 break;                      
         }
-      
+        exit(e);
     }
     
 };
 
 fecha::fecha(int d,int m):day(d),month(m){
+    if (day == 0 && month ==0)
+    {
+        fecha aux;
+        this->day=aux.dia();
+        this->month=aux.mes();
+        this->year=aux.anno();
+    }
     time_t tt;
     time(&tt);
     tm TM = *localtime(&tt);
@@ -168,6 +186,13 @@ fecha::fecha(int d,int m):day(d),month(m){
 }
 
 fecha::fecha(int d):day(d){
+    if (day == 0 )
+    {
+        fecha aux;
+        this->day=aux.dia();
+        this->month=aux.mes();
+        this->year=aux.anno();
+    }
     try
     {
         if(day > 31 || day <1)
@@ -253,7 +278,7 @@ fecha& fecha::operator = (fecha a){
     return *this;
  }
 
- fecha::fecha(string date){
+fecha::fecha(string date){
     //Verificar que este bien introducido
     try{
         if (date.size()>10)
@@ -299,26 +324,139 @@ fecha& fecha::operator = (fecha a){
     
     for (size_t i = slash_found[1]+1; i < date.size(); i++)
     {
-        str_mes+=date[i];
+        str_year+=date[i];
     //mete mas de lo que debe
     }
-    cout<<str_mes<<endl;
+
     try
     {
-        if(str_year.size()<5){
-            cout<< str_year.size() <<endl;
+        if(str_year.size()>4){
             throw 9;
         }
     }
     catch(int e)
     {
-        std::cerr << "Se ha introducido un year de forma incorrecta" << '\n';
+        cerr << "Se ha introducido un year de forma incorrecta" << '\n';
         exit(e);
     }
-    
-
-    
-    
-    
-
+    year = stoi(str_year);
+    if (day == 0 && month ==0 && year==0)
+    {
+        fecha aux;
+        this->day=aux.dia();
+        this->month=aux.mes();
+        this->year=aux.anno();
+    }
  }
+
+fecha& fecha::operator ++(){
+
+   
+   this->day++;
+   
+   if (this->month==4,6,9,11 && this->day>30)
+   {
+       
+       this->month++;
+       this->day=1; 
+       if (this->month>12){
+            this->year++;
+            this->month=1;
+        }      
+   }
+   else if (this->month!=4,6,9,11 &&this->day>31){
+       this->month++;
+       this->day=1;
+       if (this->month>12){
+            this->year++;
+            this->day=1;
+            this->month=1;
+        }
+    }
+
+    return *this;
+
+}
+
+fecha& fecha::operator --(){
+    
+    this->day--;
+    if (this->day <1)
+    {
+        if (this->month==4,6,9,11)
+        {
+            this->day=30;
+        }
+        else if(this->month==3 && (this->year%4)==0 ){
+            cout<<"entro excepcion"<<endl;
+            this->day=29;
+        }
+        else if (month==3 && (year%4)!=0)
+        {
+            
+            this->day=28;
+        }
+        else{
+            
+            this->day=31;
+        }
+        this->month--;
+        if (this->month<1)
+        {
+            this->month=12;
+            this->year--;
+        }
+        
+    }
+
+}
+
+inline bool operator == (fecha a,fecha b){
+    return (a.dia()==b.dia() && a.mes()==b.mes() && a.anno()==b.anno() );
+}
+inline bool operator != (fecha a, fecha b){
+    return !(a==b);
+}
+
+bool operator >(fecha a, fecha b){
+
+    if (a.anno() > b.anno())
+    {
+        return true;
+    }
+    else if (a.mes()>b.mes() && a.anno()==b.anno())
+    {
+        return true;
+    }
+    else if(a.dia() > b.dia() && a.mes() == b.mes() && a.anno()==b.anno() ){
+        return true;
+    }
+    else {
+        return false;
+    }
+
+}
+
+inline bool operator <(fecha a, fecha b){
+    return !(a > b);
+}
+
+inline bool operator >=(fecha a, fecha b){
+    if (a > b == true || a==b)
+        return true;
+    else
+        return false;
+    
+    
+}
+
+inline bool operator <= (fecha a, fecha b){
+    if (a < b || a == b)
+        return true;
+    else
+        return false;    
+}
+
+fecha operator +(fecha a, int num){
+
+}

@@ -83,10 +83,19 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/main.cpp">
 			<Option target="EDNL"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/p2/practica2.h">
+			<Option target="EDNL"/>
+		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/tads/agenEnlazado.h">
+			<Option target="EDNL"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/tads/arbolbinenla.h">
 			<Option target="EDNL"/>
 		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/tads/arbolbinvect.h">
+			<Option target="EDNL"/>
+		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/tads/funciones_abin.h">
 			<Option target="EDNL"/>
 		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/CMakeLists.txt">

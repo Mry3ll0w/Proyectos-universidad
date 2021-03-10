@@ -4,4 +4,6 @@
 CMakeFiles/EDNL.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/EDNL.dir/main.cpp.obj: ../tads/arbolbinenla.h
 CMakeFiles/EDNL.dir/main.cpp.obj: ../tads/arbolbinvect.h
+CMakeFiles/EDNL.dir/main.cpp.obj: ../tads/funciones_abin.h
+CMakeFiles/EDNL.dir/main.cpp.obj: ../tads/practica2.h
 
