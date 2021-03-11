@@ -4,7 +4,7 @@
 using namespace std;//Avoid using std:: ....
 
 int main(){
-     fecha obj_fecha(34,2,2001),b;
+     fecha obj_fecha(34,2,2001);
      obj_fecha.show_date();
      return 0;
      

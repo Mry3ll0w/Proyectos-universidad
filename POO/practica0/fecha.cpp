@@ -9,14 +9,19 @@ fecha::fecha(int d,int m,int y){
         this->month=aux.mes();
         this->year=aux.anno();
     }
-    if (fecha_check(d,m,y)!="ok")
+    if (fecha_check(d,m,y)=="ok"){
         day=d;
         month=m;
         year=y;
+    }
+    else{
+        exit;
+    } 
+            
 };
 
-fecha::fecha(int d,int m):day(d),month(m){
-    if (day == 0 && month ==0)
+fecha::fecha(int d,int m){
+    if (d == 0 && m ==0)
     {
         fecha aux;
         this->day=aux.dia();
@@ -27,60 +32,17 @@ fecha::fecha(int d,int m):day(d),month(m){
     time(&tt);
     tm TM = *localtime(&tt);
     year = TM.tm_year + 1900;
-    try{
-        if (day > 31 || day <1 )
-        {
-            throw 1 ;
-        }
-        else if (month > 12)
-        {
-            throw 2;
-        }
-
-         else{
-                if (month==4 || month==6 || month==9 || month==11 && day >30 )
-                {
-                    throw 5; // no tiene 31 dias 
-                }
-                else if (month==2 && (year%4)!=0 && day >28){ 
-                    throw 6;//29 dias en no bisisesto
-                }
-                else if (month==2 && day>29)
-                    throw 7; //feb no tiene mas de 29 dias
-         }  
-    
-    }
-    catch(int e)
+    if (fecha_check(d,m,year)=="ok")
     {
-        switch(e){
-            case 1:
-                cerr << "Se ha introducido un dia erroneo (" <<day<<")" <<endl;
-                exit(1);
-                break;
-            case 2:
-                cerr<< "Se ha introducido un mes no valido ("<<month<<")" << '\n';
-                exit(2);
-                break;
-            case 5:
-                cerr<< "Se ha introducido un mes con 31 dias cuando solo tiene 30"<<endl;
-                exit(5);
-                break;  
-            case 6: 
-                cerr<< "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto "<<endl;
-                exit(6);
-                break;
-            case 7: 
-                cerr<<"febrero no tiene mas de 29 dias"<<endl;
-                exit(7);
-                break;
-            default:
-                break;                      
-        }
-      
+        day=d;
+        month = m;
     }
+    else
+        exit;
+    
 }
 
-fecha::fecha(int d):day(d){
+fecha::fecha(int d){
     if (day == 0 )
     {
         fecha aux;
@@ -88,23 +50,19 @@ fecha::fecha(int d):day(d){
         this->month=aux.mes();
         this->year=aux.anno();
     }
-    try
-    {
-        if(day > 31 || day <1)
-            throw 1;
-    }
-    catch(int e)
-    {
-        cerr<<"El dia introducido no es valido"<<endl;
-        exit(e);
-    }
     
     time_t tt;
     time(&tt);
     tm TM = *localtime(&tt);
     month = TM.tm_mon+1;
     year = TM.tm_year + 1900;
-
+    if (fecha_check(d,month,year)=="ok")
+    {
+        day=d;
+    }
+    else 
+        exit;
+    
 }
 
 fecha::fecha(){
