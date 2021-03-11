@@ -1,10 +1,14 @@
-main: main.o 
-	g++  main.o -o main -lm
+main: main.o fecha.o
+	g++  main.o fecha.o -o main
 	./main
 	
 
-main.o: main.cpp p0.hpp
-	g++ -c main.cpp
+main.o: main.cpp fecha.hpp
+	g++ -c main.cpp  
+
+fecha.o: fecha.cpp fecha.hpp
+	g++ -c fecha.cpp
+
 
 clean: 
-	$(RM) main.o
+	$(RM) main.o p0.o main

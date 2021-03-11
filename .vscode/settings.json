@@ -21,7 +21,8 @@
         "streambuf": "c",
         "system_error": "c",
         "tuple": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "type_traits": "cpp"
     },
     "cmake.configureOnOpen": false
 }
