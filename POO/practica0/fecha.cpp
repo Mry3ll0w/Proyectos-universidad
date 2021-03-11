@@ -1,6 +1,7 @@
 #include "fecha.hpp"
 
-fecha::fecha(int d,int m,int y):day(d),month(m),year(y){
+fecha::fecha(int d,int m,int y){
+    
     if (day == 0 && month ==0 && year==0)
     {
         fecha aux;
@@ -8,73 +9,10 @@ fecha::fecha(int d,int m,int y):day(d),month(m),year(y){
         this->month=aux.mes();
         this->year=aux.anno();
     }
-    
-    try
-    {
-        if (day > 31 || day <1 )
-        {
-            throw 1 ;
-        }
-        else if (month > 12 || month<1)
-        {
-            throw 2;
-        }
-        else if(year < annomin){
-            throw 3;
-        }
-        else if (year > annomaximo)
-        {
-            throw 4;
-        }
-        else{
-                if (month==4,6,9,11 && day >30 )
-                {
-                    throw 5; // no tiene 31 dias 
-                }
-                else if (month==2 && (year%4)!=0 && day >28){ 
-                    throw 6;//29 dias en no bisisesto
-                }
-                else if (month==2 && day>29)
-                    throw 7; //feb no tiene mas de 29 dias
-        }  
-        
-    }
-    catch(int e)
-    {
-        switch(e){
-            case 1:
-                cerr << "Se ha introducido un dia erroneo (" <<day<<")" <<endl; 
-                
-                break;
-            case 2:
-                cerr<< "Se ha introducido un mes no valido ("<<month<<")" << '\n';
-                
-                break;
-            case 3:
-                cerr<< "Se ha introducido un anno menor al anno minimo("<<annomin<<")" << '\n';
-                
-                break;
-            case 4:
-                cerr<< "Se ha introducido un anno mayor al anno maximo("<<annomaximo<<")"<<endl;
-                
-                break;
-            case 5:
-                cerr<< "Se ha introducido un mes con 31 dias cuando solo tiene 30"<<endl;
-                
-                break;  
-            case 6: 
-                cerr<< "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto "<<endl;
-                break;
-            case 7: 
-                cerr<<"febrero no tiene mas de 29 dias"<<endl;
-                
-                break;
-            default:
-                break;                      
-        }
-        exit(e);
-    }
-    
+    if (fecha_check(d,m,y)!="ok")
+        day=d;
+        month=m;
+        year=y;
 };
 
 fecha::fecha(int d,int m):day(d),month(m){
@@ -100,7 +38,7 @@ fecha::fecha(int d,int m):day(d),month(m){
         }
 
          else{
-                if (month==4,6,9,11 && day >30 )
+                if (month==4 || month==6 || month==9 || month==11 && day >30 )
                 {
                     throw 5; // no tiene 31 dias 
                 }
@@ -311,7 +249,7 @@ fecha& fecha::operator ++(){
    
    this->day++;
    
-   if (this->month==4,6,9,11 && this->day>30)
+   if (((this->month==4 || month==6 || month==9 || month==11)) && this->day>30)
    {
        
        this->month++;
@@ -340,7 +278,7 @@ fecha& fecha::operator --(){
     this->day--;
     if (this->day <1)
     {
-        if (this->month==4,6,9,11)
+        if ((this->month==4 || month==6 || month==9 || month==11))
         {
             this->day=30;
         }
@@ -424,7 +362,7 @@ fecha& fecha::operator +(int n){
    
    while (n > 0)
    {
-        if (this->month==4,6,9,11 && this->day > 30){
+        if ((this->month==4 || month==6 || month==9 || month==11) && this->day > 30){
             this->month++;
             this->day=1; 
         }
@@ -467,25 +405,25 @@ fecha& fecha::operator -(int n){
    
    while (n < 0)
    {
-        if (this->month==5,7,10,12 && this->day==0){
+        if (this->month==5 || month==7 || month==10 || month==12 && this->day==0){
             this->month--;
             this->day=30; 
         }
-        else if (this->month!=5,7,10,12 &&this->day==0){
+        else if ((this->month!=5||month!=7 || month!=10|| month==12) &&this->day==0){
             this->month--;
             this->day=31;
            
         } 
-        else if (this->month==3 && (this->year%4)==0 && this->day ==0 )
+        else if (this->month==3 && (this->year%4)==0 && this->day ==1 )
         {
             this->month--;
             this->day=29;
         }
         
-        if (this->month==3 && (this->year%4)==1 && this->day <1 )
+        if (this->month==3 && (this->year%4)==1 && this->day ==1 )
         {
             this->month--;
-            this->day=28;
+            this->day=30;//seria 28 btw hotfix
         }
         
 
@@ -499,6 +437,69 @@ fecha& fecha::operator -(int n){
         this->day--;
     } 
         return *this;
+}
+
+string fecha:: fecha_check(int dd,int mm,int yy){
+      try
+    {
+        if (dd > 31 || dd <1 )
+        {
+            throw 1 ;
+        }
+        else if (mm > 12 || mm<1)
+        {
+            throw 2;
+        }
+        else if(yy < fecha::annomin){
+            throw 3;
+        }
+        else if (yy > fecha::annomaximo)
+        {
+            throw 4;
+        }
+        else{
+                if (mm==4 || mm==6 || mm==9 || mm==11 && dd >30 )
+                {
+                    throw 5; // no tiene 31 dias 
+                }
+                else if (mm==2 && (yy%4)!=0 && dd >28){ 
+                    throw 6;//29 dias en no bisisesto
+                }
+                else if (mm==2 && dd>29)
+                    throw 7; //feb no tiene mas de 29 dias
+        }  
+        
+    }
+    catch(int e)
+    {
+        switch(e){
+            case 1:
+                return "Se ha introducido un dia erroneo " ; 
+                break;
+            case 2:
+                return"Se ha introducido un mes no valido" ;
+                break;
+            case 3:
+                return "Se ha introducido un anno menor al anno minimo";
+                break;
+            case 4:
+                return "Se ha introducido un anno mayor al anno maximo";
+                break;
+            case 5:
+                return "Se ha introducido un mes con 31 dias cuando solo tiene 30";
+                break;  
+            case 6: 
+                return "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto ";
+                break;
+            case 7: 
+                return "febrero no tiene mas de 29 dias";
+                break;
+            default:
+                break;                      
+        }
+        exit(e);
+    }
+    return "ok";
 }
    
    

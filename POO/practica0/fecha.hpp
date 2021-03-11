@@ -21,6 +21,13 @@ class fecha{
             this->month=new_date.month;
             this->year=new_date.year;
         }
+        class invalida{
+            public:
+                    invalida(string name);
+                    string what()const;
+            private:
+                string input;
+        };
         fecha();
         int dia()const{
             return day;
@@ -44,6 +51,7 @@ class fecha{
         int day,month,year;
         int error_handler;//SI =32 error dia,=13, ...
         string month_selector(int month);
+        string fecha_check(int dd ,int mm,int yy);
        
 
 };
