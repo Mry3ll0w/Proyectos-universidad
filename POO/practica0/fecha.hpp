@@ -23,10 +23,15 @@ class fecha{
         }
         class invalida{
             public:
-                    invalida(string name);
-                    string what()const;
+                    invalida(int a):input(a){};
+                    int error(){
+                        return input;
+                    };
+                    inline void what(string e)const{
+                        cout<<e<<endl;
+                    };
             private:
-                string input;
+                int input;
         };
         fecha();
         int dia()const{
@@ -49,7 +54,6 @@ class fecha{
     private:
 
         int day,month,year;
-        int error_handler;//SI =32 error dia,=13, ...
         string month_selector(int month);
         string fecha_check(int dd ,int mm,int yy);
        

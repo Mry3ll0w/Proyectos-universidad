@@ -1,0 +1,1 @@
+select art_num,art_nom,ART_COL from articulos;

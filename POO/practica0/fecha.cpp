@@ -398,6 +398,7 @@ fecha& fecha::operator -(int n){
 }
 
 string fecha:: fecha_check(int dd,int mm,int yy){
+      
       try
     {
         if (dd > 31 || dd <1 )
@@ -430,27 +431,28 @@ string fecha:: fecha_check(int dd,int mm,int yy){
     }
     catch(int e)
     {
-        switch(e){
+        invalida er(e);
+        switch(er.error()){
             case 1:
-                return "Se ha introducido un dia erroneo " ; 
+                er.what("Se ha introducido un dia erroneo ") ; 
                 break;
             case 2:
-                return"Se ha introducido un mes no valido" ;
+                er.what("Se ha introducido un mes no valido");
                 break;
             case 3:
-                return "Se ha introducido un anno menor al anno minimo";
+                er.what("Se ha introducido un anno menor al anno minimo");
                 break;
             case 4:
-                return "Se ha introducido un anno mayor al anno maximo";
+                er.what("Se ha introducido un anno mayor al anno maximo");
                 break;
             case 5:
-                return "Se ha introducido un mes con 31 dias cuando solo tiene 30";
+                er.what("Se ha introducido un mes con 31 dias cuando solo tiene 30");
                 break;  
             case 6: 
-                return "Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto ";
+                er.what("Se ha introducido mas de 28 dias en febrero y el anno no es bisiesto");
                 break;
             case 7: 
-                return "febrero no tiene mas de 29 dias";
+                er.what("febrero no tiene mas de 29 dias");
                 break;
             default:
                 break;                      

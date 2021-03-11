@@ -1,0 +1,1 @@
+select distinct CLT_PAIS,CLT_pob from clientes;

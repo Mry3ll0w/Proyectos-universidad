@@ -1,0 +1,1 @@
+select CLT_NOM,CLT_APELL from clientes;
