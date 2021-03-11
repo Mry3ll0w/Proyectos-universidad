@@ -1,0 +1,220 @@
+
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: en la función `_start':
+(.text+0x24): referencia a `main' sin definir
+/usr/bin/ld: fecha.o: en la función `fecha::fecha(int, int, int)':
+fecha.cpp:(.text+0xeb): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xfd): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x105): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x126): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x138): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x140): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x15b): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x16d): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x175): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x191): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1a3): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1ab): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1c1): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1d3): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1db): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x20b): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x21d): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x225): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x24f): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x261): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x269): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x283): referencia a `__cxa_begin_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x2c4): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x2c9): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x2dd): referencia a `std::ostream::operator<<(int)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x2ec): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x2f6): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x301): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x314): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x319): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x32d): referencia a `std::ostream::operator<<(int)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x33c): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x349): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x35c): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x361): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x374): referencia a `std::ostream::operator<<(int)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x383): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x390): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3a3): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3a8): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3bc): referencia a `std::ostream::operator<<(int)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3cb): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3d5): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3e0): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3f0): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3f5): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x3ff): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x40a): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x41a): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x41f): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x429): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x434): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x444): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x449): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x453): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x45e): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x477): referencia a `__cxa_end_catch' sin definir
+/usr/bin/ld: fecha.o: en la función `fecha::fecha(int, int)':
+fecha.cpp:(.text+0x5d4): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x5e6): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x5ee): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x604): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x616): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x61e): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x634): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x646): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x64e): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x67e): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x690): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x698): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x6c2): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x6d4): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x6dc): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x6f6): referencia a `__cxa_begin_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x737): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x73c): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x750): referencia a `std::ostream::operator<<(int)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x75f): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x769): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x774): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x78c): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x791): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x7a5): referencia a `std::ostream::operator<<(int)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x7b4): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x7c1): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x7d9): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x7de): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x7e8): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x7f3): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x80b): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x810): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x81a): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x825): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x83d): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x842): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x84c): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x857): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x867): referencia a `__cxa_end_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x875): referencia a `__cxa_end_catch' sin definir
+/usr/bin/ld: fecha.o: en la función `fecha::fecha(int)':
+fecha.cpp:(.text+0x95b): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x96d): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x975): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xa0d): referencia a `__cxa_begin_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xa20): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xa25): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xa2f): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xa3a): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xa50): referencia a `__cxa_end_catch' sin definir
+/usr/bin/ld: fecha.o: en la función `fecha::month_selector[abi:cxx11](int)':
+fecha.cpp:(.text+0xba1): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xbb8): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xbc4): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xbd5): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xbec): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xbf8): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc09): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc20): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc2c): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc3d): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc54): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc60): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc71): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc88): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xc94): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xca5): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xcbc): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xcc8): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xcd9): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xcf0): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xcfc): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd0d): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd24): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd30): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd41): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd58): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd64): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd75): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd8c): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xd98): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xda9): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xdc0): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xdcc): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xddd): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xdf4): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xe00): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xe11): referencia a `std::allocator<char>::allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xe28): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xe34): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xe4c): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xe6a): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xe88): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0xea6): referencia a `std::allocator<char>::~allocator()' sin definir
+/usr/bin/ld: fecha.o:fecha.cpp:(.text+0xec4): más referencias a `std::allocator<char>::~allocator()' sin definir a continuación
+/usr/bin/ld: fecha.o: en la función `fecha::show_date()':
+fecha.cpp:(.text+0x100e): referencia a `std::cout' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1013): referencia a `std::ostream::operator<<(int)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1022): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x104e): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x105d): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1071): referencia a `std::ostream::operator<<(int)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x107b): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1086): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1092): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x10b7): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/usr/bin/ld: fecha.o: en la función `fecha::fecha(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+fecha.cpp:(.text+0x1165): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x117a): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x118c): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1194): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x11aa): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x11b6): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x11c2): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x11dc): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1203): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned long)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x126d): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned long)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1281): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x12e7): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned long)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x12fb): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1346): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x136d): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned long)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1381): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1397): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x13ac): referencia a `__cxa_allocate_exception' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x13be): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x13c6): referencia a `__cxa_throw' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1489): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1495): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x14a1): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x14d4): referencia a `__cxa_begin_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x14f3): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x14f8): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1502): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x150d): referencia a `std::ostream::operator<<(std::ostream& (*)(std::ostream&))' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x151c): referencia a `__cxa_end_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x152d): referencia a `__cxa_end_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x154f): referencia a `__cxa_begin_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1565): referencia a `std::cerr' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x156a): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1577): referencia a `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1590): referencia a `__cxa_end_catch' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x15a5): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x15b1): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x15bd): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' sin definir
+/usr/bin/ld: fecha.o: en la función `__static_initialization_and_destruction_0(int, int)':
+fecha.cpp:(.text+0x1b37): referencia a `std::ios_base::Init::Init()' sin definir
+/usr/bin/ld: fecha.cpp:(.text+0x1b4c): referencia a `std::ios_base::Init::~Init()' sin definir
+/usr/bin/ld: fecha.o: en la función `std::__cxx11::stoi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*, int)':
+fecha.cpp:(.text._ZNSt7__cxx114stoiERKNS_12basic_stringIcSt11char_traitsIcESaIcEEEPmi[_ZNSt7__cxx114stoiERKNS_12basic_stringIcSt11char_traitsIcESaIcEEEPmi]+0x1f): referencia a `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const' sin definir
+/usr/bin/ld: fecha.o: en la función `int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)':
+fecha.cpp:(.text._ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_[_ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_]+0x6a): referencia a `std::__throw_invalid_argument(char const*)' sin definir
+/usr/bin/ld: fecha.cpp:(.text._ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_[_ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_]+0xa2): referencia a `std::__throw_out_of_range(char const*)' sin definir
+/usr/bin/ld: fecha.o:(.data.rel.local.DW.ref._ZTIi[DW.ref._ZTIi]+0x0): referencia a `typeinfo for int' sin definir
+/usr/bin/ld: fecha.o:(.data.rel.local.DW.ref.__gxx_personality_v0[DW.ref.__gxx_personality_v0]+0x0): referencia a `__gxx_personality_v0' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [<integrado>: fecha] Error 1
