@@ -3,34 +3,48 @@
 using namespace std;
 Cadena::Cadena(char* parser_cad, unsigned t)
 {
-    if (error_parser()==-1)
+    if (error_parser(parser_cad,t)==-1)
     {
         exit;
     }
     else{
-        cad = new char(t);//Asignar size
-        size =t; 
+        s_ = new char(t+1);//Asignar size
+        for (size_t i = 0; i < t; i++)
+        {
+            s_[i]=parser_cad[i];
+            
+        }
+        tam_=t+1; 
+        s_[t]='\0';
     }
-    
-    
+};
+
+Cadena::Cadena(char* parser_cad){
+    s_ = new char(sizeof(parser_cad)+1);
+    for (size_t i = 0; i < sizeof(parser_cad); i++)
+    {
+        s_[i]=parser_cad[i];
+    }
+    tam_=sizeof(parser_cad)+1;
+    s_[tam_-1]='\0';
 };
 
 Cadena::~Cadena()
 {
-    delete cad;//Vaciamos mem
+    delete s_;//Vaciamos mem
 };
 
-int Cadena::error_parser(){
-    Cadena::error_handler aux;
+int Cadena::error_parser(char *cad, unsigned size){
+    
     try
     {
         if (sizeof(cad)>size)
         {
-            throw aux;
+            throw error_handler();
         }
         
     }
-    catch(Cadena::error_handler e)
+    catch(error_handler e)
     {
         e.err();
         return -1;

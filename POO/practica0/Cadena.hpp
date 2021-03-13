@@ -6,23 +6,23 @@ using namespace std;
 class Cadena
 {
 private:
-    int error_parser();
-    char *cad;unsigned size;
-public:
+    int error_parser(char *,unsigned);
+    char *s_;unsigned tam_;
     class error_handler{
         public:
-            error_handler();
             void err(){
                 cout<<"Contruccion de la cadena es erroneo, revise los datos introducidos"<<endl;
                 exit;
             };
-            ~error_handler();
         private:
             
     };
-    Cadena(char* s_, unsigned tam_);
+public:
+    
+    Cadena(char*, unsigned);
+    Cadena(char*);
     inline void show(){
-        cout<<cad<<endl;
+        cout<<s_<<endl;
     };
     ~Cadena();
 };
