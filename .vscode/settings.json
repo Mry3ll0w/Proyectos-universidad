@@ -28,7 +28,11 @@
         "random": "cpp",
         "limits": "cpp",
         "ratio": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "bitset": "cpp",
+        "exception": "cpp",
+        "future": "cpp",
+        "typeinfo": "cpp"
     },
     "cmake.configureOnOpen": false
 }

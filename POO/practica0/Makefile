@@ -14,4 +14,8 @@ cadena.o: Cadena.cpp Cadena.hpp
 	g++ -c Cadena.cpp
 
 clean: 
-	rm main.o fecha.o Cadena.hpp main
+	rm main.o fecha.o Cadena.o main
+
+clean_win:
+	del main.o fecha.o Cadena.o main.exe
+	cls

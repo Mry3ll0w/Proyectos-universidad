@@ -5,8 +5,9 @@
 using namespace std;//Avoid using std:: ....
 
 int main(){
-     Cadena c("hola");
+     Cadena c("hola"),d("hola");
+     c+=d;
      c.show();
+     cout<<c.length()<<endl;
      return 0;
-     
 }
