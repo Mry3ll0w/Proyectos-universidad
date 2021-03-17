@@ -1,18 +1,22 @@
 #include "Cadena.hpp"
 #include <string.h>
 using namespace std;
-Cadena::Cadena(char* parser_cad, unsigned t)
+Cadena::Cadena(char parser_chr, unsigned t)
 {
-    if (error_parser(parser_cad,t)==-1)
+    
+    s_ = new char(t+1);//Asignar size
+    tam_=t; 
+    for (size_t i = 0; i <tam_ ; i++)
+    {
+       s_[i]=parser_chr;
+    }        
+    s_[tam_]='\0';
+    
+    if (error_parser(s_,tam_)==-1)
     {
         exit;
     }
-    else{
-        s_ = new char(t+1);//Asignar size
-       strcpy(s_,parser_cad);
-        tam_=t; 
-        s_[tam_]='\0';
-    }
+    
 };
 
 Cadena::Cadena(const char* parser_cad){

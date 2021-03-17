@@ -23,7 +23,7 @@ private:
     };
 public:
     //Constructores
-    Cadena(char*, unsigned);
+    Cadena(char, unsigned);
     Cadena(const char*);
     Cadena(unsigned);
     Cadena();
