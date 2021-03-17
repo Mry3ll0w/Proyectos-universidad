@@ -14,9 +14,7 @@ Fecha::Fecha(int d,int m,int y){
         month=m;
         year=y;
     }
-    else{
-        exit;
-    } 
+    
             
 };
 
@@ -37,8 +35,7 @@ Fecha::Fecha(int d,int m){
         day=d;
         month = m;
     }
-    else
-        exit;
+    
     
 }
 
@@ -60,8 +57,7 @@ Fecha::Fecha(int d){
     {
         day=d;
     }
-    else 
-        exit;
+    
     
 }
 
@@ -217,7 +213,7 @@ Fecha& Fecha::operator ++(){
             this->month=1;
         }      
    }
-   else if (this->month!=4,6,9,11 &&this->day>31){
+   else if ((this->month!=4 || month!=6 || month!=9 || month!=11) &&this->day>31){
        this->month++;
        this->day=1;
        if (this->month>12){
@@ -324,7 +320,7 @@ Fecha& Fecha::operator +(int n){
             this->month++;
             this->day=1; 
         }
-        else if (this->month!=4,2,6,9,11 &&this->day>31){
+        else if ((this->month!=4 || month!=6 || month!=9 || month!=11) &&this->day>31){
             this->month++;
             this->day=1;
            
