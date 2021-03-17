@@ -24,7 +24,7 @@ private:
 public:
     //Constructores
     Cadena(char*, unsigned);
-    Cadena(char*);
+    Cadena(const char*);
     Cadena(unsigned);
     Cadena();
     Cadena(const Cadena &new_cad); 
