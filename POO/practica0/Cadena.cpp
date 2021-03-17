@@ -20,14 +20,14 @@ Cadena::Cadena(char* parser_cad, unsigned t)
 };
 
 Cadena::Cadena(char* parser_cad){
-    s_ = new char(sizeof(parser_cad)+1);
+    s_ = new char(sizeof(parser_cad)+2);
     for (size_t i = 0; i < sizeof(parser_cad)+1; i++)
     {
         s_[i]=parser_cad[i];
         
     }
-    tam_=sizeof(parser_cad)+1;
-    s_[tam_]='\0';
+    size_auto_assignation();
+    s_[tam_+1]='\0';
 };
 
 inline Cadena::Cadena(unsigned size){
@@ -117,28 +117,22 @@ char& Cadena::at(int i){
 
 Cadena& Cadena::operator =(Cadena b){
     this->tam_=b.tam_;
+    delete this->s_;
     this->s_ = new char(b.tam_);
-    for (size_t i = 0; i < b.tam_; i++)
-    {
-        this->s_[i] = b.s_[i];
-    }
+    strcpy(this->s_,b.s_);
     return *this;
 }
 
 Cadena& Cadena::operator+=(Cadena a){
     int j=0;
-    char *parser_str = new char((this->length()+a.length()+1));//parser char [a+b];
+    char *parser_str = new char((this->length()+a.length()));//parser char [a+b];
     strcpy(parser_str,this->s_);
     delete this->s_;
     strcat(parser_str,a.s_);
     this->s_ = new char(sizeof(parser_str));
     strcpy(this->s_,parser_str);
     //Falla el sizeof por tanto lo hago por medio del cursor
-    this->tam_=0;
-    for (size_t i = 0; this->s_[i]!='\0'; i++)
-    {
-        this->tam_++;
-    }
+    size_auto_assignation();
     return *this;
 }
 
@@ -146,11 +140,12 @@ Cadena& Cadena::operator=(char* parser_str){
     delete this->s_;
     this->s_ = new char(sizeof(parser_str));
     strcpy(this->s_,parser_str);
-    this->tam_=0;
-    for (size_t i = 0; this->s_[i]!='\0'; i++)
-    {
-        this->tam_++;
-    }
+    size_auto_assignation();
     
     return *this;
+}
+
+Cadena& operator+(Cadena& a, Cadena& b){
+    a+=b;
+    return a;
 }

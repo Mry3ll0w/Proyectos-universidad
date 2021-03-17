@@ -36,5 +36,31 @@ void reflejo(Abin<t>& a,typename Abin<t>::nodo n){
 
 }
 
+float evaluar_llamada_rec(Abin<string>a,Abin<string>::nodo n){
+    if (n->hder==Abin<string>::NODO_NULO && n->hizq==Abin<string>::NODO_NULO){//ES HOJA
+        return stof(a.elemento(n));
+    }
+    else{
+        if (a.elemento(n)=="+"){
+            return (evaluar_llamada_rec(a,a.hijoIzqdoB(n))+evaluar_llamada_rec(a,a.hijoDrchoB(n)));
+        }
+        else if (a.elemento(n)=="-"){
+            return (evaluar_llamada_rec(a,a.hijoIzqdoB(n))-evaluar_llamada_rec(a,a.hijoDrchoB(n)));
+        }
+        else if (a.elemento(n)=="*"){
+            return (evaluar_llamada_rec(a,a.hijoIzqdoB(n))*evaluar_llamada_rec(a,a.hijoDrchoB(n)));
+        }
+        else{
+            return (evaluar_llamada_rec(a,a.hijoIzqdoB(n))/evaluar_llamada_rec(a,a.hijoDrchoB(n)));
+        }
+    }
+}
+float Evaluar_llamada(Abin<string>a){//EJERCICIO3
+    if (a.arbolVacioB()){
+        return 0;
+    }
+    else
+        return evaluar_llamada_rec(a,a.raizB());
+}
 
 #endif //EDNL_PRACTICA2_H

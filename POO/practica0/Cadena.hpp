@@ -2,11 +2,20 @@
 #define CADENA_HPP
 
 #include <iostream>
+#include <string.h>
 using namespace std;
 class Cadena
 {
 private:
     int error_parser(char *,unsigned);
+    void size_auto_assignation(){
+        this->tam_=0;
+        for (size_t i = 0; this->s_[i]!='\0'; i++)
+        {
+            this->tam_++;
+        }
+        this->tam_+=1;
+    }
     char *s_;unsigned tam_;
     class error_handler{
         public:
@@ -41,7 +50,35 @@ public:
     Cadena& operator=(Cadena a);
     Cadena& operator=( char*);
     Cadena& operator+=(Cadena a);
+    inline const char& operator[](size_t i)const{
+        return at(i);
+    };
+    inline bool operator ==(Cadena a){
+        return !strcmp(this->s_,a.s_);
+    }
+    inline bool operator!=(Cadena a){
+        return !(*this==a);
+    }
+    inline bool operator >(Cadena a){
+        if (this->tam_ > a.tam_)
+            return true;
+        else
+            return false;
+    };
+    inline bool operator <(Cadena a){
+        return !(*this > a);
+    };
+    inline bool operator >=(Cadena a){
+        return (*this > a)&&(*this==a);
+    };
+    inline bool operator <=(Cadena a){
+        return (*this < a)&&(*this == a);
+    };   
+
+    
 };
+//Funciones
+Cadena& operator+(Cadena& a,Cadena& b);
 
 
 #endif

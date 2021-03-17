@@ -83,9 +83,6 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/main.cpp">
 			<Option target="EDNL"/>
 		</Unit>
-		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/p2/practica2.h">
-			<Option target="EDNL"/>
-		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/tads/agenEnlazado.h">
 			<Option target="EDNL"/>
 		</Unit>
@@ -96,6 +93,9 @@
 			<Option target="EDNL"/>
 		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/tads/funciones_abin.h">
+			<Option target="EDNL"/>
+		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/tads/practica2.h">
 			<Option target="EDNL"/>
 		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/EDNL/CMakeLists.txt">
