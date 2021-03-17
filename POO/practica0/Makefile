@@ -1,4 +1,5 @@
 all:main
+
 main: main.o fecha.o cadena.o
 	g++  main.o fecha.o cadena.o -o main
 	./main
@@ -15,6 +16,7 @@ cadena.o: Cadena.cpp Cadena.hpp
 
 clean: 
 	rm main.o fecha.o Cadena.o main
+	clear
 
 clean_win:
 	del main.o fecha.o Cadena.o main.exe

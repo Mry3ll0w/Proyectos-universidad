@@ -9,12 +9,7 @@ class Cadena
 private:
     int error_parser(char *,unsigned);
     void size_auto_assignation(){
-        this->tam_=0;
-        for (size_t i = 0; this->s_[i]!='\0'; i++)
-        {
-            this->tam_++;
-        }
-        this->tam_+=1;
+        this->tam_=strlen(this->s_);
     }
     char *s_;unsigned tam_;
     class error_handler{

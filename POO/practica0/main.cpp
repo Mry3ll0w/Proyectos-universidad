@@ -5,7 +5,7 @@
 using namespace std;//Avoid using std:: ....
 
 int main(){
-     Cadena c{"hola"},d{"qwert"};
+     Cadena c{"hola"},d{"qwertt"};
      cout<<c.length()<<", "<<d.length()<<endl;
      c.show();
      d.show();

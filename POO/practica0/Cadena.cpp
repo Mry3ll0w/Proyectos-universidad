@@ -20,14 +20,10 @@ Cadena::Cadena(char* parser_cad, unsigned t)
 };
 
 Cadena::Cadena(char* parser_cad){
-    s_ = new char(sizeof(parser_cad)+2);
-    for (size_t i = 0; i < sizeof(parser_cad)+1; i++)
-    {
-        s_[i]=parser_cad[i];
-        
-    }
+    s_ = new char(strlen(parser_cad)+1);
+    strcpy(s_,parser_cad);
     size_auto_assignation();
-    s_[tam_+1]='\0';
+    
 };
 
 inline Cadena::Cadena(unsigned size){
@@ -42,11 +38,9 @@ inline Cadena::Cadena(){
 Cadena::Cadena(const Cadena &new_cad){
     
     this->tam_=new_cad.tam_;
-    this->s_ = new char(sizeof(tam_));
-    for (size_t i = 0; i < tam_; i++)
-    {
-        this->s_[i]=new_cad.s_[i];
-    }
+    delete this->s_;
+    this->s_ = new char(strlen(new_cad.s_)+1);
+    strcpy(this->s_,new_cad.s_);
 
 };
 
