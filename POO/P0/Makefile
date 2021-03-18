@@ -1,25 +1,23 @@
-ejecutables= test-P0-auto test-P0-consola
-CXX= g++
-CXXFLAGS=-pedantic -g -wall -std=c++11
-CPPFLAGS=-DP0 -I../Test-auto -I
-VPATH = ../Test-auto:..
-clases= fecha.o cadena.o
+all:main
 
-.PHONY: all clean
+main: main.o fecha.o cadena.o
+	g++  main.o fecha.o cadena.o -o main
+	./main
+	
 
-all: $(ejecutables)
+main.o: main.cpp fecha.hpp cadena.hpp
+	g++ -c main.cpp  
 
-test-P0-auto: test-caso0-fecha-auto.o test-caso0-cadena-auto.o \
-test-auto.o cadena.o fecha.o
+fecha.o: fecha.cpp fecha.hpp
+	g++ -c fecha.cpp
 
+cadena.o: cadena.cpp cadena.hpp
+	g++ -c cadena.cpp
 
-test-caso0-fecha-auto.o test-caso0-cadena-auto.o test-auto.o: \
-test-caso0-fecha-auto.cpp test-caso0-cadena-auto.cpp \
-test-auto.cpp test-auto.hpp fecha.hpp cadena.hpp
+clean: 
+	rm main.o fecha.o cadena.o main
+	clear
 
-
-test-fechachadena-consola: test-P0-consola.o $(clases)
-	$(CXX) $(CXXflags) $^ -o $@
-
-clean:
-	@$(rm) $(ejecutables) *.o
+clean_win:
+	del main.o fecha.o cadena.o main.exe
+	cls

@@ -8,6 +8,7 @@ int main(){
      Cadena c{"hola"},d{"qwertt"},a{'a',3};
      c.show();
      d.show();
+     a="bbb";
      a.show();
      return 0;
 }

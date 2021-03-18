@@ -24,7 +24,7 @@ Cadena::Cadena(char parser_chr, unsigned t)
         }
 };
 
-Cadena::Cadena(const char* parser_cad){
+Cadena::Cadena(const char parser_cad[]){
     s_ = new char(strlen(parser_cad)+1);
     tam_=strlen(parser_cad);
     strcpy(s_,parser_cad);
@@ -54,11 +54,11 @@ Cadena::~Cadena()
     delete []s_;//Vaciamos mem
 };
 
-int Cadena::error_parser(char *cad, unsigned size){
+int Cadena::error_parser(const char cad[], unsigned size){
     
     try
     {
-        if (sizeof(cad)>size)
+        if (strlen(cad)>size+1)
         {
             throw error_handler();
         }
@@ -135,7 +135,7 @@ Cadena& Cadena::operator+=(Cadena a){
     return *this;
 }
 
-Cadena& Cadena::operator=(char* parser_str){
+Cadena& Cadena::operator=(const char parser_str[]){
     delete this->s_;
     this->s_ = new char(sizeof(parser_str));
     strcpy(this->s_,parser_str);

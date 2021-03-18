@@ -7,7 +7,7 @@ using namespace std;
 class Cadena
 {
 private:
-    int error_parser(char *,unsigned);
+    int error_parser(const char [],unsigned);
     void size_auto_assignation(){
         this->tam_=strlen(this->s_);
     }
@@ -24,7 +24,7 @@ private:
 public:
     //Constructores
     Cadena(char, unsigned);
-    Cadena(const char*);
+    Cadena(const char[]);
     Cadena(unsigned);
     Cadena();
     Cadena(const Cadena &new_cad); 
@@ -43,7 +43,7 @@ public:
 
     //Operadores declarados fuera para poder usar en ambos lados(excepto el =)
     Cadena& operator=(Cadena a);
-    Cadena& operator=( char*);
+    Cadena& operator=( const char[]);
     Cadena& operator+=(Cadena a);
     inline const char& operator[](size_t i)const{
         return at(i);
