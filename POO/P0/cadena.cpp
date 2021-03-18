@@ -128,16 +128,16 @@ Cadena& Cadena::operator+=(Cadena a){
     strcpy(parser_str,this->s_);
     delete this->s_;
     strcat(parser_str,a.s_);
-    this->s_ = new char(sizeof(parser_str));
+    this->s_ = new char(strlen(parser_str));
     strcpy(this->s_,parser_str);
-    //Falla el sizeof por tanto lo hago por medio del cursor
+    //Falla el strlen por tanto lo hago por medio del cursor
     size_auto_assignation();
     return *this;
 }
 
-Cadena& Cadena::operator=(const char parser_str[]){
+Cadena& Cadena::operator=( const char parser_str[]){
     delete this->s_;
-    this->s_ = new char(sizeof(parser_str));
+    this->s_ = new char(strlen(parser_str));
     strcpy(this->s_,parser_str);
     size_auto_assignation();
     
