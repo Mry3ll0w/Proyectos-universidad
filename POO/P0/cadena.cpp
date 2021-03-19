@@ -51,6 +51,7 @@ Cadena::Cadena(const Cadena &new_cad){
 
 Cadena::~Cadena()
 {
+    tam_=0;
     delete []s_;//Vaciamos mem
 };
 

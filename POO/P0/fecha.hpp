@@ -2,7 +2,7 @@
 #define Fecha_HPP
 
 #include <iostream>
-#include <string>
+#include <cstring>
 #include <ctime>
 using namespace std;
 
@@ -10,17 +10,14 @@ using namespace std;
 class Fecha{
     
     public:
+        //Constantes
+        static const int annomin=1902;
+        static const int annomaximo=2037;
         
-        const int annomin=1902,annomaximo=2037;
         Fecha(int d, int m, int y);
         Fecha(int d,int m);
         Fecha(int d);
         Fecha(string date);//poner Fecha sin anno
-        Fecha(const Fecha &new_date){
-            this->day=new_date.day;
-            this->month=new_date.month;
-            this->year=new_date.year;
-        }
         class invalida{
             public:
                     invalida(int a):input(a){};
