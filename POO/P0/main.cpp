@@ -5,7 +5,7 @@
 using namespace std;//Avoid using std:: ....
 
 int main(){
-     Fecha a,b(3,3,2000),c(b);
+     Fecha b(3,3,2000),c(3),d(3,3),a;
      c.show_date();
      
      return 0;

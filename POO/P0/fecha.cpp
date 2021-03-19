@@ -1,6 +1,6 @@
 #include "fecha.hpp"
 
-Fecha::Fecha(int d,int m,int y){
+Fecha::Fecha(int d,int m,int y):day(d),month(m),year(y){
     
     if (day == 0 && month ==0 && year==0)
     {
@@ -18,8 +18,8 @@ Fecha::Fecha(int d,int m,int y){
             
 };
 
-Fecha::Fecha(int d,int m){
-    if (d == 0 && m ==0)
+Fecha::Fecha(int d,int m):day(d),month(m){
+    if (day == 0 && month ==0)
     {
         Fecha aux;
         this->day=aux.dia();
@@ -39,7 +39,7 @@ Fecha::Fecha(int d,int m){
     
 }
 
-Fecha::Fecha(int d){
+Fecha::Fecha(int d):day(d){
     if (day == 0 )
     {
         Fecha aux;
