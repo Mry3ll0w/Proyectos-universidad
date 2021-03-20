@@ -5,8 +5,7 @@
 using namespace std;//Avoid using std:: ....
 
 int main(){
-     Fecha b(3,3,2000),c(3),d(3,3),a;
-     c.show_date();
-     
+     Cadena a("pepe");
+     a.show();
      return 0;
 }

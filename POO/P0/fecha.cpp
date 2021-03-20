@@ -116,7 +116,7 @@ string Fecha::month_selector(int m){
         }
 }
 
-void Fecha::show_date(){
+void Fecha::show_date()noexcept{
     cout<<day<<" de "<<month_selector(month)<<" de "<<year<<endl;
 }
 
@@ -405,10 +405,10 @@ string Fecha:: Fecha_check(int dd,int mm,int yy){
         {
             throw 2;
         }
-        else if(yy < Fecha::annomin){
+        else if(yy < Fecha::AnnoMin){
             throw 3;
         }
-        else if (yy > Fecha::annomaximo)
+        else if (yy > Fecha::AnnoMaximo)
         {
             throw 4;
         }

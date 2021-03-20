@@ -11,12 +11,12 @@ class Fecha{
     
     public:
         //Constantes
-        static const int annomin=1902;
-        static const int annomaximo=2037;
+        static const int  AnnoMin=1902;
+        static const int AnnoMaximo=2037;
         
-        Fecha(int d, int m, int y);
-        Fecha(int d,int m);
-        Fecha(int d);
+        explicit Fecha(int d, int m, int y);
+        explicit Fecha(int d,int m);
+        explicit Fecha(int d);
         Fecha(string date);//poner Fecha sin anno
         class invalida{
             public:
@@ -31,16 +31,16 @@ class Fecha{
                 int input;
         };
         Fecha();
-        int dia()const{
+        int dia()const noexcept{
             return day;
         }
-        int mes()const{
+        int mes()const noexcept{
             return month;
         }
-        int anno()const{
+        int anno()const noexcept{
             return year;
         }
-        void show_date();
+        void show_date()noexcept;
         Fecha& operator = (Fecha a);
         Fecha& operator ++();
         Fecha& operator --();

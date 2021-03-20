@@ -2,7 +2,7 @@
 #define CADENA_HPP
 
 #include <iostream>
-#include <string.h>
+#include <cstring>
 using namespace std;
 class Cadena
 {
@@ -16,7 +16,6 @@ private:
         public:
             void err(){
                 cout<<"Contruccion de la cadena es erroneo, revise los datos introducidos"<<endl;
-                exit;
             };
         private:
             
@@ -25,19 +24,19 @@ public:
     //Constructores
     Cadena(char, unsigned);
     Cadena(const char[]);
-    Cadena(unsigned);
+    explicit Cadena(unsigned);
     Cadena();
     Cadena(const Cadena &new_cad); 
     ~Cadena();
     
     //Funciones 
-    inline unsigned length()const{
+    inline unsigned length()const noexcept{
         return tam_;
     };
-    inline void show(){
+    inline void show()noexcept{
         cout<<s_<<endl;
     };
-    char* substr(unsigned, unsigned);
+    Cadena substr(unsigned, unsigned);
     const char& at(int)const;//Funcion return
     char& at(int);//Funcion modificadora
 
@@ -45,8 +44,8 @@ public:
     Cadena& operator=(Cadena a);
     Cadena& operator=( const char[]);
     Cadena& operator+=(Cadena a);
-    inline const char& operator[](size_t i)const{
-        return at(i);
+    inline  char& operator[](size_t i)const{
+        return s_[i];
     };
     inline bool operator ==(Cadena a){
         return !strcmp(this->s_,a.s_);

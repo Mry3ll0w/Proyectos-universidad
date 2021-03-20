@@ -27,7 +27,7 @@ Cadena::Cadena(char parser_chr, unsigned t)
 Cadena::Cadena(const char parser_cad[]){
     s_ = new char(strlen(parser_cad)+1);
     tam_=strlen(parser_cad);
-    strcpy(s_,parser_cad);
+    s_=strdup(parser_cad);
 
 };
 
@@ -43,16 +43,16 @@ inline Cadena::Cadena(){
 Cadena::Cadena(const Cadena &new_cad){
     
     this->tam_=new_cad.tam_;
-    delete this->s_;
+    delete []this->s_;
     this->s_ = new char(strlen(new_cad.s_)+1);
-    strcpy(this->s_,new_cad.s_);
+    this->s_=strdup(new_cad.s_);
 
 };
 
 Cadena::~Cadena()
 {
     tam_=0;
-    delete []s_;//Vaciamos mem
+    delete[] s_;//Vaciamos mem
 };
 
 int Cadena::error_parser(const char cad[], unsigned size){
@@ -73,7 +73,7 @@ int Cadena::error_parser(const char cad[], unsigned size){
     return 0;
 }
 
-char* Cadena::substr(unsigned inf_limit,unsigned sup_lim){
+Cadena Cadena::substr(unsigned inf_limit,unsigned sup_lim){
     if (inf_limit > sup_lim)
     {
         swap(inf_limit,sup_lim);
@@ -83,16 +83,15 @@ char* Cadena::substr(unsigned inf_limit,unsigned sup_lim){
         throw out_of_range("Se ha introducido en la funcion un indice fuera de rango");
     }
     else{
-        char* parser_cad;
-        parser_cad = new char((sup_lim - inf_limit)+1);
+        
+       Cadena a((sup_lim - inf_limit)+1);
         size_t k =0;
         for (size_t i = inf_limit; i < sup_lim; i++)
         {
-            parser_cad[k]=s_[i];
+            a[k]=s_[i];
             k++;    
         }
-        parser_cad[k]='\0';
-        return parser_cad;
+        return a;
     }
    
 };
@@ -117,29 +116,30 @@ char& Cadena::at(int i){
 
 Cadena& Cadena::operator =(Cadena b){
     this->tam_=b.tam_;
-    delete this->s_;
-    this->s_ = new char(b.tam_);
-    strcpy(this->s_,b.s_);
+    delete []this->s_;
+    this->s_ = new char[strlen(b.s_)+1];
+    strcpy(this->s_, b.s_);
     return *this;
 }
 
 Cadena& Cadena::operator+=(Cadena a){
     int j=0;
     char *parser_str = new char((this->length()+a.length()));//parser char [a+b];
-    strcpy(parser_str,this->s_);
+    parser_str=strdup(this->s_);
     delete this->s_;
     strcat(parser_str,a.s_);
     this->s_ = new char(strlen(parser_str));
-    strcpy(this->s_,parser_str);
+    this->s_=strdup(parser_str);
     //Falla el strlen por tanto lo hago por medio del cursor
     size_auto_assignation();
+    delete parser_str;
     return *this;
 }
 
 Cadena& Cadena::operator=( const char parser_str[]){
-    delete this->s_;
+    delete []this->s_;
     this->s_ = new char(strlen(parser_str));
-    strcpy(this->s_,parser_str);
+    this->s_=strdup(parser_str);
     size_auto_assignation();
     
     return *this;
