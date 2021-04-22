@@ -8,12 +8,23 @@ Diseñe una función recursiva que calcule la i-ésima cifra de un entero n. Imp
 en C.
 */
 size_t ej_1(int n,int cifra,int buscada){
-    if (cifra==0)
+    if (cifra==0||n<=0)
     {
         return buscada;
     }
-    return ej_1(n=n/10,cifra-1,buscada=n%10);
+    printf("n=%i buscada=%i\n",n,buscada);// 376 /10 = 37 b=6 c=3-1 // 37 %10 = b(7) c=3-2 n=3 // c=0 n=0 3%10=3==> buscada=3
+    return ej_1(n=n/10,cifra-1,buscada=n%10);// 37 % 10==> 7
 } 
+///BONUS cifras de un numero 11234/10 1123 112 11 1 0
+size_t cifras_numero(int n){
+    if (n<=0)
+    {
+        return 0;
+    }
+    return 1 + cifras_numero(n/10); 
+}
+
+///
 
 /*
 Diseñe un algoritmo que localice de forma recursiva, en la misma pasada, el máximo y el mínimo
@@ -21,22 +32,24 @@ de un vector dado no vacío. Implemente dicha función en C.
     - Usamos array size como iterador del vector de bajo nivel
     - Max y min deben comenzar con el primer elemento del array
 */
-int ej_2(int array_size, int *max, int min,int array[]){
-    if (array_size<0)
+
+int ejercicio_2(int s, int max, int *min,int v[]){
+    if (s<0)
     {
-        return min;
-    }
-    if (*max < array[array_size])
-    {
-        *max = array[array_size];
+        return max;
     }
 
-    if (min>array[array_size])
+    if (max < v[s]) 
     {
-        min = array[array_size];
+        max = v[s]; 
     }
 
-    return ej_2(array_size-1,max,min,array);
+    if (*min>v[s])
+    {
+        *min = v[s];
+    }
+
+    return ejercicio_2(s-1,max,min,v);
 }
 
 /**
