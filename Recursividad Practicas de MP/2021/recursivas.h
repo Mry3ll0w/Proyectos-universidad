@@ -68,4 +68,85 @@ int ej3(int arr_size, int v1[] ,int v2[]){
     return (v1[arr_size-1]*v2[arr_size-1])+ej3(arr_size-=1,v1,v2);
 }
 
+/**
+ * @brief 
+ * 4. Dado un vector ordenado crecientemente A[1..n], siendo n ≥ 1, diseñe un algoritmo que 
+ * calcule de forma recursiva la longitud de la escalera más larga, es decir, la longitud 
+ * de la secuencia más larga de valores consecutivos que se encuentre en A. 
+ * Implemente dicha función en C.
+ * @details Recibe un vector ordenado de forma creciente inicializado
+ * sea V [5]={2,1,1,4,5} y max_escalera=0=escalera_temp (valores iniciales)
+ */
+int ejercicio_4_practicas(int v[],int max_escalera, int escalera_temp,int size){
+    if (size<2)
+    {
+        return max_escalera+1;//Ya que empieza en 0 (0+1+1)+1
+    }
+    if (v[size-1]==v[size-2])
+    {
+        escalera_temp++;
+    }
+    if (escalera_temp>max_escalera)
+    {
+        max_escalera=escalera_temp;
+    }
+    else{
+        escalera_temp=0;
+    }
+    
+    ejercicio_4_practicas(v, max_escalera, escalera_temp, size-1);
+}
+
+/**
+ * @brief 
+ * 5. Diseñe una función recursiva que determine si en un vector A de n enteros existen dos parejas
+ * consecutivas de elementos tales que sus sumas sean idénticas. 
+ * Implemente dicha función en C.
+ * @details 
+ * Precondicion==>Recibe v (sea int v[]={1,1,1,1,4,5,6,2}, un array de bajo de ejemplo), para iterar usamos el 
+ * entero size>0, aunque seria mas optimo usar el tipo size_t para iterar de la libreria stdlib.h, 
+ * necesaria para la ejecuion de la misma (debido a que nunca pude tener valores<0).
+ * En el caso base tenemos que si el size del vector no es menor 
+ * 
+ */
+#define true 1
+#define false 0
+typedef int bool;
+bool ejercicio_5_practicas(int v[], int size){
+    if (size<4)
+    {
+        return false;
+    }
+    if ((v[size-1]+v[size-2])==(v[size-3]+v[size-4]))
+    {
+        return true;
+    }
+    ejercicio_5_practicas(v,size-1);
+}
+
+/**
+ * @brief Diseñe un algoritmo que calcule de forma recursiva la suma de todos los elementos de un vector A
+ * de n enteros que cumplen la siguiente propiedad: 
+ * 
+ * @details 
+ * Precondicion==> Recibe un vector de enteros v inicializado previamente
+ * y su dimension como un entero size.
+ * Aunque aunque seria mas optimo usar el tipo size_t para iterar de la libreria stdlib.h, 
+ * necesaria para la ejecuion de la misma (debido a que nunca pude tener valores<0), mediante #include <stdlib.h>
+ * Ademas recibe parametro entero result donde iremos almacenando la suma de los elementos que cumplan la condicion dada
+ * 
+ * Postcondicion==> Devuelve la suma de todos los elementos que cumplan las condiciones dadas (result)
+ */
+int ejercicio_6_practicas(int v[], int size, int result ){
+    if ((size/2)-1<=1)
+    {
+        return result;
+    }
+    
+    if(v[size]>v[size*2] && v[size]>v[(size*2)+1]){
+            result+=v[size];
+    }
+
+    ejercicio_6_practicas(v,size-1,0);
+}
 #endif  
