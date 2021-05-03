@@ -56,7 +56,7 @@ int ejercicio3_seminario7(int n, int k){
 
 //Comprueba que sea capicua, recibe el numero divido en un vector
 int ej4_sem7_capicua(int v[],int i0,int in,int size){
-    printf("%i %i\n",v[i0],v[in-1]);
+    
     if (i0==size||in<1)
     {
         return 1;
@@ -68,8 +68,38 @@ int ej4_sem7_capicua(int v[],int i0,int in,int size){
     ej4_sem7_capicua(v,i0+1,in-1,size);
 }
 
-int ejercicio4_sem7_llamada(int v[],int size){
-    //return ej4_sem7_capicua(v,0,size,size)==ej4_sem7_dec_cre(v,0,size/2,size);
+int ej4_sem7_dec_cre(int v[],int it, int size){
+    //caso base
+    if (it==size){
+        return 1;//si el vector es de 0 elementos o se ha recorrido por completo devuelve cierto
+    }
+    if ((it+1)<size/2)//Comprobamos la primera mitad (valores de i < size/2)
+    {
+        if (v[it]>v[it+1])
+        {
+            return 0; //No es creciente su primera mitad, por tanto sera falso que sea monte
+        }
+        
+    }
+
+    if ((it>=size/2)&&(it+1<size))//comprobamos la segunda mitad del vector (valores de i >= que size/2)
+    {
+        if (v[it]<v[it+1])
+        {
+            return 0;//No es decreciente su segunda mitad, por tanto sera falso que sea monte
+        }
+        
+    }
+    
+    ej4_sem7_dec_cre(v,it+1,size);
 }
+
+int ejercicio4_sem7_llamada(int v[],int size){
+    //devuelve el la comparacion de ambos enteros, es decir si es cierto en capicua y creciente/dec sera cierto
+    return ej4_sem7_capicua(v,0,size,size) && ej4_sem7_dec_cre(v,0,size);
+}
+
+/* ------------------------------- EJERCICIO 5 ------------------------------ */
+
 
 #endif

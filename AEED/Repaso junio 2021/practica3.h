@@ -91,15 +91,16 @@ void ejercicio4(){
  *  5) void retrasar_cursor(size_t posicion)
  *      Precondicion==> posicion tiene que ser menor<=0
  *      Postcondicion==> Situa el tope de esa pila en esa posicion
+ *  
  */    
-        
+template<typename t>       
 class Linea_Texto
 {
 private:
     size_t tam_linea;
     size_t posicion_actual;
-    PilaEnla<char> trasCursor;
-    PilaEnla<char>linea_t;   
+    PilaEnla<t> trasCursor;
+    PilaEnla<t>linea_t;   
 public:
     Linea_Texto():posicion_actual(0),tam_linea(0){}//Vacio ya que no necesita parametros de inicializacion ya que la linea de texto es vacia
     inline void insertar_caracter(char c){linea_t.push(c);tam_linea++;posicion_actual++;}
@@ -131,6 +132,7 @@ public:
             salida+=trc.tope();
             trc.pop();
         }
+        reverse(salida.begin(), salida.end());
         while (actual.vacia()!=true)
         {
 
@@ -140,6 +142,12 @@ public:
         reverse(salida.begin(),salida.end());
         cout<<salida<<endl;
     }
+
+    inline void sobreescribir_cursor(t mod)noexcept{
+        trasCursor.tope()=mod;
+        
+    }
    // ~Linea_Texto();
 };
 
+//Ejercicio 
