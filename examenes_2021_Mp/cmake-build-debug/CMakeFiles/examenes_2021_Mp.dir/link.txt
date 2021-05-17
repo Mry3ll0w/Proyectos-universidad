@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\examenes_2021_Mp.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\examenes_2021_Mp.dir/objects.a @CMakeFiles\examenes_2021_Mp.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\examenes_2021_Mp.dir/objects.a -Wl,--no-whole-archive -o examenes_2021_Mp.exe -Wl,--out-implib,libexamenes_2021_Mp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\examenes_2021_Mp.dir\linklibs.rsp

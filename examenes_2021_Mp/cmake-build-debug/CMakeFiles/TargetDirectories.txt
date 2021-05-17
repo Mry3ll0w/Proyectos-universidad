@@ -1,0 +1,3 @@
+D:/Proyectos/Proyectos-universidad/examenes_2021_Mp/cmake-build-debug/CMakeFiles/examenes_2021_Mp.dir
+D:/Proyectos/Proyectos-universidad/examenes_2021_Mp/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Proyectos/Proyectos-universidad/examenes_2021_Mp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
