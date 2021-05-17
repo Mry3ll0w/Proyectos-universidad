@@ -500,4 +500,72 @@ int llamada_ex_feb_2018(int n){
     return t;
 }
 
+void ej_9_practicas(int f,int c,int it_f,int it_c,int m[][c]){
+    
+    if (it_f<f)
+    {
+        
+        if (it_c>=c)//Reseteamos las columnas y pasamos a la siguiente fila
+        {
+            it_c=0;
+            ++it_f;
+        }
+
+        //CASO DEL PRIMERA FILA Y COLUMNA 1 0 0 0 0..
+        if (it_f==0)
+        {
+            if (it_c==0)//para el primer elemento de la matriz tiene que empezar en 1
+            {
+                m[it_f][it_c]=1;
+            }else
+                m[it_f][it_c]=0;
+            
+        }
+        if(it_f>0){
+            if (it_c==0)//primer elemento de la fila es igual al ultimo de la anterior
+            {
+                m[it_f][it_c]=m[it_f-1][it_f-1];
+            }
+            else{//Resto de los elementos
+                m[it_f][it_c]=m[it_f][it_c-1]+m[it_f-1][it_c-1];//Los restantes elementos se generan como la suma de ...
+            }
+            
+        }
+        if (it_c>it_f)//Correccion de la triangular
+        {
+            m[it_f][it_c]=0;
+        }
+        ej_9_practicas(f,c,it_f,it_c+1,m);//Iteracion de la matriz
+    }
+}
+
+void ej_9_practicas_normalizar(int f,int c,int it_f,int it_c, int m[][c] ){
+    if (it_f<f)
+    {
+        if (it_c>=c)
+        {
+            it_c=0;
+            it_f++;
+        }
+        m[it_f][it_c]=m[it_c][it_f];
+        ej_9_practicas_normalizar(f,c,it_f,it_c+1,m);
+    }
+    
+}
+void llamada_ej_9_practicas(int n){
+    int m[n][n];//Declaramos la matriz de nxn elementos que vamos a rellenar
+    ej_9_practicas(n,n,0,0,m);
+    ej_9_practicas_normalizar(n,n,0,0,m);
+    printf("\n\n");
+
+    for (size_t i = 0; i < n; i++)
+    {
+        for(size_t j=0;j<n;++j){
+            printf("%i ",m[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
+
 #endif  

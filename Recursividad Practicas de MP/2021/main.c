@@ -4,6 +4,6 @@
 #include "seminarios.h"
 
 int main(){
-    printf("%i\n",llamada_ex_feb_2018(12));
+    llamada_ej_9_practicas(5);
     return 0;
 }
