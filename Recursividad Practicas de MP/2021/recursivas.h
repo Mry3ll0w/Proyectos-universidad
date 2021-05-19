@@ -275,42 +275,6 @@ int sumatorio(int v[], int min, int max){
     
 }
 
-/* -------------------------------- EJERCICIO 9 ------------------------------- */
-void ej9_sum_matriz();
-void ej9_matriz(int f, int c,int f_it,int c_it, int m[][c]){
-    if (f<f_it)//caso general
-    {
-        //inicializamos la primera linea
-        if (f_it==0 && c_it==0)
-        {
-            m[f_it][c_it]=1;
-        }
-        if (f_it==0 && c_it>0)
-        {
-            m[f_it][c_it]=0;
-        }
-        
-        if (f_it>1)
-        {
-            
-        }
-        
-         
-       
-        
-    }
-    if (c==c_it)
-    {
-        c_it=0;
-        f_it+=1;
-    }
-    //ej9_inicializar_matriz(f,c,f_it+1,c_it+1,m);
-}
-/*
-void ej9_llamada(int n, int m[][]){
-    
-}
-*/
 //Procedimiento recursivo para obtener los
 void rec_jun_21_lower(int f, int c,int it_c,int m[][c],int v_sal[],int it_v,int lowest){
     if (f>0)
@@ -499,5 +463,19 @@ int llamada_ex_feb_2018(int n){
     
     return t;
 }
+
+/**
+ * @brief 
+ * Parejas 238 - 761
+ */
+void rec_ex_junio_2011(int n){
+    
+    if (n>0)
+    {
+        printf("%i ", 9-(n%10) );
+        rec_ex_junio_2011(n/10);
+    }
+
+} 
 
 #endif  
