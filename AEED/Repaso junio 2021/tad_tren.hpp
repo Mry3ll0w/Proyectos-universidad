@@ -2,7 +2,7 @@
 #define TAD_TREN_HPP
 #include <iostream>
 #include <cassert>
-#include <pila_enla.h>
+#include "tads implementados profesorado/pila_enla.h"
 
 typedef struct{
     size_t id;

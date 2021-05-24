@@ -2,6 +2,9 @@
 #include "practica3.hpp"
 #include "practica5.hpp"
 #include "practica6.hpp"
+#include "tad_texto.hpp"
+#include "tad_infijo.hpp"
+#include "tad_dict.hpp"
 #include <string>
 #include <algorithm>
 
@@ -15,12 +18,9 @@ void show_list(ListaEnla<t>&l){
 }
 
 int main(){
-    num_binario n("00001");
-    num_binario a("11110");
-    n.show();
-    n.shift_left(2);
-    //std::cout<<std::endl;
-    n.show();
+   
+    cout<<op_infjo("12+3+")<<endl;
+
     return 0;
 }
 

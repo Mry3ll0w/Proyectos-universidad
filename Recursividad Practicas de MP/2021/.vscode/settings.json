@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "limits": "cpp",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "seminarios.h": "c",
+        "stdio.h": "c"
     }
 }

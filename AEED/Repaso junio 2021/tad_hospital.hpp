@@ -2,7 +2,7 @@
 #define TAD_HOSPITAL_HPP
 #include <iostream>
 #include <cassert>
-#include <ListaEnla.h>
+#include "tads implementados profesorado/ListaEnla.h"
 
 typedef struct {
     size_t gravedad;

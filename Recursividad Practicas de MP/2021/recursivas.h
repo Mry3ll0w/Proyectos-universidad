@@ -478,4 +478,36 @@ void rec_ex_junio_2011(int n){
 
 } 
 
+/**
+ * @brief 
+ *  Determina si una matriz es cuadrada o no lo es 
+ * @return 1 si es cuadrada 2 no lo es 
+ */
+int rec_feb_2017(int f, int c ,int it_temp,int m[][c]){
+    if (f<1)
+    {
+        return 1;
+    }
+    
+    if (m[f][c]!=m[c][f]){
+        return 0;
+    }
+    if (c<1)
+    {
+        c=it_temp;
+        f-=1;
+    }
+
+    rec_feb_2017(f,c-1,it_temp,m);
+
+}
+void llamada_feb_2017(int f, int c,int m[][c]){
+
+    if (rec_feb_2017(f,c,f,m)==1)
+    {
+        printf("La matriz es cuadrada\n");
+    }
+    else
+        printf("la matriz no es cuadrada\n");
+}
 #endif  
