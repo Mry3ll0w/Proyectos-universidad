@@ -322,7 +322,7 @@ int rec_jun_21_llamada(int f,int c,int m[][c],int vec_can[f] ){
 void ex_enero_21(int n,int *v,int size,int it){
     if (size>0)
     {
-        //printf("%i %i\n",v[it-1],v[it]);
+        
         if (v[it-1]%v[it]==0 && v[it]!=0 && v[it-1]!=0)
         {
             v[it-1]= 0;

@@ -1,16 +1,49 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "examenes.h"
+
+void print_matrix(int f,int c, int f_it, int c_it,int m[][c]);
+int matrix_inversa(int f,int c, int f_it, int c_it,int m[][c]);
 int main(){
-    int v[]={4, 8, 16, 24, 36};
-    ex_enero_21(4,v,5,0,1);
-    for (size_t i = 0; i < 5; i++)
-    {
-        printf("%i, ",v[i]);
-    }
-    printf("\n");
+    int m[4][4]={{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}};
 
-
-
+    print_matrix(4,4,0,0,m);
+    //void print_matrix(int f,int c, int f_it, int c_it,int m[][c]);
+    printf("%i\n",matrix_inversa(4,4,0,0,m));
     return 0;
+}
+void print_matrix(int f,int c, int f_it, int c_it,int m[][c]){
+
+    if (f_it<=f-1)//Caso general
+    {
+        if (c_it>c-1)
+        {
+            c_it=0;
+            f_it++;
+            printf("\n");
+        }
+        printf("%i ",m[f_it][c_it]);
+
+        print_matrix(f,c,f_it,c_it+1,m);
+    }
+
+
+}
+int matrix_inversa(int f,int c, int f_it, int c_it,int m[][c]){
+
+    if (f_it>f)//Caso base
+    {
+        return  0;
+    }
+    if (c_it>c)
+    {
+        c_it=0;
+        f_it++;
+        printf("\n");
+    }
+    if (m[f_it][c_it]!=m[c_it][f_it])
+    {
+        return -1;
+    }
+    matrix_inversa(f,c,f_it,c_it+1,m);
+
 }

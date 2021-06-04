@@ -4,7 +4,7 @@
 #include "seminarios.h"
 
 int main(){
-    int m[4][4]={{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}};
-    llamada_feb_2017(4,4,m);
+    int v[4]={2,5,4,8};
+    ex_enero_21(4,v,4,0);
     return 0;
 }
