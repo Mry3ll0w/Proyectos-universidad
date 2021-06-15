@@ -6,6 +6,7 @@
 #include "tad_infijo.hpp"
 #include "tad_dict.hpp"
 #include "tad_simbolo.hpp"
+#include "ex_junio_2021.hpp"
 #include <string>
 #include <algorithm>
 
@@ -19,20 +20,6 @@ void show_list(ListaEnla<t>&l){
 }
 
 int main(){
-
-    ListaEnla<int>n;
-    n.insertar(1,n.fin());
-    n.insertar(2,n.fin());
-    n.insertar(3,n.fin());
-    if (n.buscar(9)==n.fin())
-    {
-        std::cout<<"igual al fin\n";
-    }
-    else if (n.buscar(2)==n.fin())
-    {
-        std::cout<<"no igual al fin\n";
-    }
-    
     
     return 0;
 }

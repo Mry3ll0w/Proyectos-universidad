@@ -34,7 +34,22 @@ where
 /*
 Listado de artículos y autores por tema. 
 El listado debe mostrar el nombre del tema, la
-cantidad de artículos de ese tema, estén publicados o no, y la cantidad de autores que
+cantidad de artículos de ese tema, estén publicados o no, 
+y la cantidad de autores que
 han escrito artículos de ese tema.
 */
+
+select 
+	t.name,
+    count(*)
+    from
+		articles a,Topics t
+	left join Revisions
+    on a.id = Revisions.articles_id
+    ;
+		
+    
+
+
+
 

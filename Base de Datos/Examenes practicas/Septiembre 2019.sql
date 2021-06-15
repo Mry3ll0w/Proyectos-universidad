@@ -22,6 +22,50 @@ where
     and
     u.email like '%gmail%'
 group by u.username
-order by tg.name
+order by tg.name 
 ;
+
+
+/*
+2)
+Mostrar un listado que muestre:
+el nombre, apellido y número de los cuestionarios 
+rellenos de aquellos usuarios que, además, son dueños de un grupo. Los usuarios
+deberán ordenarse alfabéticamente por nombre y apellidos:
+*/
+
+select 
+	u.first_name 'Nombre',
+    u.last_name 'Apellido',
+    count(*) 'Numero de encuestas Rellenas'
+    
+from 
+	user u
+where
+	u.username =
+    (
+		select 
+			owner
+		from 
+			therapy_group
+		group by owner
+    )
+	and
+    u.username =
+    (
+		select 
+			username
+		from 
+			questionnaire_taken 
+	)
+    group by u.username
+    order by u.first_name,u.last_name
+;
+
+
+	
+    
+    
+    
+	
 	
