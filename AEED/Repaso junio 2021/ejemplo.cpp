@@ -1,6 +1,7 @@
 #include <iostream>
 #include "tads implementados profesorado/pila_enla.h"
 #include "tads implementados profesorado/Cola_Din.h"
+#include "tads implementados profesorado/ListaEnla.h"
 using namespace std;//Avoid using std:: ....
 
 int main(){
@@ -33,6 +34,30 @@ int main(){
     }
     cout<<endl<<endl;
 
+    ListaEnla<int> l;
+    
+    l.insertar(1,l.fin());//Insertamos en el final de forma general (salvo excepciones)
+    l.insertar(2,l.fin());//Insertamos en el final de forma general (salvo excepciones)
+    l.insertar(3,l.fin());//Insertamos en el final de forma general (salvo excepciones)
+    l.insertar(4,l.fin());//Insertamos en el final de forma general (salvo excepciones)
+    
+    auto pos = l.primera();
+    while (pos!=l.fin())
+    {
+        cout<<l.elemento(pos)<<' ';
+        pos=l.siguiente(pos);
+    }
 
+    bool temp = l.buscar(3)==l.fin();
+    cout<<endl<<temp<<endl;
+    l.eliminar(l.buscar(3));
+    temp = l.buscar(3)==l.fin();
+    cout<<temp<<endl;
+    
+    for (auto i = l.primera(); i !=l.fin(); i=l.siguiente(i))
+    {
+        cout<<l.elemento(i)<<' ';
+    }
+    
     return 0;
 }
