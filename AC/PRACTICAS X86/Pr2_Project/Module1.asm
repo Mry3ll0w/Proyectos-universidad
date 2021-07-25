@@ -46,5 +46,6 @@ fin_while:
 
 
 
+
 	Xor Eax, Eax
 	Invoke ExitProcess, Eax
