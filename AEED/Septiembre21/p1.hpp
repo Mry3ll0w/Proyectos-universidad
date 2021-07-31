@@ -41,7 +41,7 @@ public:
     void borrar_cursor();       //ok
     void borrar_anterior_cursor();//ta weno
     void insertar_en_cursor(const char&);//finiquitado de wanna wana kikon
-    void sobre_escribe_cursor(const char&);
+    void sobre_escribe_cursor(const char&);//finiquitado
 };
 
 void texto::avanzar_cursor(){
