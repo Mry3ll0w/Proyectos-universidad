@@ -1,0 +1,64 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/hospital.h
+iostream
+-
+../tads p/ListaEnla.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/ListaEnla.h
+vector
+-
+
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/main.cpp
+iostream
+-
+tad_texto.hpp
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tad_texto.hpp
+p2.hpp
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/p2.hpp
+tads p/pila_enla.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/pila_enla.h
+tads p/Cola_Din.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/Cola_Din.h
+tads p/ListaEnla.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/ListaEnla.h
+examenes/hospital.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/hospital.h
+
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/p2.hpp
+iostream
+-
+tads p/Cola_Din.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/Cola_Din.h
+cassert
+-
+
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tad_texto.hpp
+iostream
+-
+string
+-
+tads p/ListaEnla.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/ListaEnla.h
+
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/Cola_Din.h
+cassert
+-
+iostream
+-
+
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/ListaEnla.h
+cassert
+-
+
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/pila_enla.h
+cassert
+-
+iostream
+-
+
