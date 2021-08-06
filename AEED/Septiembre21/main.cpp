@@ -9,7 +9,5 @@ using namespace std;//Avoid using std:: ....
 #include "examenes/hospital.h"
 
 int main(){
-    hospital h (3,3);
-    paciente p (3,3);
-    h.ingresar_paciente(p);
+
 }

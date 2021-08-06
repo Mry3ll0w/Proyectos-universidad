@@ -30,7 +30,7 @@ class hospital{
 
 paciente hospital::min_gravedad(ListaEnla<paciente> &l) {
     paciente p = l.elemento(l.primera());
-    for (auto i = l.primera(); i != l.fin(); l.siguiente(i)) {
+    for (auto i = l.primera(); i != l.fin(); i=l.siguiente(i)) {
         if (p.gr() > l.elemento(i).gr())
             p = l.elemento(i);
     }
@@ -43,29 +43,32 @@ void hospital::ingresar_paciente(const paciente &p) {
             paciente temp = min_gravedad(uci);
             planta.insertar(temp , planta.fin());//Metemos en planta el paciente de menor gravedad de la uci
             ListaEnla<paciente>::posicion i;
-            for (i = uci.primera(); i !=uci.fin() || uci.elemento(i).get_id() == temp.get_id(); i=uci.siguiente(i));
+            for (i = uci.primera(); i !=uci.anterior(uci.fin()) || uci.elemento(i).get_id() == temp.get_id(); i=uci.siguiente(i));
             //Avanzamos el iterador hasta el paciente buscado
-            uci.eliminar(i);// y lo elimnamos de la uci
+            uci.eliminar(uci.anterior(i));// y lo elimnamos de la uci
             ++s_uci;
             --s_planta;
         }
         else{
             uci.insertar(p, uci.fin());
-            ++s_uci;
+            --s_uci;
         }
     }
-    if(s_planta <=0){
-        paciente temp = min_gravedad(planta);
-        ListaEnla<paciente>::posicion i;
-        for (i = planta.primera(); i !=planta.fin() || planta.elemento(i).get_id() == temp.get_id(); i=planta.siguiente(i));
-        //Avanzamos el iterador hasta el paciente buscado
-        planta.eliminar(i);
-        ++s_planta;
+    if (p.gr()>=6){
+        if(s_planta <=0){
+            paciente temp = min_gravedad(planta);
+            ListaEnla<paciente>::posicion i;
+            for (i = planta.primera(); i !=planta.anterior(planta.fin()) || planta.elemento(i).get_id() == temp.get_id(); i=planta.siguiente(i));
+            //Avanzamos el iterador hasta el paciente buscado
+            planta.eliminar(i);
+            ++s_planta;
+        }
+        else{
+            --s_planta;
+            planta.insertar(p,planta.fin());
+        }
     }
-    else{
-        --s_planta;
-        planta.insertar(p,planta.fin());
-    }
+
 }
 
 void hospital::muerte(const paciente &p) {
@@ -91,13 +94,15 @@ void hospital::alta(const paciente &p) {
 }
 
 void hospital::list_uci() {
-    for(auto i = uci.primera(); i !=uci.fin(); uci.siguiente(i)){
+    std::cout<<"ESTADO DE LA UCI"<<std::endl;
+    for(auto i = uci.primera(); i !=uci.fin(); i=uci.siguiente(i)){
         std::cout<<uci.elemento(i).get_id()<<"\t"<<uci.elemento(i).gr()<<std::endl;
     }
 }
 
 void hospital::list_planta() {
-    for(auto i = planta.primera(); i !=planta.fin(); planta.siguiente(i)){
+    std::cout<<"ESTADO DE LA PLANTA"<<std::endl;
+    for(auto i = planta.primera(); i !=planta.fin(); i=planta.siguiente(i)){
         std::cout<<planta.elemento(i).get_id()<<"\t"<<planta.elemento(i).gr()<<std::endl;
     }
 }
@@ -106,14 +111,14 @@ void hospital::list_gravity(size_t gravedad, size_t lugar) {
     assert(lugar == 1 || lugar == 2);
     if (lugar == 1 ){
         //listamos la uci
-        for(auto i = uci.primera(); i !=uci.fin(); uci.siguiente(i)){
+        for(auto i = uci.primera(); i !=uci.fin(); i=uci.siguiente(i)){
             if (uci.elemento(i).gr()==gravedad){
                 std::cout<<uci.elemento(i).get_id()<<std::endl;
             }
         }
     }
     else{//si no es 1 es 2 por assert
-        for(auto i = planta.primera(); i !=planta.fin(); planta.siguiente(i)){
+        for(auto i = planta.primera(); i !=planta.fin(); i=planta.siguiente(i)){
             if (planta.elemento(i).gr()==gravedad){
                 std::cout<<planta.elemento(i).get_id()<<std::endl;
             }
