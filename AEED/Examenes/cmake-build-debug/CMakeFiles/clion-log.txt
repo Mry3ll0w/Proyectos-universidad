@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Proyectos\Proyectos-universidad\AEED\Examenes
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" D:\Proyectos\Proyectos-universidad\AEED\Examenes
 -- The C compiler identification is GNU 9.2.0
 -- The CXX compiler identification is GNU 9.2.0
 -- Detecting C compiler ABI info
