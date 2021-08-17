@@ -11,7 +11,7 @@ public:
 	PilaEnla(const PilaEnla<T>& P); //ctor. de copia
 	PilaEnla<T>& operator =(const PilaEnla<T>& P); // asignacion
 	bool vacia() const;
-	const basic_string<char> tope() const;
+	const T tope() const;
 	void pop();
 	void push(const T& x);
 	~PilaEnla(); // destructor
@@ -54,7 +54,7 @@ inline bool PilaEnla<T>::vacia() const
 }
 
 template <typename T>
-inline const basic_string<char> PilaEnla<T>::tope() const
+inline const T PilaEnla<T>::tope() const
 {
 	assert(!vacia());
 	return tope_->elto;

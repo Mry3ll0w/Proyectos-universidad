@@ -98,6 +98,9 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/hospital.h">
 			<Option target="Septiembre21"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/tren.h">
+			<Option target="Septiembre21"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/main.cpp">
 			<Option target="Septiembre21"/>
 		</Unit>

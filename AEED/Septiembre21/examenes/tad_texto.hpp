@@ -2,7 +2,7 @@
 #define TAD_TEXTO_HPP
 #include <iostream>
 #include <string>
-#include "tads p/ListaEnla.h"
+#include "../tads p/ListaEnla.h"
 class texto
 {
 private:

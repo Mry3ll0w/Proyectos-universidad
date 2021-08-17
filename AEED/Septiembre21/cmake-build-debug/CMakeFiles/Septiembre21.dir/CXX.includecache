@@ -14,6 +14,12 @@ D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/Cola_Din.h
 string
 -
 
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/tren.h
+iostream
+-
+../tads p/pila_enla.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/pila_enla.h
+
 D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/main.cpp
 iostream
 -
@@ -21,6 +27,8 @@ examenes/consultorio.h
 D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/consultorio.h
 tads p/ListaEnla.h
 D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/ListaEnla.h
+examenes/tren.h
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/tren.h
 
 D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/Cola_Din.h
 cassert
@@ -30,5 +38,11 @@ iostream
 
 D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/ListaEnla.h
 cassert
+-
+
+D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/tads p/pila_enla.h
+cassert
+-
+iostream
 -
 
