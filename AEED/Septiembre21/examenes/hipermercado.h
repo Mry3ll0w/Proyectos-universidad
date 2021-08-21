@@ -1,104 +1,98 @@
 #ifndef SEPTIEMBRE21_HIPERMERCADO_H
 #define SEPTIEMBRE21_HIPERMERCADO_H
 #include<iostream>
-#include "../tads p/ListaEnla.h"
+#include <string>
 struct caja{
-    caja(size_t id_c,size_t id=0):id_cajero(id),recaudacion(0.00),id_caja(id_c),activa(false){}
-    double recaudacion;
+    size_t id;
     bool activa;
-    size_t id_cajero,id_caja;
+    std::string id_caj;
+    double facturacion;
+    caja():activa(false),facturacion(0.00){}
 };
 class hipermercado{
-    ListaEnla<caja>linea_caja;
+    caja linea_caja[50];
     double total_dia;
-    public:
-        hipermercado():total_dia(0.00){
-            for (int i = 0; i < 50; ++i) {
-                //Al tener como maximo 50 cajas funcionales metemos 50 cajas y 10 funcionando
-                caja temp(i);
-                if(i<10){
-                    temp.id_cajero=i;
-                    temp.activa=true;
-                }
-                linea_caja.insertar(temp,linea_caja.fin());
-            }
+    size_t check_activa();
+public:
+    hipermercado(){
+        for (int i = 0; i <50 ; ++i) {
+            linea_caja[i].id = i+1; //simplemente metemos el id para que tenga cierto sentido
         }
-        void abrir_caja(const size_t id_caja,const size_t id_cajero);
-        void cerrar_caja(const size_t id_caja);
-        void cobrar_cliente(const size_t id,double venta);
-        void cambiar_cajero(size_t id_caja, size_t id_cajero);
-        void cambiar_turno();
-        void cerrar_hipermercado();
-        ~hipermercado()=default;
+    }
+    ~hipermercado()=default;
+    //assert en todo lo que tenga id debe ser >0 y <50
+    void abrir_caja(size_t id,std::string id_cajero);
+    double cerrar_caja(size_t id);
+    void cobrar_caja(size_t id,double cobro);
+    void sustituye_cajero(size_t id,std::string new_id);//debe estar activa
+    double cambiar_turno();
+    double cerrar_hipermercado();
+
+
 };
 
-void hipermercado::abrir_caja(const size_t id_caja, const size_t id_cajero) {
-    auto i = linea_caja.primera();
-    while (i != linea_caja.fin()){
-        if (id_caja==linea_caja.elemento(i).id_caja){
-            linea_caja.elemento(i).activa=true;
-            linea_caja.elemento(i).id_cajero=id_cajero;
-            break;
-        }
-        i=linea.siguiente(i);
+void hipermercado::abrir_caja(size_t id, std::string id_cajero) {
+    assert(id>0 && id<50);
+    if (linea_caja[id-1].activa)
+        linea_caja[id-1].id_caj=id_cajero;
+    else{
+        linea_caja[id-1].id_caj=id_cajero;
+        linea_caja[id-1].activa=true;
     }
 }
 
-void hipermercado::cerrar_caja(const size_t id_caja) {
-    auto i = linea_caja.primera();
-    while (i != linea_caja.fin()){
-        if (id_caja==linea_caja.elemento(i).id_caja){
-            linea_caja.elemento(i).activa=false;
-            linea_caja.elemento(i).id_cajero=-1;
-            total_dia+=linea_caja.elemento(i).recaudacion;
-            linea_caja.elemento(i).recaudacion=0;
-            break;
-        }
-        i=linea.siguiente(i);
+double hipermercado::cerrar_caja(size_t id) {
+    //check <10
+    assert(id>0 && id<50 && check_activa()>10);
+    if (!linea_caja[id-1].activa)
+        linea_caja[id-1].id_caj=" ";//vaciamos el id del cajero
+    else{
+        linea_caja[id-1].id_caj=" ";
+        linea_caja[id-1].activa=false;
     }
+    double temp =linea_caja[id-1].facturacion;
+    linea_caja[id-1].facturacion = 0;
+    return temp;
 }
 
-void hipermercado::cobrar_cliente(const size_t id,double venta) {
-    auto i = linea_caja.primera();
-    while (i != linea_caja.fin()){
-        if (id_caja==linea_caja.elemento(i).id_caja){
-            linea_caja.elemento(i).recaudacion+=venta;//Suma a la recaudacion de la caja
-            break;
-        }
-        i=linea.siguiente(i);
-    }
+void hipermercado::cobrar_caja(size_t id, double cobro) {
+    assert(id>0 && id<50);
+    linea_caja[id-1].facturacion+=cobro;
 }
 
-void hipermercado::cambiar_cajero(size_t id_caja, size_t id_cajero) {
-    auto i = linea_caja.primera();
-    while (i != linea_caja.fin()){
-        if (id_caja==linea_caja.elemento(i).id_caja){
-            linea_caja.elemento(i).id_cajero= id_cajero;
-            break;
-        }
-        i=linea.siguiente(i);
-    }
+void hipermercado::sustituye_cajero(size_t id, std::string new_id) {
+    assert(id>0 && id<50 && linea_caja[id-1].activa);
+    linea_caja[id-1].id_caj=new_id;
 }
 
-void hipermercado::cambiar_turno() {
-    auto i = linea_caja.primera();
-    while (i != linea_caja.fin()){
-        if (linea_caja.elemento(i).activa){
-            total_dia+=linea_caja.elemento(i).recaudacion;
-            linea_caja.elemento(i).recaudacion=0;
+double hipermercado::cambiar_turno() {
+    double total_t=0;
+    for (int i = 0; i < 50; ++i) {
+        if (linea_caja[i].activa){
+            total_t+= linea_caja[i].facturacion;//corregir el desfase por eso de 1 a 51
+            linea_caja[i].facturacion=0;
         }
-        i=linea.siguiente(i);
     }
+    //Sumamos al total la recaudacion
+    total_dia+=total_t;
+    return total_t;
 }
 
-void hipermercado::cerrar_hipermercado() {
-    auto i = linea_caja.primera();
-    cambiar_turno();
-    while (i != linea_caja.fin()){
-        linea_caja.elemento(i).activa=false;
-        i=linea.siguiente(i);
+double hipermercado::cerrar_hipermercado() {
+    for (int i = 0; i < 50 ; ++i) {
+        if (linea_caja[i].activa)
+            total_dia += cerrar_caja(i);
     }
+    return total_dia;
+}
 
+size_t hipermercado::check_activa() {
+    size_t cont=0;
+    for(auto &i :linea_caja ){
+        if (i.activa)
+            ++cont;
+    }
+    return cont;
 }
 
 #endif //SEPTIEMBRE21_HIPERMERCADO_H
