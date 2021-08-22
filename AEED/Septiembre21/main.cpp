@@ -4,6 +4,6 @@ using namespace std;//Avoid using std:: ....
 #include "tads p/ListaEnla.h"
 #include "examenes/hipermercado.h"
 int main(){
-
+    
 
 }

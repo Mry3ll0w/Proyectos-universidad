@@ -3,8 +3,7 @@
 
 CMakeFiles/Septiembre21.dir/main.cpp.obj: \
  ../examenes/consultorio.h \
- ../examenes/tren.h \
+ ../examenes/hipermercado.h \
  ../main.cpp \
  ../tads\ p/Cola_Din.h \
- ../tads\ p/ListaEnla.h \
- ../tads\ p/pila_enla.h
+ ../tads\ p/ListaEnla.h

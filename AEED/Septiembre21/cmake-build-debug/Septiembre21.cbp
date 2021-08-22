@@ -89,6 +89,9 @@
 		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/diccionario.h">
 			<Option target="Septiembre21"/>
 		</Unit>
+		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/escalonada.h">
+			<Option target="Septiembre21"/>
+		</Unit>
 		<Unit filename="D:/Proyectos/Proyectos-universidad/AEED/Septiembre21/examenes/estacion_tren.h">
 			<Option target="Septiembre21"/>
 		</Unit>
