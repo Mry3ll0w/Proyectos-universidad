@@ -23,6 +23,7 @@ public:
         }//Inserta n vias de transito
     }
     ~estacion()=default;
+
     void llegada(const tren& t, const char v);
     void sacar_transito(size_t id);
     void est_transito(const tren& t);

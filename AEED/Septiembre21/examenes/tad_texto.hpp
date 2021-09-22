@@ -36,7 +36,6 @@ void texto::mostrar_texto(){
         {
             lineas.eliminar(it);//Si tiene una ocurrencia de # se borra la linea
         }
-        
         if(lineas.elemento(it).find('@')!=string::npos){//Si es == a npos no lo ha encontrado
             size_t pos_ar;
             for (size_t i = 0; i < lineas.elemento(it).size(); i++)
@@ -45,9 +44,7 @@ void texto::mostrar_texto(){
                 {
                     pos_ar=i;
                 }
-                
             }
-            
             char aux_s[lineas.elemento(it).size()];
             for (size_t i = 0; i < lineas.elemento(it).size(); i++)
             {
@@ -63,5 +60,6 @@ void texto::mostrar_texto(){
         it = lineas.siguiente(it);
     }
 }
+
 
 #endif
